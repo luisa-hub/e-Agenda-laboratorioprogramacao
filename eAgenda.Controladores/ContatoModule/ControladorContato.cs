@@ -6,8 +6,12 @@ using System.Data;
 
 namespace eAgenda.Controladores.ContatoModule
 {
+    /// <summary>
+    /// Classe responsável pelo Controle de Contatos, que herda os métodos do Controlador Base. Possui métodos de Inserção, Exclusão, Edição, entre outros. 
+    /// </summary>
     public class ControladorContato : Controlador<Contato>
     {
+        #region Queries
         private const string sqlInserirContato =
             @"INSERT INTO TBCONTATO 
 	                (
@@ -75,7 +79,13 @@ namespace eAgenda.Controladores.ContatoModule
                 [TBCONTATO]
             WHERE 
                 [ID] = @ID";
+        #endregion
 
+        /// <summary>
+        /// Valida o registro do contato antes de adicioná-lo ao banco. Retorna o resulta da Validação. 
+        /// </summary>
+        /// <param name="registro">Registro que seja inserir</param>
+        /// <returns></returns>
         public override string InserirNovo(Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -88,6 +98,13 @@ namespace eAgenda.Controladores.ContatoModule
             return resultadoValidacao;
         }
 
+
+        /// <summary>
+        /// Edita o registro no banco de dados depois de validar. Retorna o resultado da validação.
+        /// </summary>
+        /// <param name="id">Id do registro que deseja editar</param>
+        /// <param name="registro">Novo registro</param>
+        /// <returns></returns>
         public override string Editar(int id, Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -101,6 +118,11 @@ namespace eAgenda.Controladores.ContatoModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Exclui um registro com base no id. Retorna true caso tenha conseguido excluir. 
+        /// </summary>
+        /// <param name="id">Id do registro</param>
+        /// <returns></returns>
         public override bool Excluir(int id)
         {
             try
@@ -115,23 +137,42 @@ namespace eAgenda.Controladores.ContatoModule
             return true;
         }
 
+        /// <summary>
+        /// Verifica se o registro existe no banco com base no id.
+        /// </summary>
+        /// <param name="id">Id do registro</param>
+        /// <returns></returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteContato, AdicionarParametro("ID", id));
         }
 
+        /// <summary>
+        /// Seleciona registro do banco de dados com base no id.
+        /// </summary>
+        /// <param name="id">Id do registro</param>
+        /// <returns></returns>
         public override Contato SelecionarPorId(int id)
         {
             return Db.Get(sqlSelecionarContatoPorId, ConverterEmContato, AdicionarParametro("ID", id));
         }
 
+
+        /// <summary>
+        /// Seleciona todos os registros e retorna uma Lista de Contatos
+        /// </summary>
+        /// <returns></returns>
         public override List<Contato> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodosContatos, ConverterEmContato);
         }
 
         
-
+        /// <summary>
+        /// Obtém parâmetros de um contato específico.
+        /// </summary>
+        /// <param name="contato">Registro do tipo Contato</param>
+        /// <returns></returns>
         private Dictionary<string, object> ObtemParametrosContato(Contato contato)
         {
             var parametros = new Dictionary<string, object>();
@@ -146,6 +187,11 @@ namespace eAgenda.Controladores.ContatoModule
             return parametros;
         }
 
+        /// <summary>
+        /// Converte do banco de dados um registro para Contato.
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
         private Contato ConverterEmContato(IDataReader reader)
         {
             int id = Convert.ToInt32(reader["ID"]);
