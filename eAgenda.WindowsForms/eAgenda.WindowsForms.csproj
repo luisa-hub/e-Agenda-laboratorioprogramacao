@@ -135,6 +135,10 @@
       <Project>{4017e73e-8feb-4de8-8c3c-66178b41a902}</Project>
       <Name>eAgenda.Controladores</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ExportPDF\eAgenda.ExportPDF.csproj">
+      <Project>{adc360d0-e6d3-482d-babd-5b2a95c3ce7b}</Project>
+      <Name>eAgenda.ExportPDF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

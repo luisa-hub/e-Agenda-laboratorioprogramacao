@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
 {
@@ -273,7 +274,8 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, tarefa);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Tarefa" + tarefa.Titulo + "editada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
             {
                 MessageBox.Show(resultadoValidacao);
@@ -307,7 +309,8 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, tarefa);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Tarefa" + tarefa.Titulo + "editada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
             {
                 MessageBox.Show(resultadoValidacao);
@@ -318,8 +321,18 @@ namespace eAgenda.WindowsForms
             limparCampos();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btn_exportarPDFConcluida_Click(object sender, EventArgs e)
         {
+            ExportarPDFTarefa.ExportarTarefaEmPDF();
+
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_exportarPDFPendente_Click(object sender, EventArgs e)
+        {
+            ExportarPDFTarefa.ExportarTarefaPendenteEmPDF();
+
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

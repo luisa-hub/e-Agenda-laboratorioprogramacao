@@ -59,10 +59,12 @@ namespace eAgenda.WindowsForms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_tarefas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_exportarPDFPendente = new System.Windows.Forms.Button();
             this.bt_editarPendente = new System.Windows.Forms.Button();
             this.bt_excluirPendente = new System.Windows.Forms.Button();
             this.dataGridTarefas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_exportarPDFConcluida = new System.Windows.Forms.Button();
             this.bt_editarConcluida = new System.Windows.Forms.Button();
             this.bt_excluirConcluida = new System.Windows.Forms.Button();
             this.dataGridTarefaConcluidas = new System.Windows.Forms.DataGridView();
@@ -185,7 +187,7 @@ namespace eAgenda.WindowsForms
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.cb_prioridadeTarefa);
             this.panel3.Controls.Add(this.tb_name);
-            this.panel3.Location = new System.Drawing.Point(12, 410);
+            this.panel3.Location = new System.Drawing.Point(12, 439);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(326, 114);
             this.panel3.TabIndex = 9;
@@ -252,7 +254,6 @@ namespace eAgenda.WindowsForms
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Percentual";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel4
             // 
@@ -260,7 +261,7 @@ namespace eAgenda.WindowsForms
             this.panel4.Controls.Add(this.tb_porcentagem);
             this.panel4.Controls.Add(this.bt_atualizar);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(345, 410);
+            this.panel4.Location = new System.Drawing.Point(345, 439);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(182, 114);
             this.panel4.TabIndex = 3;
@@ -268,7 +269,7 @@ namespace eAgenda.WindowsForms
             // tb_porcentagem
             // 
             this.tb_porcentagem.Location = new System.Drawing.Point(66, 42);
-            this.tb_porcentagem.Mask = "000%";
+            this.tb_porcentagem.Mask = "000";
             this.tb_porcentagem.Name = "tb_porcentagem";
             this.tb_porcentagem.Size = new System.Drawing.Size(55, 20);
             this.tb_porcentagem.TabIndex = 9;
@@ -290,21 +291,36 @@ namespace eAgenda.WindowsForms
             this.tb_tarefas.Location = new System.Drawing.Point(17, 14);
             this.tb_tarefas.Name = "tb_tarefas";
             this.tb_tarefas.SelectedIndex = 0;
-            this.tb_tarefas.Size = new System.Drawing.Size(502, 252);
+            this.tb_tarefas.Size = new System.Drawing.Size(502, 292);
             this.tb_tarefas.TabIndex = 8;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_exportarPDFPendente);
             this.tabPage1.Controls.Add(this.bt_editarPendente);
             this.tabPage1.Controls.Add(this.bt_excluirPendente);
             this.tabPage1.Controls.Add(this.dataGridTarefas);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(494, 226);
+            this.tabPage1.Size = new System.Drawing.Size(494, 266);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pendentes";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_exportarPDFPendente
+            // 
+            this.btn_exportarPDFPendente.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFPendente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFPendente.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFPendente.Location = new System.Drawing.Point(196, 229);
+            this.btn_exportarPDFPendente.Name = "btn_exportarPDFPendente";
+            this.btn_exportarPDFPendente.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFPendente.TabIndex = 5;
+            this.btn_exportarPDFPendente.Text = "Exportar PDF";
+            this.btn_exportarPDFPendente.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFPendente.Click += new System.EventHandler(this.btn_exportarPDFPendente_Click);
             // 
             // bt_editarPendente
             // 
@@ -344,16 +360,31 @@ namespace eAgenda.WindowsForms
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn_exportarPDFConcluida);
             this.tabPage2.Controls.Add(this.bt_editarConcluida);
             this.tabPage2.Controls.Add(this.bt_excluirConcluida);
             this.tabPage2.Controls.Add(this.dataGridTarefaConcluidas);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(494, 226);
+            this.tabPage2.Size = new System.Drawing.Size(494, 266);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Concluídas";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btn_exportarPDFConcluida
+            // 
+            this.btn_exportarPDFConcluida.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFConcluida.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFConcluida.Location = new System.Drawing.Point(199, 226);
+            this.btn_exportarPDFConcluida.Name = "btn_exportarPDFConcluida";
+            this.btn_exportarPDFConcluida.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFConcluida.TabIndex = 6;
+            this.btn_exportarPDFConcluida.Text = "Exportar PDF";
+            this.btn_exportarPDFConcluida.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFConcluida.Click += new System.EventHandler(this.btn_exportarPDFConcluida_Click);
             // 
             // bt_editarConcluida
             // 
@@ -397,7 +428,7 @@ namespace eAgenda.WindowsForms
             this.panel1.Controls.Add(this.tb_tarefas);
             this.panel1.Location = new System.Drawing.Point(8, 124);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 280);
+            this.panel1.Size = new System.Drawing.Size(537, 309);
             this.panel1.TabIndex = 1;
             // 
             // TarefaForms
@@ -405,7 +436,7 @@ namespace eAgenda.WindowsForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(561, 530);
+            this.ClientSize = new System.Drawing.Size(561, 569);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -470,6 +501,8 @@ namespace eAgenda.WindowsForms
         private System.Windows.Forms.DataGridView dataGridTarefaConcluidas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox tb_porcentagem;
+        private System.Windows.Forms.Button btn_exportarPDFPendente;
+        private System.Windows.Forms.Button btn_exportarPDFConcluida;
     }
 }
 

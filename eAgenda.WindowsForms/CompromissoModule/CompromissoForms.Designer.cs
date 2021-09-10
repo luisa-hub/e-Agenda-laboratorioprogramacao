@@ -93,6 +93,9 @@ namespace eAgenda.WindowsForms
             this.dataColumn22 = new System.Data.DataColumn();
             this.dataColumn23 = new System.Data.DataColumn();
             this.dataColumn24 = new System.Data.DataColumn();
+            this.btn_exportarCompromissos = new System.Windows.Forms.Button();
+            this.btn_exportarCompromissoPassado = new System.Windows.Forms.Button();
+            this.btn_exportarPDFCompromissoFuturo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Compromissos.SuspendLayout();
@@ -132,6 +135,7 @@ namespace eAgenda.WindowsForms
             // 
             // Compromissos
             // 
+            this.Compromissos.Controls.Add(this.btn_exportarCompromissos);
             this.Compromissos.Controls.Add(this.bt_excluir);
             this.Compromissos.Controls.Add(this.dataGridCompromissos);
             this.Compromissos.Location = new System.Drawing.Point(4, 22);
@@ -147,7 +151,7 @@ namespace eAgenda.WindowsForms
             this.bt_excluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bt_excluir.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_excluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_excluir.Location = new System.Drawing.Point(185, 194);
+            this.bt_excluir.Location = new System.Drawing.Point(6, 182);
             this.bt_excluir.Name = "bt_excluir";
             this.bt_excluir.Size = new System.Drawing.Size(84, 29);
             this.bt_excluir.TabIndex = 3;
@@ -166,6 +170,7 @@ namespace eAgenda.WindowsForms
             // 
             // Passados
             // 
+            this.Passados.Controls.Add(this.btn_exportarCompromissoPassado);
             this.Passados.Controls.Add(this.label2);
             this.Passados.Controls.Add(this.dataPassado);
             this.Passados.Controls.Add(this.dataGridPassado);
@@ -181,7 +186,7 @@ namespace eAgenda.WindowsForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label2.Location = new System.Drawing.Point(109, 202);
+            this.label2.Location = new System.Drawing.Point(19, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 20;
@@ -189,7 +194,7 @@ namespace eAgenda.WindowsForms
             // 
             // dataPassado
             // 
-            this.dataPassado.Location = new System.Drawing.Point(145, 198);
+            this.dataPassado.Location = new System.Drawing.Point(55, 198);
             this.dataPassado.Name = "dataPassado";
             this.dataPassado.Size = new System.Drawing.Size(133, 20);
             this.dataPassado.TabIndex = 19;
@@ -206,6 +211,7 @@ namespace eAgenda.WindowsForms
             // 
             // Futuro
             // 
+            this.Futuro.Controls.Add(this.btn_exportarPDFCompromissoFuturo);
             this.Futuro.Controls.Add(this.label10);
             this.Futuro.Controls.Add(this.label9);
             this.Futuro.Controls.Add(this.dataFuturoDois);
@@ -222,7 +228,7 @@ namespace eAgenda.WindowsForms
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label10.Location = new System.Drawing.Point(132, 212);
+            this.label10.Location = new System.Drawing.Point(22, 213);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 13);
             this.label10.TabIndex = 21;
@@ -232,7 +238,7 @@ namespace eAgenda.WindowsForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label9.Location = new System.Drawing.Point(126, 186);
+            this.label9.Location = new System.Drawing.Point(16, 187);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 19;
@@ -240,7 +246,7 @@ namespace eAgenda.WindowsForms
             // 
             // dataFuturoDois
             // 
-            this.dataFuturoDois.Location = new System.Drawing.Point(165, 206);
+            this.dataFuturoDois.Location = new System.Drawing.Point(55, 207);
             this.dataFuturoDois.Name = "dataFuturoDois";
             this.dataFuturoDois.Size = new System.Drawing.Size(133, 20);
             this.dataFuturoDois.TabIndex = 20;
@@ -248,7 +254,7 @@ namespace eAgenda.WindowsForms
             // 
             // dataFuturoUm
             // 
-            this.dataFuturoUm.Location = new System.Drawing.Point(165, 180);
+            this.dataFuturoUm.Location = new System.Drawing.Point(55, 181);
             this.dataFuturoUm.Name = "dataFuturoUm";
             this.dataFuturoUm.Size = new System.Drawing.Size(133, 20);
             this.dataFuturoUm.TabIndex = 19;
@@ -602,6 +608,48 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn24.ColumnName = "Assunto";
             // 
+            // btn_exportarCompromissos
+            // 
+            this.btn_exportarCompromissos.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarCompromissos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarCompromissos.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarCompromissos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarCompromissos.Location = new System.Drawing.Point(354, 182);
+            this.btn_exportarCompromissos.Name = "btn_exportarCompromissos";
+            this.btn_exportarCompromissos.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarCompromissos.TabIndex = 6;
+            this.btn_exportarCompromissos.Text = "Exportar PDF";
+            this.btn_exportarCompromissos.UseVisualStyleBackColor = false;
+            this.btn_exportarCompromissos.Click += new System.EventHandler(this.btn_exportarCompromissos_Click);
+            // 
+            // btn_exportarCompromissoPassado
+            // 
+            this.btn_exportarCompromissoPassado.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarCompromissoPassado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarCompromissoPassado.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarCompromissoPassado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarCompromissoPassado.Location = new System.Drawing.Point(354, 194);
+            this.btn_exportarCompromissoPassado.Name = "btn_exportarCompromissoPassado";
+            this.btn_exportarCompromissoPassado.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarCompromissoPassado.TabIndex = 21;
+            this.btn_exportarCompromissoPassado.Text = "Exportar PDF";
+            this.btn_exportarCompromissoPassado.UseVisualStyleBackColor = false;
+            this.btn_exportarCompromissoPassado.Click += new System.EventHandler(this.btn_exportarCompromissoPassado_Click);
+            // 
+            // btn_exportarPDFCompromissoFuturo
+            // 
+            this.btn_exportarPDFCompromissoFuturo.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFCompromissoFuturo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFCompromissoFuturo.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFCompromissoFuturo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFCompromissoFuturo.Location = new System.Drawing.Point(357, 180);
+            this.btn_exportarPDFCompromissoFuturo.Name = "btn_exportarPDFCompromissoFuturo";
+            this.btn_exportarPDFCompromissoFuturo.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFCompromissoFuturo.TabIndex = 22;
+            this.btn_exportarPDFCompromissoFuturo.Text = "Exportar PDF";
+            this.btn_exportarPDFCompromissoFuturo.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFCompromissoFuturo.Click += new System.EventHandler(this.btn_exportarPDFCompromissoFuturo_Click);
+            // 
             // CompromissoForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -702,5 +750,8 @@ namespace eAgenda.WindowsForms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button bt_editar;
+        private System.Windows.Forms.Button btn_exportarCompromissos;
+        private System.Windows.Forms.Button btn_exportarCompromissoPassado;
+        private System.Windows.Forms.Button btn_exportarPDFCompromissoFuturo;
     }
 }
