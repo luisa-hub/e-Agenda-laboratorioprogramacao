@@ -13,10 +13,17 @@ using System.Windows.Forms;
 using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
-{
+{/// <summary>
+/// Classe Contato Forms
+/// </summary>
     public partial class ContatoForms : Form
     {
         ControladorContato controlador;
+
+        /// <summary>
+        /// Construtor do Contato Forms
+        /// </summary>
+        /// <param name="controlador">Controlador do contato</param>
         public ContatoForms(ControladorContato controlador)
         {
             InitializeComponent();
@@ -25,6 +32,9 @@ namespace eAgenda.WindowsForms
             
         }
 
+        /// <summary>
+        /// Preenche dataGridView dos contatos
+        /// </summary>
         private void PreencherTabelaContatos()
         {
             dataGridContatos.Refresh();
@@ -63,6 +73,9 @@ namespace eAgenda.WindowsForms
 
         }
 
+        /// <summary>
+        /// Limpa os campos de texto
+        /// </summary>
         private void limparCampos()
         {
             tb_nome.Text = "";
@@ -72,6 +85,11 @@ namespace eAgenda.WindowsForms
             tb_email.Text = "";
         }
 
+        /// <summary>
+        /// Insere um novo contato depois de validar e mostra mensagem
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_gravar_Click(object sender, EventArgs e)
         {
             Contato contato = CriarContato();
@@ -93,6 +111,10 @@ namespace eAgenda.WindowsForms
             
         }
 
+        /// <summary>
+        /// Cria um novo contato pegando os valores dos campos de texto
+        /// </summary>
+        /// <returns>Retorna um contato</returns>
         private Contato CriarContato()
         {
             string nome = tb_nome.Text;
@@ -106,6 +128,11 @@ namespace eAgenda.WindowsForms
         }
 
 
+        /// <summary>
+        /// Exclui um contato
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_excluirContato_Click(object sender, EventArgs e)
         {
             if (dataGridContatos.RowCount == 0)
@@ -142,7 +169,11 @@ namespace eAgenda.WindowsForms
         }
 
         
-
+        /// <summary>
+        /// Editar um contato existente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_editar_Click(object sender, EventArgs e)
         {
             if (dataGridContatos == null)
@@ -186,6 +217,21 @@ namespace eAgenda.WindowsForms
         {
             ExportPDF.ExportarPDFContato.ExportarContatosEmPDF();
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Pega os valores no dataGridContatos e preenche nos campos depois do doubleClick
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridContatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_nome.Text = dataGridContatos.CurrentRow.Cells["Nome"].Value.ToString();
+            tb_telefone.Text = dataGridContatos.CurrentRow.Cells["Telefone"].Value.ToString();
+            tb_cargo.Text = dataGridContatos.CurrentRow.Cells["Cargo"].Value.ToString();
+            tb_email.Text = dataGridContatos.CurrentRow.Cells["Email"].Value.ToString();
+            tb_empresa.Text = dataGridContatos.CurrentRow.Cells["Empresa"].Value.ToString();
+            
         }
     }
 }

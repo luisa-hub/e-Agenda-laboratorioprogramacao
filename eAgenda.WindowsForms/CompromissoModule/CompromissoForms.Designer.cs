@@ -181,7 +181,7 @@ namespace eAgenda.WindowsForms
             this.dataGridCompromissos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCompromissos.Size = new System.Drawing.Size(436, 150);
             this.dataGridCompromissos.TabIndex = 2;
-            this.dataGridCompromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridCompromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Passados
             // 
@@ -237,7 +237,7 @@ namespace eAgenda.WindowsForms
             this.dataGridPassado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPassado.Size = new System.Drawing.Size(436, 150);
             this.dataGridPassado.TabIndex = 2;
-            this.dataGridPassado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridPassado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Futuro
             // 
@@ -312,7 +312,7 @@ namespace eAgenda.WindowsForms
             this.dataGridFuturo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridFuturo.Size = new System.Drawing.Size(436, 150);
             this.dataGridFuturo.TabIndex = 1;
-            this.dataGridFuturo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridFuturo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // panel2
             // 
