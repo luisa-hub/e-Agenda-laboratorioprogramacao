@@ -153,10 +153,10 @@ namespace eAgenda.Controladores.CompromissoModule
         #endregion
 
         /// <summary>
-        /// Valida o registro recebido antes de inseri-lo no banco. Retorna o resultado da validação em string.
+        /// Valida o registro recebido antes de inseri-lo no banco. 
         /// </summary>
         /// <param name="registro">Registro do tipo Compromisso</param>
-        /// <returns></returns>
+        /// <returns>Retorna o resultado da validação em string.</returns>
         public override string InserirNovo(Compromisso registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -170,11 +170,11 @@ namespace eAgenda.Controladores.CompromissoModule
         }
 
         /// <summary>
-        /// Edita um registro de compromissos depois de validar. Retorna o resultado da validação em string.
+        /// Edita um registro de compromissos depois de validar.
         /// </summary>
         /// <param name="id">Id do registro que deseja editar</param>
         /// <param name="registro">Novo registro que </param>
-        /// <returns></returns>
+        /// <returns> Retorna o resultado da validação em string.</returns>
         public override string Editar(int id, Compromisso registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -189,10 +189,10 @@ namespace eAgenda.Controladores.CompromissoModule
         }
 
         /// <summary>
-        /// Exclui um registro baseado em seu Id. Retorna true caso tenha conseguido excluir. 
+        /// Exclui um registro baseado em seu Id.  
         /// </summary>
         /// <param name="id">Id do registro que deseja excluir</param>
-        /// <returns></returns>
+        /// <returns>Retorna true caso tenha conseguido excluir.</returns>
         public override bool Excluir(int id)
         {
             try
@@ -208,10 +208,10 @@ namespace eAgenda.Controladores.CompromissoModule
         }
 
         /// <summary>
-        /// Retorna true se o Id existe
+        /// Verifica se um registro existe
         /// </summary>
         /// <param name="id">Id do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna true se o Id existe</returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteCompromisso, AdicionarParametro("ID", id));
@@ -228,9 +228,9 @@ namespace eAgenda.Controladores.CompromissoModule
         }
 
         /// <summary>
-        /// Selecionar todos os registros, retorna uma lista de Compromisso
+        /// Selecionar todos os registros.
         /// </summary>
-        /// <returns></returns>
+        /// <returns> retorna uma lista de Compromisso</returns>
         public override List<Compromisso> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodosCompromissos, ConverterEmCompromisso);
@@ -238,11 +238,11 @@ namespace eAgenda.Controladores.CompromissoModule
 
 
         /// <summary>
-        /// Retorna uma lista de Compromisso baseado em Compromissos futuros
+        ///  Seleciona todos os compromissos futuros
         /// </summary>
         /// <param name="dataInicio">Data Início que deseja comparar</param>
         /// <param name="dataFim">Data Final que deseja comparar</param>
-        /// <returns></returns>
+        /// <returns>Retorna uma lista de Compromisso</returns>
         public List<Compromisso> SelecionarCompromissosFuturos(DateTime dataInicio, DateTime dataFim)
         {
             var parametros = new Dictionary<string, object>();
@@ -254,10 +254,10 @@ namespace eAgenda.Controladores.CompromissoModule
         }
 
         /// <summary>
-        /// Retorna uma lista de compromissos passados baseados em uma data
+        ///  Seleciona todos os compromissos passados
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
+        /// <param name="data">Data de comparação</param>
+        /// <returns>Retorna uma lista de compromissos passados</returns>
         public List<Compromisso> SelecionarCompromissosPassados(DateTime data)
         {
             return Db.GetAll(sqlSelecionarTodosCompromissosPassados, ConverterEmCompromisso, AdicionarParametro("DATA", data));
@@ -265,10 +265,10 @@ namespace eAgenda.Controladores.CompromissoModule
 
 
         /// <summary>
-        /// Retorna um compormisso. Recebe o registro do banco de dados e converte para compromisso
+        ///  Recebe o registro do banco de dados e converte para compromisso
         /// </summary>
         /// <param name="reader"></param>
-        /// <returns></returns>
+        /// <returns>Retorna um compromisso.</returns>
         private Compromisso ConverterEmCompromisso(IDataReader reader)
         {
             var assunto = Convert.ToString(reader["ASSUNTO"]);
@@ -301,7 +301,7 @@ namespace eAgenda.Controladores.CompromissoModule
         /// Obtém os parâmetros do Compromisso
         /// </summary>
         /// <param name="compromisso">Registro do tipo Compromisso</param>
-        /// <returns></returns>
+        /// <returns>Retorna um dicionário</returns>
         private Dictionary<string, object> ObtemParametrosCompromisso(Compromisso compromisso)
         {
             var parametros = new Dictionary<string, object>();

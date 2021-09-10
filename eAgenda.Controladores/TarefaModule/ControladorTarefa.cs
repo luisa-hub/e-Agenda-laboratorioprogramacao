@@ -7,7 +7,7 @@ using System.Data;
 namespace eAgenda.Controladores.TarefaModule
 {
     /// <summary>
-    /// Controlador das tarefas. Contém os métodos relativos aos bancos de dados.
+    /// Contém os métodos relativos aos bancos de dados, herda os métodos de Controlador. 
     /// </summary>
     public class ControladorTarefa : Controlador<Tarefa>
     {
@@ -112,10 +112,10 @@ namespace eAgenda.Controladores.TarefaModule
         #endregion
 
         /// <summary>
-        /// Insere uma nova tarefa no banco de dados
+        /// Insere uma nova tarefa no banco de dados depois de validar. 
         /// </summary>
         /// <param name="registro">Recebe um registro do tipo Tarefa</param>
-        /// <returns></returns>
+        /// <returns>String de validação</returns>
         public override string InserirNovo(Tarefa registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -130,11 +130,11 @@ namespace eAgenda.Controladores.TarefaModule
 
 
         /// <summary>
-        /// Edita no banco de dados a tarefa
+        /// Edita no banco de dados a tarefa depois de validar. 
         /// </summary>
         /// <param name="id">Recebe o Id da tarefa que deseja editar</param>
         /// <param name="registro">Recebe um registro do tipo Tarefa</param>
-        /// <returns></returns>
+        /// <returns>Retorna uma string de validação.</returns>
         public override string Editar(int id, Tarefa registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -148,6 +148,11 @@ namespace eAgenda.Controladores.TarefaModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Exclui um registro com base no id. 
+        /// </summary>
+        /// <param name="id">Id do registro</param>
+        /// <returns>Retorna true caso tenha conseguido excluir. </returns>
         public override bool Excluir(int id)
         {
             try
@@ -161,23 +166,42 @@ namespace eAgenda.Controladores.TarefaModule
 
             return true;
         }
-        
+
+        /// <summary>
+        /// Verifica se o registro da tarefa existe no banco com base no id.
+        /// </summary>
+        /// <param name="id">Id do registro tarefa</param>
+        /// <returns>Retorna true se o registro da tarefa existir</returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteTarefa, AdicionarParametro("ID", id));
         }
         
+        /// <summary>
+        /// Seleciona todas as tarefas
+        /// </summary>
+        /// <returns>Retorna uma lista de tarefas</returns>
         public override List<Tarefa> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodasTarefas, ConverterEmTarefa);
         }
         
+        /// <summary>
+        /// Seleciona uma tarefa com base no ID
+        /// </summary>
+        /// <param name="id">Id da tarefa</param>
+        /// <returns>Retorna uma Tarefa</returns>
         public override Tarefa SelecionarPorId(int id)
         {
             return Db.Get(sqlSelecionarTarefaPorId, ConverterEmTarefa, AdicionarParametro("ID", id));
         }
 
 
+        /// <summary>
+        /// Atualiza o percentual da tarefa
+        /// </summary>
+        /// <param name="id">Id da tareda</param>
+        /// <param name="novoPercentual">Percentual Concluído</param>
         public void AtualizarPercentual(int id, int novoPercentual)
         {
             Tarefa tarefa = SelecionarPorId(id);            
@@ -188,17 +212,29 @@ namespace eAgenda.Controladores.TarefaModule
         }
 
        
-                      
+        /// <summary>
+        /// Seleciona todas as tarefas concluídas
+        /// </summary>
+        /// <returns>Retorna uma lista de tarefas</returns>        
         public List<Tarefa> SelecionarTodasTarefasConcluidas()
         {
             return Db.GetAll(sqlSelecionarTodasTarefasConcluidas, ConverterEmTarefa);
         }
 
+        /// <summary>
+        /// Seleciona todas as tarefas pendentes
+        /// </summary>
+        /// <returns>Retorna uma lista com todas as tarefas</returns>
         public List<Tarefa> SelecionarTodasTarefasPendentes()
         {
             return Db.GetAll(sqlSelecionarTodasTarefasPendentes, ConverterEmTarefa);
         }
 
+        /// <summary>
+        /// Converte valor do banco em tarefa
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns>Retorna um registro do tipo tarefa</returns>
         private Tarefa ConverterEmTarefa(IDataReader reader)
         {
             var titulo = Convert.ToString(reader["TITULO"]);
@@ -219,6 +255,11 @@ namespace eAgenda.Controladores.TarefaModule
             return tarefa;
         }
 
+        /// <summary>
+        /// Obtém parâmetros de uma tarefa
+        /// </summary>
+        /// <param name="tarefa">Tarefa que deseja obter parâmetros</param>
+        /// <returns>Dicionário de string e objetos</returns>
         private Dictionary<string, object> ObtemParametrosTarefa(Tarefa tarefa)
         {
             var parametros = new Dictionary<string, object>();

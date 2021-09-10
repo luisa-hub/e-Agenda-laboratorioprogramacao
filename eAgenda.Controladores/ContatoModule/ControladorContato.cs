@@ -82,10 +82,10 @@ namespace eAgenda.Controladores.ContatoModule
         #endregion
 
         /// <summary>
-        /// Valida o registro do contato antes de adicioná-lo ao banco. Retorna o resulta da Validação. 
+        /// Valida o registro do contato antes de adicioná-lo ao banco.
         /// </summary>
         /// <param name="registro">Registro que seja inserir</param>
-        /// <returns></returns>
+        /// <returns> Retorna o resulta da Validação. </returns>
         public override string InserirNovo(Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -100,11 +100,11 @@ namespace eAgenda.Controladores.ContatoModule
 
 
         /// <summary>
-        /// Edita o registro no banco de dados depois de validar. Retorna o resultado da validação.
+        /// Edita o registro no banco de dados depois de validar. 
         /// </summary>
         /// <param name="id">Id do registro que deseja editar</param>
         /// <param name="registro">Novo registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna o resultado da validação.</returns>
         public override string Editar(int id, Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -119,10 +119,10 @@ namespace eAgenda.Controladores.ContatoModule
         }
 
         /// <summary>
-        /// Exclui um registro com base no id. Retorna true caso tenha conseguido excluir. 
+        /// Exclui um registro com base no id. 
         /// </summary>
         /// <param name="id">Id do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna true caso tenha conseguido excluir. </returns>
         public override bool Excluir(int id)
         {
             try
@@ -141,7 +141,7 @@ namespace eAgenda.Controladores.ContatoModule
         /// Verifica se o registro existe no banco com base no id.
         /// </summary>
         /// <param name="id">Id do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna true se o registro existir</returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteContato, AdicionarParametro("ID", id));
@@ -151,7 +151,7 @@ namespace eAgenda.Controladores.ContatoModule
         /// Seleciona registro do banco de dados com base no id.
         /// </summary>
         /// <param name="id">Id do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna um contato</returns>
         public override Contato SelecionarPorId(int id)
         {
             return Db.Get(sqlSelecionarContatoPorId, ConverterEmContato, AdicionarParametro("ID", id));
@@ -159,9 +159,9 @@ namespace eAgenda.Controladores.ContatoModule
 
 
         /// <summary>
-        /// Seleciona todos os registros e retorna uma Lista de Contatos
+        /// Seleciona todos os registros dos contatos. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>retorna uma Lista de Contatos</returns>
         public override List<Contato> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodosContatos, ConverterEmContato);
@@ -172,7 +172,7 @@ namespace eAgenda.Controladores.ContatoModule
         /// Obtém parâmetros de um contato específico.
         /// </summary>
         /// <param name="contato">Registro do tipo Contato</param>
-        /// <returns></returns>
+        /// <returns>Retorna um dicionário de string e objeto</returns>
         private Dictionary<string, object> ObtemParametrosContato(Contato contato)
         {
             var parametros = new Dictionary<string, object>();
@@ -191,7 +191,7 @@ namespace eAgenda.Controladores.ContatoModule
         /// Converte do banco de dados um registro para Contato.
         /// </summary>
         /// <param name="reader"></param>
-        /// <returns></returns>
+        /// <returns>Retorna um contato</returns>
         private Contato ConverterEmContato(IDataReader reader)
         {
             int id = Convert.ToInt32(reader["ID"]);
