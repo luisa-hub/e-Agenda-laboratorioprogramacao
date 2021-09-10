@@ -59,16 +59,16 @@ namespace eAgenda.WindowsForms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tb_tarefas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_exportarPDFPendente = new System.Windows.Forms.Button();
             this.bt_editarPendente = new System.Windows.Forms.Button();
             this.bt_excluirPendente = new System.Windows.Forms.Button();
             this.dataGridTarefas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_exportarPDFConcluida = new System.Windows.Forms.Button();
             this.bt_editarConcluida = new System.Windows.Forms.Button();
             this.bt_excluirConcluida = new System.Windows.Forms.Button();
             this.dataGridTarefaConcluidas = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_exportarPDFPendente = new System.Windows.Forms.Button();
-            this.btn_exportarPDFConcluida = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPendentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetConcluidas)).BeginInit();
@@ -308,6 +308,20 @@ namespace eAgenda.WindowsForms
             this.tabPage1.Text = "Pendentes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btn_exportarPDFPendente
+            // 
+            this.btn_exportarPDFPendente.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFPendente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFPendente.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFPendente.Location = new System.Drawing.Point(196, 229);
+            this.btn_exportarPDFPendente.Name = "btn_exportarPDFPendente";
+            this.btn_exportarPDFPendente.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFPendente.TabIndex = 5;
+            this.btn_exportarPDFPendente.Text = "Exportar PDF";
+            this.btn_exportarPDFPendente.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFPendente.Click += new System.EventHandler(this.btn_exportarPDFPendente_Click);
+            // 
             // bt_editarPendente
             // 
             this.bt_editarPendente.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -358,6 +372,20 @@ namespace eAgenda.WindowsForms
             this.tabPage2.Text = "Concluídas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btn_exportarPDFConcluida
+            // 
+            this.btn_exportarPDFConcluida.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFConcluida.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFConcluida.Location = new System.Drawing.Point(199, 226);
+            this.btn_exportarPDFConcluida.Name = "btn_exportarPDFConcluida";
+            this.btn_exportarPDFConcluida.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFConcluida.TabIndex = 6;
+            this.btn_exportarPDFConcluida.Text = "Exportar PDF";
+            this.btn_exportarPDFConcluida.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFConcluida.Click += new System.EventHandler(this.btn_exportarPDFConcluida_Click);
+            // 
             // bt_editarConcluida
             // 
             this.bt_editarConcluida.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -402,33 +430,6 @@ namespace eAgenda.WindowsForms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(537, 309);
             this.panel1.TabIndex = 1;
-            // 
-            // btn_exportarPDFPendente
-            // 
-            this.btn_exportarPDFPendente.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_exportarPDFPendente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFPendente.Font = new System.Drawing.Font("Veneer", 10F);
-            this.btn_exportarPDFPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFPendente.Location = new System.Drawing.Point(196, 229);
-            this.btn_exportarPDFPendente.Name = "btn_exportarPDFPendente";
-            this.btn_exportarPDFPendente.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFPendente.TabIndex = 5;
-            this.btn_exportarPDFPendente.Text = "Exportar PDF";
-            this.btn_exportarPDFPendente.UseVisualStyleBackColor = false;
-            // 
-            // btn_exportarPDFConcluida
-            // 
-            this.btn_exportarPDFConcluida.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_exportarPDFConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFConcluida.Font = new System.Drawing.Font("Veneer", 10F);
-            this.btn_exportarPDFConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFConcluida.Location = new System.Drawing.Point(199, 226);
-            this.btn_exportarPDFConcluida.Name = "btn_exportarPDFConcluida";
-            this.btn_exportarPDFConcluida.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFConcluida.TabIndex = 6;
-            this.btn_exportarPDFConcluida.Text = "Exportar PDF";
-            this.btn_exportarPDFConcluida.UseVisualStyleBackColor = false;
-            this.btn_exportarPDFConcluida.Click += new System.EventHandler(this.btn_exportarPDFConcluida_Click);
             // 
             // TarefaForms
             // 

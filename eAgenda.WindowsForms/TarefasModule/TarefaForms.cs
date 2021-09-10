@@ -274,7 +274,8 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, tarefa);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Tarefa" + tarefa.Titulo + "editada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
             {
                 MessageBox.Show(resultadoValidacao);
@@ -308,7 +309,8 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, tarefa);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Tarefa" + tarefa.Titulo + "editada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
             {
                 MessageBox.Show(resultadoValidacao);
@@ -322,6 +324,16 @@ namespace eAgenda.WindowsForms
         private void btn_exportarPDFConcluida_Click(object sender, EventArgs e)
         {
             ExportarPDF.ExportarTarefaEmPDF();
+
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_exportarPDFPendente_Click(object sender, EventArgs e)
+        {
+            ExportarPDF.ExportarTarefaPendenteEmPDF();
+
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
