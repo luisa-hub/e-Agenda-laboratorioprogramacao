@@ -149,6 +149,7 @@ namespace eAgenda.WindowsForms
             this.dataGridContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridContatos.Location = new System.Drawing.Point(0, 6);
             this.dataGridContatos.Name = "dataGridContatos";
+            this.dataGridContatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridContatos.Size = new System.Drawing.Size(379, 166);
             this.dataGridContatos.TabIndex = 0;
             this.dataGridContatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContatos_CellDoubleClick);

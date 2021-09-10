@@ -215,7 +215,7 @@ namespace eAgenda.WindowsForms
         /// <param name="e"></param>
         private void btn_exportarPDFContato_Click(object sender, EventArgs e)
         {
-            ExportPDF.ExportarPDFContato.ExportarContatosEmPDF();
+            ExportarPDFContato.ExportarContatosEmPDF();
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
