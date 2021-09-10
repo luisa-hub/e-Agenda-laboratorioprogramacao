@@ -38,7 +38,7 @@ namespace eAgenda.Controladores.Shared
         /// </summary>
         /// <param name="sql">Query em SQL para inserção do registro</param>
         /// <param name="parameters">Parâmetros do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna Id</returns>
         public static int Insert(string sql, Dictionary<string, object> parameters)
         {
             DbConnection connection = comandoFactory.CreateConnection();
@@ -96,13 +96,13 @@ namespace eAgenda.Controladores.Shared
         }
 
         /// <summary>
-        /// Retorna uma lista de registros de acordo com o comando passado
+        /// Pega todos os registros de acordo com o comando
         /// </summary>
         /// <typeparam name="T">Registro genérico</typeparam>
         /// <param name="sql">Query SQL</param>
         /// <param name="convert">Converter registro</param>
         /// <param name="parameters">Parâmetros do registro</param>
-        /// <returns></returns>
+        /// <returns> Retorna uma lista de registros</returns>
         public static List<T> GetAll<T>(string sql, ConverterDelegate<T> convert, Dictionary<string, object> parameters = null)
         {
             DbConnection connection = comandoFactory.CreateConnection();
@@ -133,13 +133,13 @@ namespace eAgenda.Controladores.Shared
         }
 
         /// <summary>
-        /// Retorna um registro específico de acordo com o comando SQL
+        ///  Procura um registro específico com base na Query
         /// </summary>
         /// <typeparam name="T">Registro genérico</typeparam>
         /// <param name="sql">Query SQL do comando</param>
         /// <param name="convert">Conversão dos registros</param>
         /// <param name="parameters">Parâmetros dos registros</param>
-        /// <returns></returns>
+        /// <returns>Retorna um registro específico</returns>
         public static T Get<T>(string sql, ConverterDelegate<T> convert, Dictionary<string, object> parameters)
         {
 
@@ -169,11 +169,11 @@ namespace eAgenda.Controladores.Shared
         }
 
         /// <summary>
-        /// Retorna true se existe registro especificado
+        /// Verifica se existe registro
         /// </summary>
         /// <param name="sql">Query SQL com o comando</param>
         /// <param name="parameters">Parâmetros do registro</param>
-        /// <returns></returns>
+        /// <returns>Retorna true se existe registro especificado</returns>
         public static bool Exists(string sql, Dictionary<string, object> parameters)
         {
             DbConnection connection = comandoFactory.CreateConnection();
@@ -225,10 +225,10 @@ namespace eAgenda.Controladores.Shared
 
 
         /// <summary>
-        /// Retorna string de auto-incremento no banco de dados. Pode ser diferente dependendo do ipo de banco
+        /// String de autoincremento pode ser diferente dependendo do banco utilizado. 
         /// </summary>
         /// <param name="sql">QUERY Sql que será adicionado o valor</param>
-        /// <returns></returns>
+        /// <returns> Retorna string de auto-incremento no banco de dados.</returns>
         private static string AppendSelectIdentity(this string sql)
         {
               return sql + ";SELECT SCOPE_IDENTITY()";
@@ -236,10 +236,10 @@ namespace eAgenda.Controladores.Shared
 
 
         /// <summary>
-        /// Retorna true se for null ou vazio
+        /// Verifica se é null ou vazio
         /// </summary>
         /// <param name="value">Recebe um objeto</param>
-        /// <returns></returns>
+        /// <returns>Retorna true se for null ou vazio</returns>
         public static bool IsNullOrEmpty(this object value)
         {
             return (value is string && string.IsNullOrEmpty((string)value)) ||
