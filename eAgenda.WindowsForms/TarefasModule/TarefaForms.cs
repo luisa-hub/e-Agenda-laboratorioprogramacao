@@ -116,6 +116,10 @@ namespace eAgenda.WindowsForms
             limparCampos();
         }
 
+        /// <summary>
+        /// Pega os parâmetros dos campos para criar tarefa
+        /// </summary>
+        /// <returns>Retorna uma Tarefa</returns>
         private Tarefa CriarTarefa()
         {
             string titulo = tb_name.Text;
@@ -218,6 +222,11 @@ namespace eAgenda.WindowsForms
             PreencherTabelaConcluida();
         }
 
+        /// <summary>
+        /// Atualiza a porcentagem das Tarefas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
             int id = 0;
@@ -252,6 +261,12 @@ namespace eAgenda.WindowsForms
             PreencherTabelaConcluida();
         }
 
+
+        /// <summary>
+        /// Edita a Tarefa Pendente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_editarPendente_Click(object sender, EventArgs e)
         {
             if (dataGridTarefas == null)
@@ -287,6 +302,11 @@ namespace eAgenda.WindowsForms
         }
 
        
+        /// <summary>
+        /// Edita a Tarefa Concluída
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_editarConcluida_Click(object sender, EventArgs e)
         {
             if (dataGridTarefaConcluidas == null)
@@ -321,6 +341,11 @@ namespace eAgenda.WindowsForms
             limparCampos();
         }
 
+        /// <summary>
+        /// Chama o método para exportar o PDF das Tarefas concluídas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_exportarPDFConcluida_Click(object sender, EventArgs e)
         {
             ExportarPDFTarefa.ExportarTarefaEmPDF();
@@ -328,11 +353,40 @@ namespace eAgenda.WindowsForms
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Chama o método para exportar para PDF as tarefas pendentes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_exportarPDFPendente_Click(object sender, EventArgs e)
         {
             ExportarPDFTarefa.ExportarTarefaPendenteEmPDF();
 
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        /// <summary>
+        /// Adiciona os parâmetros das tarefas pendentes nos campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridTarefas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_name.Text = dataGridTarefas.CurrentRow.Cells["Nome"].Value.ToString();
+            cb_prioridadeTarefa.Text = dataGridTarefas.CurrentRow.Cells["Prioridade"].Value.ToString();
+            
+        }
+
+        /// <summary>
+        /// Adiciona os parâmetros das tarefas concluídas nos campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridTarefasConcluidas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_name.Text = dataGridTarefaConcluidas.CurrentRow.Cells["Nome"].Value.ToString();
+            cb_prioridadeTarefa.Text = dataGridTarefaConcluidas.CurrentRow.Cells["Prioridade"].Value.ToString();
 
         }
     }
