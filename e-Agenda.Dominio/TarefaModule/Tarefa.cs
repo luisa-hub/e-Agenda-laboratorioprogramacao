@@ -14,15 +14,15 @@ namespace eAgenda.Dominio.TarefaModule
         }
 
 
-        public string Titulo { get; }
+        public string Titulo { get; set; }
 
-        public Prioridade Prioridade { get; }
+        public Prioridade Prioridade { get; set; }
 
-        public DateTime DataCriacao { get;  }
+        public DateTime DataCriacao { get; set; }
 
-        public int Percentual { get; private set; }
+        public int Percentual { get; set; }
 
-        public DateTime? DataConclusao { get; private set; }        
+        public DateTime? DataConclusao { get; set; }        
 
         public void AtualizarPercentual(int percentual, DateTime dataConclusao)
         {

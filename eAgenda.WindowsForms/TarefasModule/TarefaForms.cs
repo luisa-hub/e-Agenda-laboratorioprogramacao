@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
 {
@@ -318,9 +319,9 @@ namespace eAgenda.WindowsForms
             limparCampos();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btn_exportarPDFConcluida_Click(object sender, EventArgs e)
         {
-
+            ExportarPDF.ExportarTarefaEmPDF();
         }
     }
 }
