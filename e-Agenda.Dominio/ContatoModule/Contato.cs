@@ -5,8 +5,19 @@ using System.Text.RegularExpressions;
 
 namespace eAgenda.Dominio.ContatoModule
 {
+    /// <summary>
+    /// Classe para a criação do registro Contato, que herda de EntidadeBase e implementa IEquetable
+    /// </summary>
     public class Contato : EntidadeBase, IEquatable<Contato>
-    {        
+    {   
+        /// <summary>
+        /// Construtor do Contato
+        /// </summary>
+        /// <param name="nome">Nome do contato</param>
+        /// <param name="email">Email do Contato</param>
+        /// <param name="telefone">Telefone do contato</param>
+        /// <param name="empresa">Empresa do Contato</param>
+        /// <param name="cargo">Cargo do Contato</param>
         public Contato(string nome, string email, string telefone, string empresa, string cargo)
         {
             Nome = nome;
@@ -22,6 +33,10 @@ namespace eAgenda.Dominio.ContatoModule
         public string Cargo { get; }
         public string Empresa { get; }
 
+        /// <summary>
+        /// Método de validação dos campos do contato
+        /// </summary>
+        /// <returns>Retorna uma string com o resultado da validação</returns>
         public override string Validar()
         {
             Regex templateEmail = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");

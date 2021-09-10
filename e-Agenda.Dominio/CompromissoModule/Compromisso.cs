@@ -6,10 +6,20 @@ using System.Collections.Generic;
 namespace eAgenda.Dominio.CompromissoModule
 {
     /// <summary>
-    /// Classe para a criação dos compromissos
+    /// Classe para a criação dos registros compromissos, que herda de EntidadeBase e implementa IEquetable
     /// </summary>
     public class Compromisso : EntidadeBase, IEquatable<Compromisso>
     {        
+        /// <summary>
+        /// Construtor do Compromisso
+        /// </summary>
+        /// <param name="assunto">Assunto do Compromisso</param>
+        /// <param name="local">Local de encontro</param>
+        /// <param name="link">Link da web para o encontro</param>
+        /// <param name="data">Data do compromisso</param>
+        /// <param name="horaInicio">Hora Início do Compromisso</param>
+        /// <param name="horaFim">Hora Final do Compromisso</param>
+        /// <param name="contato">Contato associado ao compromisso</param>
         public Compromisso(string assunto, string local, string link, DateTime data,
             TimeSpan horaInicio, TimeSpan horaFim, Contato contato)
         {
@@ -30,11 +40,13 @@ namespace eAgenda.Dominio.CompromissoModule
         public TimeSpan HoraTermino { get; }
         public Contato Contato { get; }
 
+       
         public override bool Equals(object obj)
         {
             return Equals(obj as Compromisso);
         }
 
+       
         public bool Equals(Compromisso other)
         {
             return other != null
@@ -65,7 +77,7 @@ namespace eAgenda.Dominio.CompromissoModule
         /// <summary>
         /// Validação dos campos do comprimisso
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna string de validação</returns>
         public override string Validar()
         {
             string resultadoValidacao = "";
