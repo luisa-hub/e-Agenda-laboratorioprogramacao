@@ -7,13 +7,13 @@ namespace eAgenda.Dominio.TarefaModule
     /// </summary>
     public enum PrioridadeEnum : int
     {
-        [Description("Prioridade Baixa")]
+        [Description("Baixa")]
         Baixa = 0,
 
-        [Description("Prioridade Normal")]
+        [Description("Normal")]
         Normal = 1,
 
-        [Description("Prioridade Alta")]
+        [Description("Alta")]
         Alta = 2
     }
 }

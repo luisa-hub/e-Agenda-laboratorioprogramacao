@@ -358,6 +358,7 @@ namespace eAgenda.WindowsForms
             this.dataGridTarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTarefas.Size = new System.Drawing.Size(478, 174);
             this.dataGridTarefas.TabIndex = 0;
+            this.dataGridTarefas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTarefas_CellDoubleClick);
             // 
             // tabPage2
             // 
@@ -423,6 +424,7 @@ namespace eAgenda.WindowsForms
             this.dataGridTarefaConcluidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTarefaConcluidas.Size = new System.Drawing.Size(478, 174);
             this.dataGridTarefaConcluidas.TabIndex = 0;
+            this.dataGridTarefaConcluidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTarefasConcluidas_CellDoubleClick);
             // 
             // panel1
             // 
