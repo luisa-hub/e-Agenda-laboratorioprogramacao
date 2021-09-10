@@ -16,6 +16,9 @@ namespace eAgenda.ExportPDF
     public class ExportarPDFContato
     {
 
+        /// <summary>
+        /// Cria um PDF com todos os contatos
+        /// </summary>
         public static void ExportarContatosEmPDF()
         {
             ControladorContato controlador = new ControladorContato();
@@ -40,6 +43,11 @@ namespace eAgenda.ExportPDF
 
         }
 
+        /// <summary>
+        /// Método privado que adiciona o contato ao documento
+        /// </summary>
+        /// <param name="document">Documento do contato</param>
+        /// <param name="contato">Contato a ser adicionado</param>
         private static void AdicionarContatoNoDocumento(Document document, Contato contato)
         {
             document.Add(new Paragraph("\n\n"));

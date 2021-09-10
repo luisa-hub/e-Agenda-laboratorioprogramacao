@@ -6,11 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
 {
@@ -291,6 +288,9 @@ namespace eAgenda.WindowsForms
             limparCampos();
         }
 
+        /// <summary>
+        /// Limpar campos de Texto
+        /// </summary>
         private void limparCampos()
         {
             tb_assunto.Text= "";
@@ -300,6 +300,40 @@ namespace eAgenda.WindowsForms
             tb_local.Text = "";
             dt_data.Value = DateTime.Now;
 
+        }
+
+        /// <summary>
+        /// Chama o método para Exportar em PDF Todos os Compromissos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_exportarCompromissos_Click(object sender, EventArgs e)
+        {
+            ExportarPDFCompromisso.ExportarCompromissosPDF();
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Chama o método para exportar em PDF Compromissos do Passado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_exportarCompromissoPassado_Click(object sender, EventArgs e)
+        {
+            ExportarPDFCompromisso.ExportarCompromissosPassadosPDF(dataPassado.Value);
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        /// <summary>
+        /// Chama o método para exportar em PDF os compromissos do futuro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_exportarPDFCompromissoFuturo_Click(object sender, EventArgs e)
+        {
+            ExportarPDFCompromisso.ExportarCompromissosFuturosPDF(dataFuturoUm.Value, dataFuturoDois.Value);
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
