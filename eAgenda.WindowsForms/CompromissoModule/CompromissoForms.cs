@@ -11,12 +11,20 @@ using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
 {
+    /// <summary>
+    /// Formulário do Compromisso
+    /// </summary>
     public partial class CompromissoForms : Form
     {
         ControladorCompromisso controlador;
         ControladorContato controladorContato;
         
         
+        /// <summary>
+        /// Construtor do CompromissoForm
+        /// </summary>
+        /// <param name="controlador">Controlador do compromisso</param>
+        /// <param name="controladorContato">Controlador Contato</param>
         public CompromissoForms(ControladorCompromisso controlador, ControladorContato controladorContato)
         {
             InitializeComponent();
@@ -29,6 +37,9 @@ namespace eAgenda.WindowsForms
             PreencherComboBox();
         }
 
+        /// <summary>
+        /// Preenche combobox com os contatos
+        /// </summary>
         private void PreencherComboBox()
         {
             List<Contato> contatos = controladorContato.SelecionarTodos();
@@ -39,6 +50,10 @@ namespace eAgenda.WindowsForms
             }
 
         }
+
+        /// <summary>
+        /// Preenche DataGridView com todos os compromissos
+        /// </summary>
         private void PreencherTabelaCompromisso() {
 
             dataGridCompromissos.Refresh();
@@ -70,6 +85,9 @@ namespace eAgenda.WindowsForms
 
         }
 
+        /// <summary>
+        /// Preenche DataGridView dos compromissos passados
+        /// </summary>
         private void PreencherTabelaCompromissoPassado() {
 
             dataGridPassado.Refresh();
@@ -103,6 +121,9 @@ namespace eAgenda.WindowsForms
 
         }
 
+        /// <summary>
+        /// Preenche DataGridView dos Compromissos do Futuro
+        /// </summary>
         private void PreencherTabelaCompromissoFuturo() {
 
             dataGridFuturo.Refresh();
@@ -140,7 +161,11 @@ namespace eAgenda.WindowsForms
      
 
       
-
+        /// <summary>
+        /// Gravar compromisso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btGravar_Click(object sender, EventArgs e)
         {
             Compromisso compromisso = CriarCompromisso();
@@ -161,6 +186,11 @@ namespace eAgenda.WindowsForms
 
         }
 
+
+        /// <summary>
+        /// Cria um compromisso com base no que foi selecionado nos campos
+        /// </summary>
+        /// <returns>Retorna Compromisso</returns>
         private Compromisso CriarCompromisso()
         {
             string assunto, local, link;
@@ -191,6 +221,11 @@ namespace eAgenda.WindowsForms
             return compromisso;
         }
 
+        /// <summary>
+        /// Excluir compromisso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_excluir_Click(object sender, EventArgs e)
         {
             if (dataGridCompromissos.RowCount == 0)
@@ -226,22 +261,42 @@ namespace eAgenda.WindowsForms
             PreencherTabelaCompromisso();
         }
 
+        /// <summary>
+        /// Quando alterado a data, preenche tabela de compromissos do passado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataPassado_ValueChanged(object sender, EventArgs e)
         {
             PreencherTabelaCompromissoPassado();
         }
 
+        /// <summary>
+        /// Quando alterada data início, preenche tabela dos compromissos do futuro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataFuturoUm_ValueChanged(object sender, EventArgs e)
         {
             PreencherTabelaCompromissoFuturo();
         }
 
+        /// <summary>
+        /// Quando alterada data final, preenche tabela dos compromissos do futuro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataFuturoDois_ValueChanged(object sender, EventArgs e)
         {
             PreencherTabelaCompromissoFuturo();
         }
 
-        private void dataGridCompromissos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        /// <summary>
+        /// Clique duplo na linha, pega os parâmetros e adiciona nos campos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridCompromissos_DoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             tb_assunto.Text = dataGridCompromissos.CurrentRow.Cells["Assunto"].Value.ToString();
             tb_hora.Text = dataGridCompromissos.CurrentRow.Cells["Hora Término"].Value.ToString();
@@ -251,6 +306,12 @@ namespace eAgenda.WindowsForms
             tb_link.Text = dataGridCompromissos.CurrentRow.Cells["Link"].Value.ToString();
         }
 
+
+        /// <summary>
+        /// Pega os parâmetros dos campos para editar compromisso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bt_editar_Click(object sender, EventArgs e)
         {
            

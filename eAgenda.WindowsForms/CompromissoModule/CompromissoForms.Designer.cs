@@ -181,7 +181,7 @@ namespace eAgenda.WindowsForms
             this.dataGridCompromissos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCompromissos.Size = new System.Drawing.Size(436, 150);
             this.dataGridCompromissos.TabIndex = 2;
-            this.dataGridCompromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridCompromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Passados
             // 
@@ -237,7 +237,7 @@ namespace eAgenda.WindowsForms
             this.dataGridPassado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPassado.Size = new System.Drawing.Size(436, 150);
             this.dataGridPassado.TabIndex = 2;
-            this.dataGridPassado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridPassado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Futuro
             // 
@@ -282,7 +282,7 @@ namespace eAgenda.WindowsForms
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label9.Location = new System.Drawing.Point(16, 187);
+            this.label9.Location = new System.Drawing.Point(22, 187);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 19;
@@ -290,7 +290,7 @@ namespace eAgenda.WindowsForms
             // 
             // dataFuturoDois
             // 
-            this.dataFuturoDois.Location = new System.Drawing.Point(55, 207);
+            this.dataFuturoDois.Location = new System.Drawing.Point(63, 207);
             this.dataFuturoDois.Name = "dataFuturoDois";
             this.dataFuturoDois.Size = new System.Drawing.Size(133, 20);
             this.dataFuturoDois.TabIndex = 20;
@@ -298,7 +298,7 @@ namespace eAgenda.WindowsForms
             // 
             // dataFuturoUm
             // 
-            this.dataFuturoUm.Location = new System.Drawing.Point(55, 181);
+            this.dataFuturoUm.Location = new System.Drawing.Point(63, 181);
             this.dataFuturoUm.Name = "dataFuturoUm";
             this.dataFuturoUm.Size = new System.Drawing.Size(133, 20);
             this.dataFuturoUm.TabIndex = 19;
@@ -312,7 +312,7 @@ namespace eAgenda.WindowsForms
             this.dataGridFuturo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridFuturo.Size = new System.Drawing.Size(436, 150);
             this.dataGridFuturo.TabIndex = 1;
-            this.dataGridFuturo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_CellContentClick);
+            this.dataGridFuturo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // panel2
             // 

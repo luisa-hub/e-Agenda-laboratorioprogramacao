@@ -36,9 +36,11 @@ namespace eAgenda.WindowsForms
             this.panel1 = new System.Windows.Forms.Panel();
             this.tb_visualizacao = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_exportarPDFContato = new System.Windows.Forms.Button();
             this.dataGridContatos = new System.Windows.Forms.DataGridView();
             this.bt_excluirContato = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.bt_editar = new System.Windows.Forms.Button();
             this.bt_gravar = new System.Windows.Forms.Button();
             this.tb_empresa = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@ namespace eAgenda.WindowsForms
             this.dataColumn11 = new System.Data.DataColumn();
             this.dataColumn12 = new System.Data.DataColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_exportarPDFContato = new System.Windows.Forms.Button();
-            this.tb_telefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.tb_visualizacao.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -130,6 +130,20 @@ namespace eAgenda.WindowsForms
             this.tabPage1.Text = "Contatos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btn_exportarPDFContato
+            // 
+            this.btn_exportarPDFContato.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_exportarPDFContato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exportarPDFContato.Font = new System.Drawing.Font("Veneer", 10F);
+            this.btn_exportarPDFContato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_exportarPDFContato.Location = new System.Drawing.Point(198, 191);
+            this.btn_exportarPDFContato.Name = "btn_exportarPDFContato";
+            this.btn_exportarPDFContato.Size = new System.Drawing.Size(92, 29);
+            this.btn_exportarPDFContato.TabIndex = 6;
+            this.btn_exportarPDFContato.Text = "Exportar PDF";
+            this.btn_exportarPDFContato.UseVisualStyleBackColor = false;
+            this.btn_exportarPDFContato.Click += new System.EventHandler(this.btn_exportarPDFContato_Click);
+            // 
             // dataGridContatos
             // 
             this.dataGridContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,6 +151,7 @@ namespace eAgenda.WindowsForms
             this.dataGridContatos.Name = "dataGridContatos";
             this.dataGridContatos.Size = new System.Drawing.Size(379, 166);
             this.dataGridContatos.TabIndex = 0;
+            this.dataGridContatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContatos_CellDoubleClick);
             // 
             // bt_excluirContato
             // 
@@ -170,6 +185,14 @@ namespace eAgenda.WindowsForms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(396, 157);
             this.panel3.TabIndex = 6;
+            // 
+            // tb_telefone
+            // 
+            this.tb_telefone.Location = new System.Drawing.Point(78, 52);
+            this.tb_telefone.Mask = "(00) 00000-0000";
+            this.tb_telefone.Name = "tb_telefone";
+            this.tb_telefone.Size = new System.Drawing.Size(107, 21);
+            this.tb_telefone.TabIndex = 13;
             // 
             // bt_editar
             // 
@@ -345,28 +368,6 @@ namespace eAgenda.WindowsForms
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // btn_exportarPDFContato
-            // 
-            this.btn_exportarPDFContato.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn_exportarPDFContato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFContato.Font = new System.Drawing.Font("Veneer", 10F);
-            this.btn_exportarPDFContato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFContato.Location = new System.Drawing.Point(198, 191);
-            this.btn_exportarPDFContato.Name = "btn_exportarPDFContato";
-            this.btn_exportarPDFContato.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFContato.TabIndex = 6;
-            this.btn_exportarPDFContato.Text = "Exportar PDF";
-            this.btn_exportarPDFContato.UseVisualStyleBackColor = false;
-            this.btn_exportarPDFContato.Click += new System.EventHandler(this.btn_exportarPDFContato_Click);
-            // 
-            // tb_telefone
-            // 
-            this.tb_telefone.Location = new System.Drawing.Point(78, 52);
-            this.tb_telefone.Mask = "(00) 00000-0000";
-            this.tb_telefone.Name = "tb_telefone";
-            this.tb_telefone.Size = new System.Drawing.Size(107, 21);
-            this.tb_telefone.TabIndex = 13;
             // 
             // ContatoForms
             // 
