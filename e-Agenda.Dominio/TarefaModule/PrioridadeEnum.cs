@@ -2,6 +2,9 @@
 
 namespace eAgenda.Dominio.TarefaModule
 {
+    /// <summary>
+    /// Enum com o tipo de prioridade da Tarefa
+    /// </summary>
     public enum PrioridadeEnum : int
     {
         [Description("Prioridade Baixa")]

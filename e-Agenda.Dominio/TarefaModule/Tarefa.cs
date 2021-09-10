@@ -4,8 +4,17 @@ using System.Collections.Generic;
 
 namespace eAgenda.Dominio.TarefaModule
 {
+    /// <summary>
+    /// Classe de criação do registro tarefa, que herda de EntidadeBase e implementa IEquetable
+    /// </summary>
     public class Tarefa : EntidadeBase, IEquatable<Tarefa>
     {        
+        /// <summary>
+        /// Construtor da Tarefa
+        /// </summary>
+        /// <param name="titulo">Título da Tarefa</param>
+        /// <param name="dataCriacao">Data de Criação da Tarefa</param>
+        /// <param name="prioridade">Prioridade da Tarefa</param>
         public Tarefa(string titulo, DateTime dataCriacao, PrioridadeEnum prioridade)
         {            
             Titulo = titulo;
@@ -24,6 +33,11 @@ namespace eAgenda.Dominio.TarefaModule
 
         public DateTime? DataConclusao { get; set; }        
 
+        /// <summary>
+        /// Atualizar percentual da tarefa
+        /// </summary>
+        /// <param name="percentual">novo percentual</param>
+        /// <param name="dataConclusao">Recebe data de conclusão e atualiza caso seja 100%</param>
         public void AtualizarPercentual(int percentual, DateTime dataConclusao)
         {
             Percentual = percentual;
@@ -62,6 +76,10 @@ namespace eAgenda.Dominio.TarefaModule
             return hashCode;
         }
 
+        /// <summary>
+        /// Valida os campos da tarefa
+        /// </summary>
+        /// <returns>Retorna uma string de validação</returns>
         public override string Validar()
         {
             string resultadoValidacao = "";
