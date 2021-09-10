@@ -355,6 +355,7 @@ namespace eAgenda.WindowsForms
             this.dataGridTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTarefas.Location = new System.Drawing.Point(10, 6);
             this.dataGridTarefas.Name = "dataGridTarefas";
+            this.dataGridTarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTarefas.Size = new System.Drawing.Size(478, 174);
             this.dataGridTarefas.TabIndex = 0;
             // 
@@ -419,6 +420,7 @@ namespace eAgenda.WindowsForms
             this.dataGridTarefaConcluidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTarefaConcluidas.Location = new System.Drawing.Point(6, 6);
             this.dataGridTarefaConcluidas.Name = "dataGridTarefaConcluidas";
+            this.dataGridTarefaConcluidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTarefaConcluidas.Size = new System.Drawing.Size(478, 174);
             this.dataGridTarefaConcluidas.TabIndex = 0;
             // 
