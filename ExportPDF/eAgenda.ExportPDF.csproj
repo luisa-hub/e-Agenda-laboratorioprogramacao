@@ -81,7 +81,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExportarPDF.cs" />
+    <Compile Include="ExportarPDFContato.cs" />
+    <Compile Include="ExportarPDFTarefa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

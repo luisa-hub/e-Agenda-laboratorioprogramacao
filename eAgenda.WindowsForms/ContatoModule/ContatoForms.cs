@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eAgenda.ExportPDF;
 
 namespace eAgenda.WindowsForms
 {
@@ -53,16 +54,6 @@ namespace eAgenda.WindowsForms
 
         
         private void ContatoForms_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -184,6 +175,17 @@ namespace eAgenda.WindowsForms
             limparCampos();
             PreencherTabelaContatos();
             
+        }
+
+        /// <summary>
+        /// Chama o método para exportar PDF do contato
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_exportarPDFContato_Click(object sender, EventArgs e)
+        {
+            ExportPDF.ExportarPDFContato.ExportarContatosEmPDF();
+            MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -4,17 +4,17 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using System;
 using System.Collections.Generic;
 using eAgenda.Controladores.TarefaModule;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace eAgenda.ExportPDF
 {
-    public class ExportarPDF
+    /// <summary>
+    /// Classe responsável pela exportação dos PDFs das tarefas concluídas e pendentes
+    /// </summary>
+    public class ExportarPDFTarefa
     {
         /// <summary>
         /// Realiza a exportação para PDF das tarefas concluídas
@@ -87,5 +87,8 @@ namespace eAgenda.ExportPDF
             }
 
         }
+
+
+
     }
 }

@@ -323,14 +323,14 @@ namespace eAgenda.WindowsForms
 
         private void btn_exportarPDFConcluida_Click(object sender, EventArgs e)
         {
-            ExportarPDF.ExportarTarefaEmPDF();
+            ExportarPDFTarefa.ExportarTarefaEmPDF();
 
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_exportarPDFPendente_Click(object sender, EventArgs e)
         {
-            ExportarPDF.ExportarTarefaPendenteEmPDF();
+            ExportarPDFTarefa.ExportarTarefaPendenteEmPDF();
 
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
