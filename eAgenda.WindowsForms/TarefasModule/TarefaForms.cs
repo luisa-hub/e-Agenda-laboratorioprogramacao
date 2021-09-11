@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using eAgenda.ExportPDF;
+using System.Threading;
 
 namespace eAgenda.WindowsForms
 {
@@ -20,10 +21,12 @@ namespace eAgenda.WindowsForms
     public partial class TarefaForms : Form
     {
         protected ControladorTarefa controlador;
+        bool english;
         public TarefaForms(ControladorTarefa controladorTarefa)
         {
             InitializeComponent();
             this.controlador = controladorTarefa;
+            english = Thread.CurrentThread.CurrentUICulture.ToString() == "en-US";
             PreencherTabelaPendente();
             PreencherTabelaConcluida();
         }
@@ -35,26 +38,41 @@ namespace eAgenda.WindowsForms
         private void PreencherTabelaPendente()
         {
            dataGridTarefas.Refresh();
-           tb_tarefapendente.Clear();
-
-            dataGridTarefas.DataSource = tb_tarefapendente;
+            tb_tarefapendenteen.Clear();
+            tb_tarefapendente.Clear();
+            if (english)
+                dataGridTarefas.DataSource = tb_tarefapendenteen;
+            else
+                dataGridTarefas.DataSource = tb_tarefapendente;
 
             //adicionado as linhas no datagrid
 
             List<Tarefa> tarefas = controlador.SelecionarTodasTarefasPendentes();
-
+            
             foreach (var tarefa in tarefas)
             {
-                DataRow linha = tb_tarefapendente.NewRow();
+                DataRow linha;
+                if (english) {
+                    linha = tb_tarefapendenteen.NewRow();
+                    linha["Id"] = tarefa.Id;
+                    linha["Title"] = tarefa.Titulo;
+                    linha["Completion Date"] = tarefa.DataConclusao;
+                    linha["Start Date"] = tarefa.DataCriacao;
+                    linha["Priority"] = tarefa.Prioridade;
+                    linha["Percentage"] = tarefa.Percentual;
+                    tb_tarefapendenteen.Rows.Add(linha);
 
-                linha["Id"] = tarefa.Id;
-                linha["Nome"] = tarefa.Titulo;
-                linha["Data Conclusão"] = tarefa.DataConclusao;
-                linha["Data Início"] = tarefa.DataCriacao;
-                linha["Prioridade"] = tarefa.Prioridade;
-                linha["Percentual"] = tarefa.Percentual;
-
-                tb_tarefapendente.Rows.Add(linha);
+                }
+                else {
+                    linha = tb_tarefapendente.NewRow();
+                    linha["Id"] = tarefa.Id;
+                    linha["Nome"] = tarefa.Titulo;
+                    linha["Data Conclusão"] = tarefa.DataConclusao;
+                    linha["Data Início"] = tarefa.DataCriacao;
+                    linha["Prioridade"] = tarefa.Prioridade;
+                    linha["Percentual"] = tarefa.Percentual;
+                    tb_tarefapendente.Rows.Add(linha);
+                }
             }
             
 
@@ -68,7 +86,11 @@ namespace eAgenda.WindowsForms
         {
             dataGridTarefaConcluidas.Refresh();
             tb_tarefasconcluidas.Clear();
-            dataGridTarefaConcluidas.DataSource = tb_tarefasconcluidas;
+            tb_tarefasconcluidasen.Clear();
+            if (english)
+                dataGridTarefaConcluidas.DataSource = tb_tarefasconcluidasen;
+            else
+                dataGridTarefaConcluidas.DataSource = tb_tarefasconcluidas;
 
             //adicionado as linhas no datagrid
 
@@ -76,16 +98,30 @@ namespace eAgenda.WindowsForms
 
             foreach (var tarefa in tarefas)
             {
-                DataRow linha = tb_tarefasconcluidas.NewRow();
+                DataRow linha;
+                if (english)
+                {
+                    linha = tb_tarefasconcluidasen.NewRow();
+                    linha["Id"] = tarefa.Id;
+                    linha["Title"] = tarefa.Titulo;
+                    linha["Completion Date"] = tarefa.DataConclusao;
+                    linha["Start Date"] = tarefa.DataCriacao;
+                    linha["Priority"] = tarefa.Prioridade;
+                    linha["Percentage"] = tarefa.Percentual;
+                    tb_tarefasconcluidasen.Rows.Add(linha);
+                }
+                else
+                {
+                    linha = tb_tarefasconcluidasen.NewRow();
+                    linha["Id"] = tarefa.Id;
+                    linha["Nome"] = tarefa.Titulo;
+                    linha["Data Conclusão"] = tarefa.DataConclusao;
+                    linha["Data Início"] = tarefa.DataCriacao;
+                    linha["Prioridade"] = tarefa.Prioridade;
+                    linha["Percentual"] = tarefa.Percentual;
+                    tb_tarefasconcluidas.Rows.Add(linha);
 
-                linha["Id"] = tarefa.Id;
-                linha["Nome"] = tarefa.Titulo;
-                linha["Data Conclusão"] = tarefa.DataConclusao;
-                linha["Data Início"] = tarefa.DataCriacao;
-                linha["Prioridade"] = tarefa.Prioridade;
-                linha["Percentual"] = tarefa.Percentual;
-
-                tb_tarefasconcluidas.Rows.Add(linha);
+                }
             }
 
 

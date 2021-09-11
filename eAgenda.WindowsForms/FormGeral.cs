@@ -7,8 +7,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,6 +53,26 @@ namespace eAgenda.WindowsForms
         private void bt_saida_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(button1.Text);
+            Console.WriteLine(Thread.CurrentThread.CurrentUICulture);
+            if (button1.Text == "English")
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                Console.WriteLine("Entrou no if do ingles");
+            }
+            if (button1.Text == "Português")
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("pt");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt");
+                Console.WriteLine("Entrou no if do português");
+            }
+            this.Controls.Clear();
+            InitializeComponent();
         }
     }
 }

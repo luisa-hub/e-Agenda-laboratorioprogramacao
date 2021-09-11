@@ -38,6 +38,13 @@ namespace eAgenda.WindowsForms
             this.dataColumn5 = new System.Data.DataColumn();
             this.dataColumn6 = new System.Data.DataColumn();
             this.dataColumn4 = new System.Data.DataColumn();
+            this.tb_tarefapendenteen = new System.Data.DataTable();
+            this.dataColumn19 = new System.Data.DataColumn();
+            this.dataColumn20 = new System.Data.DataColumn();
+            this.dataColumn21 = new System.Data.DataColumn();
+            this.dataColumn22 = new System.Data.DataColumn();
+            this.dataColumn23 = new System.Data.DataColumn();
+            this.dataColumn24 = new System.Data.DataColumn();
             this.dataSetConcluidas = new System.Data.DataSet();
             this.tb_tarefasconcluidas = new System.Data.DataTable();
             this.dataColumn7 = new System.Data.DataColumn();
@@ -46,6 +53,13 @@ namespace eAgenda.WindowsForms
             this.dataColumn10 = new System.Data.DataColumn();
             this.dataColumn11 = new System.Data.DataColumn();
             this.dataColumn12 = new System.Data.DataColumn();
+            this.tb_tarefasconcluidasen = new System.Data.DataTable();
+            this.dataColumn13 = new System.Data.DataColumn();
+            this.dataColumn14 = new System.Data.DataColumn();
+            this.dataColumn15 = new System.Data.DataColumn();
+            this.dataColumn16 = new System.Data.DataColumn();
+            this.dataColumn17 = new System.Data.DataColumn();
+            this.dataColumn18 = new System.Data.DataColumn();
             this.bt_atualizar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,8 +85,10 @@ namespace eAgenda.WindowsForms
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPendentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendenteen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetConcluidas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefasconcluidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_tarefasconcluidasen)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,7 +104,8 @@ namespace eAgenda.WindowsForms
             // 
             this.dataSetPendentes.DataSetName = "NewDataSet";
             this.dataSetPendentes.Tables.AddRange(new System.Data.DataTable[] {
-            this.tb_tarefapendente});
+            this.tb_tarefapendente,
+            this.tb_tarefapendenteen});
             // 
             // tb_tarefapendente
             // 
@@ -125,11 +142,48 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn4.ColumnName = "Prioridade";
             // 
+            // tb_tarefapendenteen
+            // 
+            this.tb_tarefapendenteen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn19,
+            this.dataColumn20,
+            this.dataColumn21,
+            this.dataColumn22,
+            this.dataColumn23,
+            this.dataColumn24});
+            this.tb_tarefapendenteen.Locale = new System.Globalization.CultureInfo("en");
+            this.tb_tarefapendenteen.TableName = "tb_tarefapendenteen";
+            // 
+            // dataColumn19
+            // 
+            this.dataColumn19.ColumnName = "Id";
+            // 
+            // dataColumn20
+            // 
+            this.dataColumn20.ColumnName = "Title";
+            // 
+            // dataColumn21
+            // 
+            this.dataColumn21.ColumnName = "Completion Date";
+            // 
+            // dataColumn22
+            // 
+            this.dataColumn22.ColumnName = "Start Date";
+            // 
+            // dataColumn23
+            // 
+            this.dataColumn23.ColumnName = "Priority";
+            // 
+            // dataColumn24
+            // 
+            this.dataColumn24.ColumnName = "Percentage";
+            // 
             // dataSetConcluidas
             // 
             this.dataSetConcluidas.DataSetName = "NewDataSet";
             this.dataSetConcluidas.Tables.AddRange(new System.Data.DataTable[] {
-            this.tb_tarefasconcluidas});
+            this.tb_tarefasconcluidas,
+            this.tb_tarefasconcluidasen});
             // 
             // tb_tarefasconcluidas
             // 
@@ -166,292 +220,249 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn12.ColumnName = "Prioridade";
             // 
+            // tb_tarefasconcluidasen
+            // 
+            this.tb_tarefasconcluidasen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn13,
+            this.dataColumn14,
+            this.dataColumn15,
+            this.dataColumn16,
+            this.dataColumn17,
+            this.dataColumn18});
+            this.tb_tarefasconcluidasen.Locale = new System.Globalization.CultureInfo("en");
+            this.tb_tarefasconcluidasen.TableName = "tb_tarefasconcluidasen";
+            // 
+            // dataColumn13
+            // 
+            this.dataColumn13.ColumnName = "Id";
+            // 
+            // dataColumn14
+            // 
+            this.dataColumn14.ColumnName = "Title";
+            // 
+            // dataColumn15
+            // 
+            this.dataColumn15.ColumnName = "Completion Date";
+            // 
+            // dataColumn16
+            // 
+            this.dataColumn16.ColumnName = "Start Date";
+            // 
+            // dataColumn17
+            // 
+            this.dataColumn17.ColumnName = "Priority";
+            // 
+            // dataColumn18
+            // 
+            this.dataColumn18.ColumnName = "Percentage";
+            // 
             // bt_atualizar
             // 
+            resources.ApplyResources(this.bt_atualizar, "bt_atualizar");
             this.bt_atualizar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.bt_atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_atualizar.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_atualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_atualizar.Location = new System.Drawing.Point(17, 76);
             this.bt_atualizar.Name = "bt_atualizar";
-            this.bt_atualizar.Size = new System.Drawing.Size(153, 29);
-            this.bt_atualizar.TabIndex = 5;
-            this.bt_atualizar.Text = "Atualizar Porcentagem";
             this.bt_atualizar.UseVisualStyleBackColor = false;
             this.bt_atualizar.Click += new System.EventHandler(this.bt_atualizar_Click);
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.cb_prioridadeTarefa);
             this.panel3.Controls.Add(this.tb_name);
-            this.panel3.Location = new System.Drawing.Point(12, 439);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(326, 114);
-            this.panel3.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label5.Location = new System.Drawing.Point(46, 54);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Prioridade";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 27);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Nome da Tarefa";
             // 
             // button2
             // 
+            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Veneer", 10F);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(118, 78);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 29);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Gravar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.bt_gravar_Click);
             // 
             // cb_prioridadeTarefa
             // 
+            resources.ApplyResources(this.cb_prioridadeTarefa, "cb_prioridadeTarefa");
             this.cb_prioridadeTarefa.FormattingEnabled = true;
             this.cb_prioridadeTarefa.Items.AddRange(new object[] {
-            "Baixa",
-            "Normal",
-            "Alta"});
-            this.cb_prioridadeTarefa.Location = new System.Drawing.Point(118, 46);
+            resources.GetString("cb_prioridadeTarefa.Items"),
+            resources.GetString("cb_prioridadeTarefa.Items1"),
+            resources.GetString("cb_prioridadeTarefa.Items2")});
             this.cb_prioridadeTarefa.Name = "cb_prioridadeTarefa";
-            this.cb_prioridadeTarefa.Size = new System.Drawing.Size(178, 21);
-            this.cb_prioridadeTarefa.TabIndex = 3;
             // 
             // tb_name
             // 
-            this.tb_name.Location = new System.Drawing.Point(118, 20);
+            resources.ApplyResources(this.tb_name, "tb_name");
             this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(178, 20);
-            this.tb_name.TabIndex = 0;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label4.Location = new System.Drawing.Point(60, 23);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Percentual";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.tb_porcentagem);
             this.panel4.Controls.Add(this.bt_atualizar);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(345, 439);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(182, 114);
-            this.panel4.TabIndex = 3;
             // 
             // tb_porcentagem
             // 
-            this.tb_porcentagem.Location = new System.Drawing.Point(66, 42);
-            this.tb_porcentagem.Mask = "000";
+            resources.ApplyResources(this.tb_porcentagem, "tb_porcentagem");
             this.tb_porcentagem.Name = "tb_porcentagem";
-            this.tb_porcentagem.Size = new System.Drawing.Size(55, 20);
-            this.tb_porcentagem.TabIndex = 9;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-22, -65);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 296);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // tb_tarefas
             // 
+            resources.ApplyResources(this.tb_tarefas, "tb_tarefas");
             this.tb_tarefas.Controls.Add(this.tabPage1);
             this.tb_tarefas.Controls.Add(this.tabPage2);
-            this.tb_tarefas.Location = new System.Drawing.Point(17, 14);
             this.tb_tarefas.Name = "tb_tarefas";
             this.tb_tarefas.SelectedIndex = 0;
-            this.tb_tarefas.Size = new System.Drawing.Size(502, 292);
-            this.tb_tarefas.TabIndex = 8;
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.btn_exportarPDFPendente);
             this.tabPage1.Controls.Add(this.bt_editarPendente);
             this.tabPage1.Controls.Add(this.bt_excluirPendente);
             this.tabPage1.Controls.Add(this.dataGridTarefas);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(494, 266);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pendentes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btn_exportarPDFPendente
             // 
+            resources.ApplyResources(this.btn_exportarPDFPendente, "btn_exportarPDFPendente");
             this.btn_exportarPDFPendente.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarPDFPendente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFPendente.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarPDFPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFPendente.Location = new System.Drawing.Point(196, 229);
             this.btn_exportarPDFPendente.Name = "btn_exportarPDFPendente";
-            this.btn_exportarPDFPendente.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFPendente.TabIndex = 5;
-            this.btn_exportarPDFPendente.Text = "Exportar PDF";
             this.btn_exportarPDFPendente.UseVisualStyleBackColor = false;
             this.btn_exportarPDFPendente.Click += new System.EventHandler(this.btn_exportarPDFPendente_Click);
             // 
             // bt_editarPendente
             // 
+            resources.ApplyResources(this.bt_editarPendente, "bt_editarPendente");
             this.bt_editarPendente.BackColor = System.Drawing.Color.MediumAquamarine;
             this.bt_editarPendente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_editarPendente.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_editarPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_editarPendente.Location = new System.Drawing.Point(269, 190);
             this.bt_editarPendente.Name = "bt_editarPendente";
-            this.bt_editarPendente.Size = new System.Drawing.Size(84, 29);
-            this.bt_editarPendente.TabIndex = 4;
-            this.bt_editarPendente.Text = "Editar";
             this.bt_editarPendente.UseVisualStyleBackColor = false;
             this.bt_editarPendente.Click += new System.EventHandler(this.bt_editarPendente_Click);
             // 
             // bt_excluirPendente
             // 
+            resources.ApplyResources(this.bt_excluirPendente, "bt_excluirPendente");
             this.bt_excluirPendente.BackColor = System.Drawing.Color.Black;
             this.bt_excluirPendente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_excluirPendente.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_excluirPendente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_excluirPendente.Location = new System.Drawing.Point(130, 190);
             this.bt_excluirPendente.Name = "bt_excluirPendente";
-            this.bt_excluirPendente.Size = new System.Drawing.Size(84, 29);
-            this.bt_excluirPendente.TabIndex = 3;
-            this.bt_excluirPendente.Text = "Excluir";
             this.bt_excluirPendente.UseVisualStyleBackColor = false;
             this.bt_excluirPendente.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
             // dataGridTarefas
             // 
+            resources.ApplyResources(this.dataGridTarefas, "dataGridTarefas");
             this.dataGridTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTarefas.Location = new System.Drawing.Point(10, 6);
             this.dataGridTarefas.Name = "dataGridTarefas";
             this.dataGridTarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTarefas.Size = new System.Drawing.Size(478, 174);
-            this.dataGridTarefas.TabIndex = 0;
             this.dataGridTarefas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTarefas_CellDoubleClick);
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.btn_exportarPDFConcluida);
             this.tabPage2.Controls.Add(this.bt_editarConcluida);
             this.tabPage2.Controls.Add(this.bt_excluirConcluida);
             this.tabPage2.Controls.Add(this.dataGridTarefaConcluidas);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(494, 266);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Concluídas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // btn_exportarPDFConcluida
             // 
+            resources.ApplyResources(this.btn_exportarPDFConcluida, "btn_exportarPDFConcluida");
             this.btn_exportarPDFConcluida.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarPDFConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFConcluida.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarPDFConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFConcluida.Location = new System.Drawing.Point(199, 226);
             this.btn_exportarPDFConcluida.Name = "btn_exportarPDFConcluida";
-            this.btn_exportarPDFConcluida.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFConcluida.TabIndex = 6;
-            this.btn_exportarPDFConcluida.Text = "Exportar PDF";
             this.btn_exportarPDFConcluida.UseVisualStyleBackColor = false;
             this.btn_exportarPDFConcluida.Click += new System.EventHandler(this.btn_exportarPDFConcluida_Click);
             // 
             // bt_editarConcluida
             // 
+            resources.ApplyResources(this.bt_editarConcluida, "bt_editarConcluida");
             this.bt_editarConcluida.BackColor = System.Drawing.Color.MediumAquamarine;
             this.bt_editarConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_editarConcluida.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_editarConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_editarConcluida.Location = new System.Drawing.Point(272, 191);
             this.bt_editarConcluida.Name = "bt_editarConcluida";
-            this.bt_editarConcluida.Size = new System.Drawing.Size(84, 29);
-            this.bt_editarConcluida.TabIndex = 2;
-            this.bt_editarConcluida.Text = "Editar";
             this.bt_editarConcluida.UseVisualStyleBackColor = false;
             this.bt_editarConcluida.Click += new System.EventHandler(this.bt_editarConcluida_Click);
             // 
             // bt_excluirConcluida
             // 
+            resources.ApplyResources(this.bt_excluirConcluida, "bt_excluirConcluida");
             this.bt_excluirConcluida.BackColor = System.Drawing.SystemColors.ControlText;
             this.bt_excluirConcluida.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_excluirConcluida.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_excluirConcluida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_excluirConcluida.Location = new System.Drawing.Point(129, 191);
             this.bt_excluirConcluida.Name = "bt_excluirConcluida";
-            this.bt_excluirConcluida.Size = new System.Drawing.Size(84, 29);
-            this.bt_excluirConcluida.TabIndex = 1;
-            this.bt_excluirConcluida.Text = "Excluir";
             this.bt_excluirConcluida.UseVisualStyleBackColor = false;
             this.bt_excluirConcluida.Click += new System.EventHandler(this.bt_excluirConcluida_Click);
             // 
             // dataGridTarefaConcluidas
             // 
+            resources.ApplyResources(this.dataGridTarefaConcluidas, "dataGridTarefaConcluidas");
             this.dataGridTarefaConcluidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTarefaConcluidas.Location = new System.Drawing.Point(6, 6);
             this.dataGridTarefaConcluidas.Name = "dataGridTarefaConcluidas";
             this.dataGridTarefaConcluidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTarefaConcluidas.Size = new System.Drawing.Size(478, 174);
-            this.dataGridTarefaConcluidas.TabIndex = 0;
             this.dataGridTarefaConcluidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTarefasConcluidas_CellDoubleClick);
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.tb_tarefas);
-            this.panel1.Location = new System.Drawing.Point(8, 124);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 309);
-            this.panel1.TabIndex = 1;
             // 
             // TarefaForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(561, 569);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "TarefaForms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Minhas Tarefas";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPendentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendenteen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetConcluidas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefasconcluidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_tarefasconcluidasen)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -507,6 +518,20 @@ namespace eAgenda.WindowsForms
         private System.Windows.Forms.MaskedTextBox tb_porcentagem;
         private System.Windows.Forms.Button btn_exportarPDFPendente;
         private System.Windows.Forms.Button btn_exportarPDFConcluida;
+        private System.Data.DataTable tb_tarefapendenteen;
+        private System.Data.DataColumn dataColumn19;
+        private System.Data.DataColumn dataColumn20;
+        private System.Data.DataColumn dataColumn21;
+        private System.Data.DataColumn dataColumn22;
+        private System.Data.DataColumn dataColumn23;
+        private System.Data.DataColumn dataColumn24;
+        private System.Data.DataTable tb_tarefasconcluidasen;
+        private System.Data.DataColumn dataColumn13;
+        private System.Data.DataColumn dataColumn14;
+        private System.Data.DataColumn dataColumn15;
+        private System.Data.DataColumn dataColumn16;
+        private System.Data.DataColumn dataColumn17;
+        private System.Data.DataColumn dataColumn18;
     }
 }
 

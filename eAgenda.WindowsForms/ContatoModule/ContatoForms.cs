@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using eAgenda.ExportPDF;
+using System.Threading;
 
 namespace eAgenda.WindowsForms
 {/// <summary>
@@ -19,7 +20,7 @@ namespace eAgenda.WindowsForms
     public partial class ContatoForms : Form
     {
         ControladorContato controlador;
-
+        bool english;
         /// <summary>
         /// Construtor do Contato Forms
         /// </summary>
@@ -28,8 +29,8 @@ namespace eAgenda.WindowsForms
         {
             InitializeComponent();
             this.controlador = controlador;
+            english = Thread.CurrentThread.CurrentUICulture.ToString() == "en-US";
             PreencherTabelaContatos();
-            
         }
 
         /// <summary>
@@ -39,23 +40,43 @@ namespace eAgenda.WindowsForms
         {
             dataGridContatos.Refresh();
             tableContatos.Clear();
-            dataGridContatos.DataSource = tableContatos;
-                        
-
+            tableContatosen.Clear();
+            if(english)
+                dataGridContatos.DataSource = tableContatosen;
+            else
+                dataGridContatos.DataSource = tableContatos;
+            Console.WriteLine(english);
+            Console.WriteLine(dataGridContatos.DataSource);
             List<Contato> contatos = controlador.SelecionarTodos();
 
             foreach (var contato in contatos)
             {
-                DataRow linha = tableContatos.NewRow();
+                if (english)
+                {
+                    DataRow linha = tableContatosen.NewRow();
 
-                linha["Id"] = contato.Id;
-                linha["Nome"] = contato.Nome;
-                linha["Empresa"] = contato.Empresa;
-                linha["Cargo"] = contato.Cargo;
-                linha["Email"] = contato.Email;
-                linha["Telefone"] = contato.Telefone;
+                    linha["Id"] = contato.Id;
+                    linha["Name"] = contato.Nome;
+                    linha["Company"] = contato.Empresa;
+                    linha["Position"] = contato.Cargo;
+                    linha["Email"] = contato.Email;
+                    linha["Telephone"] = contato.Telefone;
 
-                tableContatos.Rows.Add(linha);
+                    tableContatosen.Rows.Add(linha);
+                }
+                else
+                {
+                    DataRow linha = tableContatos.NewRow();
+
+                    linha["Id"] = contato.Id;
+                    linha["Nome"] = contato.Nome;
+                    linha["Empresa"] = contato.Empresa;
+                    linha["Cargo"] = contato.Cargo;
+                    linha["Email"] = contato.Email;
+                    linha["Telefone"] = contato.Telefone;
+
+                    tableContatos.Rows.Add(linha);
+                }
             }
 
 

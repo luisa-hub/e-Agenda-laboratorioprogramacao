@@ -91,14 +91,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CompromissoModule\CompromissoForms.en.resx">
+      <DependentUpon>CompromissoForms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CompromissoModule\CompromissoForms.resx">
       <DependentUpon>CompromissoForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContatoModule\ContatoForms.en.resx">
+      <DependentUpon>ContatoForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContatoModule\ContatoForms.resx">
       <DependentUpon>ContatoForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGeral.en.resx">
+      <DependentUpon>FormGeral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGeral.resx">
       <DependentUpon>FormGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarefasModule\TarefaForms.en.resx">
+      <DependentUpon>TarefaForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarefasModule\TarefaForms.resx">
       <DependentUpon>TarefaForms.cs</DependentUpon>

@@ -66,6 +66,20 @@ namespace eAgenda.WindowsForms
             this.dataColumn11 = new System.Data.DataColumn();
             this.dataColumn12 = new System.Data.DataColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tableContatosen = new System.Data.DataTable();
+            this.dataColumn13 = new System.Data.DataColumn();
+            this.dataColumn14 = new System.Data.DataColumn();
+            this.dataColumn15 = new System.Data.DataColumn();
+            this.dataColumn16 = new System.Data.DataColumn();
+            this.dataColumn17 = new System.Data.DataColumn();
+            this.dataColumn18 = new System.Data.DataColumn();
+            this.tableContatosAgrupadosen = new System.Data.DataTable();
+            this.dataColumn19 = new System.Data.DataColumn();
+            this.dataColumn20 = new System.Data.DataColumn();
+            this.dataColumn21 = new System.Data.DataColumn();
+            this.dataColumn22 = new System.Data.DataColumn();
+            this.dataColumn23 = new System.Data.DataColumn();
+            this.dataColumn24 = new System.Data.DataColumn();
             this.panel1.SuspendLayout();
             this.tb_visualizacao.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -76,99 +90,78 @@ namespace eAgenda.WindowsForms
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatosAgrupados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupadosen)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_cargo
             // 
-            this.tb_cargo.Location = new System.Drawing.Point(245, 52);
+            resources.ApplyResources(this.tb_cargo, "tb_cargo");
             this.tb_cargo.Name = "tb_cargo";
-            this.tb_cargo.Size = new System.Drawing.Size(120, 21);
-            this.tb_cargo.TabIndex = 0;
             // 
             // tb_nome
             // 
-            this.tb_nome.Location = new System.Drawing.Point(72, 24);
+            resources.ApplyResources(this.tb_nome, "tb_nome");
             this.tb_nome.Name = "tb_nome";
-            this.tb_nome.Size = new System.Drawing.Size(293, 21);
-            this.tb_nome.TabIndex = 2;
             // 
             // tb_email
             // 
-            this.tb_email.Location = new System.Drawing.Point(72, 83);
+            resources.ApplyResources(this.tb_email, "tb_email");
             this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(100, 21);
-            this.tb_email.TabIndex = 3;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.tb_visualizacao);
-            this.panel1.Location = new System.Drawing.Point(22, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 272);
-            this.panel1.TabIndex = 5;
             // 
             // tb_visualizacao
             // 
+            resources.ApplyResources(this.tb_visualizacao, "tb_visualizacao");
             this.tb_visualizacao.Controls.Add(this.tabPage1);
-            this.tb_visualizacao.Location = new System.Drawing.Point(3, 6);
             this.tb_visualizacao.Multiline = true;
             this.tb_visualizacao.Name = "tb_visualizacao";
             this.tb_visualizacao.SelectedIndex = 0;
-            this.tb_visualizacao.Size = new System.Drawing.Size(393, 252);
-            this.tb_visualizacao.TabIndex = 0;
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.btn_exportarPDFContato);
             this.tabPage1.Controls.Add(this.dataGridContatos);
             this.tabPage1.Controls.Add(this.bt_excluirContato);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(385, 226);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Contatos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btn_exportarPDFContato
             // 
+            resources.ApplyResources(this.btn_exportarPDFContato, "btn_exportarPDFContato");
             this.btn_exportarPDFContato.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarPDFContato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFContato.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarPDFContato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFContato.Location = new System.Drawing.Point(198, 191);
             this.btn_exportarPDFContato.Name = "btn_exportarPDFContato";
-            this.btn_exportarPDFContato.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFContato.TabIndex = 6;
-            this.btn_exportarPDFContato.Text = "Exportar PDF";
             this.btn_exportarPDFContato.UseVisualStyleBackColor = false;
             this.btn_exportarPDFContato.Click += new System.EventHandler(this.btn_exportarPDFContato_Click);
             // 
             // dataGridContatos
             // 
+            resources.ApplyResources(this.dataGridContatos, "dataGridContatos");
             this.dataGridContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridContatos.Location = new System.Drawing.Point(0, 6);
             this.dataGridContatos.Name = "dataGridContatos";
             this.dataGridContatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridContatos.Size = new System.Drawing.Size(379, 166);
-            this.dataGridContatos.TabIndex = 0;
             this.dataGridContatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContatos_CellDoubleClick);
             // 
             // bt_excluirContato
             // 
+            resources.ApplyResources(this.bt_excluirContato, "bt_excluirContato");
             this.bt_excluirContato.BackColor = System.Drawing.SystemColors.ControlText;
-            this.bt_excluirContato.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_excluirContato.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_excluirContato.Location = new System.Drawing.Point(90, 191);
             this.bt_excluirContato.Name = "bt_excluirContato";
-            this.bt_excluirContato.Size = new System.Drawing.Size(84, 29);
-            this.bt_excluirContato.TabIndex = 1;
-            this.bt_excluirContato.Text = "Excluir";
             this.bt_excluirContato.UseVisualStyleBackColor = false;
             this.bt_excluirContato.Click += new System.EventHandler(this.bt_excluirContato_Click);
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.tb_telefone);
             this.panel3.Controls.Add(this.bt_editar);
             this.panel3.Controls.Add(this.bt_gravar);
@@ -181,108 +174,67 @@ namespace eAgenda.WindowsForms
             this.panel3.Controls.Add(this.tb_nome);
             this.panel3.Controls.Add(this.tb_cargo);
             this.panel3.Controls.Add(this.tb_email);
-            this.panel3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.panel3.Location = new System.Drawing.Point(22, 388);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(396, 157);
-            this.panel3.TabIndex = 6;
             // 
             // tb_telefone
             // 
-            this.tb_telefone.Location = new System.Drawing.Point(78, 52);
-            this.tb_telefone.Mask = "(00) 00000-0000";
+            resources.ApplyResources(this.tb_telefone, "tb_telefone");
             this.tb_telefone.Name = "tb_telefone";
-            this.tb_telefone.Size = new System.Drawing.Size(107, 21);
-            this.tb_telefone.TabIndex = 13;
             // 
             // bt_editar
             // 
+            resources.ApplyResources(this.bt_editar, "bt_editar");
             this.bt_editar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.bt_editar.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_editar.Location = new System.Drawing.Point(194, 121);
             this.bt_editar.Name = "bt_editar";
-            this.bt_editar.Size = new System.Drawing.Size(84, 29);
-            this.bt_editar.TabIndex = 12;
-            this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = false;
             this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
             // 
             // bt_gravar
             // 
+            resources.ApplyResources(this.bt_gravar, "bt_gravar");
             this.bt_gravar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.bt_gravar.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_gravar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_gravar.Location = new System.Drawing.Point(97, 121);
             this.bt_gravar.Name = "bt_gravar";
-            this.bt_gravar.Size = new System.Drawing.Size(84, 29);
-            this.bt_gravar.TabIndex = 11;
-            this.bt_gravar.Text = "Gravar";
             this.bt_gravar.UseVisualStyleBackColor = false;
             this.bt_gravar.Click += new System.EventHandler(this.bt_gravar_Click);
             // 
             // tb_empresa
             // 
-            this.tb_empresa.Location = new System.Drawing.Point(245, 83);
+            resources.ApplyResources(this.tb_empresa, "tb_empresa");
             this.tb_empresa.Name = "tb_empresa";
-            this.tb_empresa.Size = new System.Drawing.Size(120, 21);
-            this.tb_empresa.TabIndex = 10;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label4.Location = new System.Drawing.Point(191, 91);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Empresa";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label3.Location = new System.Drawing.Point(202, 60);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Cargo";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label2.Location = new System.Drawing.Point(31, 91);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Email";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label1.Location = new System.Drawing.Point(17, 60);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Telefone";
             // 
             // lb_nome
             // 
-            this.lb_nome.AutoSize = true;
-            this.lb_nome.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lb_nome.Location = new System.Drawing.Point(31, 32);
+            resources.ApplyResources(this.lb_nome, "lb_nome");
             this.lb_nome.Name = "lb_nome";
-            this.lb_nome.Size = new System.Drawing.Size(40, 13);
-            this.lb_nome.TabIndex = 5;
-            this.lb_nome.Text = "Nome";
             // 
             // dataSetContatos
             // 
             this.dataSetContatos.DataSetName = "NewDataSet";
             this.dataSetContatos.Tables.AddRange(new System.Data.DataTable[] {
-            this.tableContatos});
+            this.tableContatos,
+            this.tableContatosen});
             // 
             // tableContatos
             // 
@@ -323,7 +275,8 @@ namespace eAgenda.WindowsForms
             // 
             this.dataSetContatosAgrupados.DataSetName = "NewDataSet";
             this.dataSetContatosAgrupados.Tables.AddRange(new System.Data.DataTable[] {
-            this.tableContatosAgrupados});
+            this.tableContatosAgrupados,
+            this.tableContatosAgrupadosen});
             // 
             // tableContatosAgrupados
             // 
@@ -362,26 +315,90 @@ namespace eAgenda.WindowsForms
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, -74);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(298, 283);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            // 
+            // tableContatosen
+            // 
+            this.tableContatosen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn13,
+            this.dataColumn14,
+            this.dataColumn15,
+            this.dataColumn16,
+            this.dataColumn17,
+            this.dataColumn18});
+            this.tableContatosen.Locale = new System.Globalization.CultureInfo("en");
+            this.tableContatosen.TableName = "tableContatosen";
+            // 
+            // dataColumn13
+            // 
+            this.dataColumn13.ColumnName = "Id";
+            // 
+            // dataColumn14
+            // 
+            this.dataColumn14.ColumnName = "Name";
+            // 
+            // dataColumn15
+            // 
+            this.dataColumn15.ColumnName = "Telephone";
+            // 
+            // dataColumn16
+            // 
+            this.dataColumn16.ColumnName = "Email";
+            // 
+            // dataColumn17
+            // 
+            this.dataColumn17.ColumnName = "Position";
+            // 
+            // dataColumn18
+            // 
+            this.dataColumn18.ColumnName = "Company";
+            // 
+            // tableContatosAgrupadosen
+            // 
+            this.tableContatosAgrupadosen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn19,
+            this.dataColumn20,
+            this.dataColumn21,
+            this.dataColumn22,
+            this.dataColumn23,
+            this.dataColumn24});
+            this.tableContatosAgrupadosen.TableName = "tableContatosAgrupadosen";
+            // 
+            // dataColumn19
+            // 
+            this.dataColumn19.ColumnName = "Id";
+            // 
+            // dataColumn20
+            // 
+            this.dataColumn20.ColumnName = "Name";
+            // 
+            // dataColumn21
+            // 
+            this.dataColumn21.ColumnName = "Telephone";
+            // 
+            // dataColumn22
+            // 
+            this.dataColumn22.ColumnName = "Email";
+            // 
+            // dataColumn23
+            // 
+            this.dataColumn23.ColumnName = "Position";
+            // 
+            // dataColumn24
+            // 
+            this.dataColumn24.ColumnName = "Company";
             // 
             // ContatoForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(434, 556);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "ContatoForms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Meus contatos";
             this.Load += new System.EventHandler(this.ContatoForms_Load);
             this.panel1.ResumeLayout(false);
             this.tb_visualizacao.ResumeLayout(false);
@@ -394,6 +411,8 @@ namespace eAgenda.WindowsForms
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatosAgrupados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupadosen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,5 +455,19 @@ namespace eAgenda.WindowsForms
         private System.Windows.Forms.Button bt_excluirContato;
         private System.Windows.Forms.Button btn_exportarPDFContato;
         private System.Windows.Forms.MaskedTextBox tb_telefone;
+        private System.Data.DataTable tableContatosen;
+        private System.Data.DataColumn dataColumn13;
+        private System.Data.DataColumn dataColumn14;
+        private System.Data.DataColumn dataColumn15;
+        private System.Data.DataColumn dataColumn16;
+        private System.Data.DataColumn dataColumn17;
+        private System.Data.DataColumn dataColumn18;
+        private System.Data.DataTable tableContatosAgrupadosen;
+        private System.Data.DataColumn dataColumn19;
+        private System.Data.DataColumn dataColumn20;
+        private System.Data.DataColumn dataColumn21;
+        private System.Data.DataColumn dataColumn22;
+        private System.Data.DataColumn dataColumn23;
+        private System.Data.DataColumn dataColumn24;
     }
 }
