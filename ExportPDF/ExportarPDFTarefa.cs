@@ -6,8 +6,7 @@ using iText.Layout.Element;
 using iText.Layout.Properties;
 using System.Collections.Generic;
 using eAgenda.Controladores.TarefaModule;
-
-
+using System.Threading;
 
 namespace eAgenda.ExportPDF
 {
@@ -16,6 +15,7 @@ namespace eAgenda.ExportPDF
     /// </summary>
     public class ExportarPDFTarefa
     {
+        static bool english = Thread.CurrentThread.CurrentUICulture.ToString() == "en-US";
         /// <summary>
         /// Realiza a exportação para PDF das tarefas concluídas
         /// </summary>
@@ -23,13 +23,24 @@ namespace eAgenda.ExportPDF
         {
             ControladorTarefa controlador = new ControladorTarefa();
             List<Tarefa> todasTarefas = controlador.SelecionarTodasTarefasConcluidas();
-            
-            using (PdfWriter wPdf = new PdfWriter($@"..\..\..\Relatorios\relatorioTarefaConcluida.pdf", new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
+            string url;
+            string strParagraph;
+            if (english)
+            {
+                url = $@"..\..\..\Reports\completedTasksReport.pdf";
+                strParagraph = "Completed Tasks Report";
+            }
+            else
+            {
+                url = $@"..\..\..\Relatorios\relatorioTarefaConcluida.pdf";
+                strParagraph = "Relatório Tarefas Concluídas";
+            }
+            using (PdfWriter wPdf = new PdfWriter(url, new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(wPdf);
 
                 Document document = new Document(pdfDocument, PageSize.A4);
-                document.Add(new Paragraph("Relatório Tarefas Concluídas").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
+                document.Add(new Paragraph(strParagraph).SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
 
                 foreach (var tarefa in todasTarefas)
                 {
@@ -50,13 +61,23 @@ namespace eAgenda.ExportPDF
         /// <param name="tarefa">Tarefa selecionada</param>
         private static void AdicionarTarefaNoDocumento(Document document, Tarefa tarefa)
         {
-            document.Add(new Paragraph("\n\n"));
-            document.Add(new Paragraph("Título da Tarefa: " + tarefa.Titulo.ToString()));
-            document.Add(new Paragraph("Prioridade: " + tarefa.Prioridade.ToString()));
-            document.Add(new Paragraph("Porcentagem de Conclusão: " + tarefa.Percentual.ToString() + "%"));
-            document.Add(new Paragraph("Data de Criação da Tarefa: " + tarefa.DataCriacao.ToString("d")));
-            document.Add(new Paragraph("Data de Conclusão: " + tarefa.DataConclusao.ToString()));
-
+            if (english) {
+                document.Add(new Paragraph("\n\n"));
+                document.Add(new Paragraph("Task Title: " + tarefa.Titulo.ToString()));
+                document.Add(new Paragraph("Priority: " + tarefa.Prioridade.ToString()));
+                document.Add(new Paragraph("Completion Percentage: " + tarefa.Percentual.ToString() + "%"));
+                document.Add(new Paragraph("Task Creation Date: " + tarefa.DataCriacao.ToString("d")));
+                document.Add(new Paragraph("Completion Date: " + tarefa.DataConclusao.ToString()));
+            }
+            else
+            {
+                document.Add(new Paragraph("\n\n"));
+                document.Add(new Paragraph("Título da Tarefa: " + tarefa.Titulo.ToString()));
+                document.Add(new Paragraph("Prioridade: " + tarefa.Prioridade.ToString()));
+                document.Add(new Paragraph("Porcentagem de Conclusão: " + tarefa.Percentual.ToString() + "%"));
+                document.Add(new Paragraph("Data de Criação da Tarefa: " + tarefa.DataCriacao.ToString("d")));
+                document.Add(new Paragraph("Data de Conclusão: " + tarefa.DataConclusao.ToString()));
+            }
         }
 
         /// <summary>
@@ -66,14 +87,25 @@ namespace eAgenda.ExportPDF
         {
             ControladorTarefa controlador = new ControladorTarefa();
             List<Tarefa> todasTarefas = controlador.SelecionarTodasTarefasPendentes();
-
-            using (PdfWriter wPdf = new PdfWriter($@"..\..\..\Relatorios\relatorioTarefaPendente.pdf", new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
+            string url;
+            string strParagraph;
+            if (english)
+            {
+                url = $@"..\..\..\Reports\pendingTasksReport.pdf";
+                strParagraph = "Pending Tasks Report";
+            }
+            else
+            {
+                url = $@"..\..\..\Relatorios\relatorioTarefaPendente.pdf";
+                strParagraph = "Relatório Tarefas Pendentes";
+            }
+            using (PdfWriter wPdf = new PdfWriter(url, new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(wPdf);
 
                 Document document = new Document(pdfDocument, PageSize.A4);
 
-                document.Add(new Paragraph("Relatório Tarefas Pendentes").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
+                document.Add(new Paragraph(strParagraph).SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
 
 
                 foreach (var tarefa in todasTarefas)

@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using eAgenda.ExportPDF;
+using System.Threading;
 
 namespace eAgenda.WindowsForms
 {
@@ -18,7 +19,7 @@ namespace eAgenda.WindowsForms
     {
         ControladorCompromisso controlador;
         ControladorContato controladorContato;
-        
+        bool english;
         
         /// <summary>
         /// Construtor do CompromissoForm
@@ -30,6 +31,7 @@ namespace eAgenda.WindowsForms
             InitializeComponent();
             this.controlador = controlador;
             this.controladorContato = controladorContato;
+            english = Thread.CurrentThread.CurrentUICulture.ToString() == "en-US";
             PreencherTabelaCompromissoPassado();
             PreencherTabelaCompromisso();
             PreencherTabelaCompromissoFuturo();
@@ -58,29 +60,51 @@ namespace eAgenda.WindowsForms
 
             dataGridCompromissos.Refresh();
             table_compromissos.Clear();
-
-            dataGridCompromissos.DataSource = table_compromissos;
-
-
+            table_compromissosen.Clear();
 
             List<Compromisso> compromissos = controlador.SelecionarTodos();
 
+            if (english)
+                dataGridCompromissos.DataSource = table_compromissosen;
+            else
+                dataGridCompromissos.DataSource = table_compromissos;
+
             foreach (var compromisso in compromissos)
             {
-                DataRow linha = table_compromissos.NewRow();
+                if (english)
+                {
+                    DataRow linha = table_compromissosen.NewRow();
 
-                linha["Id"] = compromisso.Id;
-                linha["Assunto"] = compromisso.Assunto;
-                linha["Hora Término"] = compromisso.HoraTermino;
-                linha["Hora Início"] = compromisso.HoraInicio;
-                linha["Local"] = compromisso.Local;
-                linha["Link"] = compromisso.Link;
-                linha["Data"] = compromisso.Data;
+                    linha["Id"] = compromisso.Id;
+                    linha["Subject"] = compromisso.Assunto;
+                    linha["Start Hour"] = compromisso.HoraTermino;
+                    linha["End Hour"] = compromisso.HoraInicio;
+                    linha["Location"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Date"] = compromisso.Data;
 
-                if (compromisso.Contato != null)
-                    linha["Contato"] = compromisso.Contato.Nome;
+                    if (compromisso.Contato != null)
+                        linha["Contact"] = compromisso.Contato.Nome;
 
-                table_compromissos.Rows.Add(linha);
+                    table_compromissosen.Rows.Add(linha);
+                }
+                else
+                {
+                    DataRow linha = table_compromissos.NewRow();
+
+                    linha["Id"] = compromisso.Id;
+                    linha["Assunto"] = compromisso.Assunto;
+                    linha["Hora Término"] = compromisso.HoraTermino;
+                    linha["Hora Início"] = compromisso.HoraInicio;
+                    linha["Local"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Data"] = compromisso.Data;
+
+                    if (compromisso.Contato != null)
+                        linha["Contato"] = compromisso.Contato.Nome;
+
+                    table_compromissos.Rows.Add(linha);
+                }
             }
 
         }
@@ -92,32 +116,56 @@ namespace eAgenda.WindowsForms
 
             dataGridPassado.Refresh();
             tablePassado.Clear();
-
-            dataGridPassado.DataSource = tablePassado;
+            tablePassadoen.Clear();
 
             DateTime dataSelecionada = dataPassado.Value;
 
             List<Compromisso> compromissosPassados = controlador.SelecionarCompromissosPassados(dataSelecionada);
 
+
+            if (english)
+                dataGridCompromissos.DataSource = tablePassadoen;
+            else
+                dataGridCompromissos.DataSource = tablePassado;
+
             foreach (var compromisso in compromissosPassados)
             {
-                DataRow linha = tablePassado.NewRow();
+                if (english)
+                {
+                    DataRow linha = tablePassadoen.NewRow();
 
-                linha["Id"] = compromisso.Id;
-                linha["Assunto"] = compromisso.Assunto;
-                linha["Hora Fim"] = compromisso.HoraTermino;
-                linha["Hora Início"] = compromisso.HoraInicio;
-                linha["Local"] = compromisso.Local;
-                linha["Link"] = compromisso.Link;
-                linha["Data"] = compromisso.Data;
+                    linha["Id"] = compromisso.Id;
+                    linha["Subject"] = compromisso.Assunto;
+                    linha["Start Hour"] = compromisso.HoraTermino;
+                    linha["End Hour"] = compromisso.HoraInicio;
+                    linha["Location"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Date"] = compromisso.Data;
 
-                if (compromisso.Contato != null)
-                    linha["Contato"] = compromisso.Contato.Nome;
+                    if (compromisso.Contato != null)
+                        linha["Contact"] = compromisso.Contato.Nome;
+
+                    tablePassadoen.Rows.Add(linha);
+                }
                 else
-                    linha["Contato"] = "Sem contato";
+                {
+                    DataRow linha = tablePassado.NewRow();
 
-                tablePassado.Rows.Add(linha);
+                    linha["Id"] = compromisso.Id;
+                    linha["Assunto"] = compromisso.Assunto;
+                    linha["Hora Término"] = compromisso.HoraTermino;
+                    linha["Hora Início"] = compromisso.HoraInicio;
+                    linha["Local"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Data"] = compromisso.Data;
+
+                    if (compromisso.Contato != null)
+                        linha["Contato"] = compromisso.Contato.Nome;
+
+                    tablePassado.Rows.Add(linha);
+                }
             }
+
 
         }
 
@@ -128,39 +176,63 @@ namespace eAgenda.WindowsForms
 
             dataGridFuturo.Refresh();
             tableFuturo.Clear();
-
-            dataGridFuturo.DataSource = tableFuturo;
+            tableFuturoen.Clear();
 
             DateTime dataInicio = dataFuturoUm.Value;
             DateTime dataFim = dataFuturoDois.Value;
 
             List<Compromisso> compromissos = controlador.SelecionarCompromissosFuturos(dataInicio, dataFim);
 
+            if (english)
+                dataGridCompromissos.DataSource = tableFuturoen;
+            else
+                dataGridCompromissos.DataSource = tableFuturo;
+
             foreach (var compromisso in compromissos)
             {
-                DataRow linha = tableFuturo.NewRow();
+                if (english)
+                {
+                    DataRow linha = tableFuturoen.NewRow();
 
-                linha["Id"] = compromisso.Id;
-                linha["Assunto"] = compromisso.Assunto;
-                linha["Hora Término"] = compromisso.HoraTermino;
-                linha["Hora Início"] = compromisso.HoraInicio;
-                linha["Local"] = compromisso.Local;
-                linha["Link"] = compromisso.Link;
-                linha["Data"] = compromisso.Data;
+                    linha["Id"] = compromisso.Id;
+                    linha["Subject"] = compromisso.Assunto;
+                    linha["Start Hour"] = compromisso.HoraTermino;
+                    linha["End Hour"] = compromisso.HoraInicio;
+                    linha["Location"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Date"] = compromisso.Data;
 
-                if (compromisso.Contato != null)
-                    linha["Contato"] = compromisso.Contato.Nome;
+                    if (compromisso.Contato != null)
+                        linha["Contact"] = compromisso.Contato.Nome;
 
-                tableFuturo.Rows.Add(linha);
+                    tableFuturoen.Rows.Add(linha);
+                }
+                else
+                {
+                    DataRow linha = tableFuturo.NewRow();
+
+                    linha["Id"] = compromisso.Id;
+                    linha["Assunto"] = compromisso.Assunto;
+                    linha["Hora Término"] = compromisso.HoraTermino;
+                    linha["Hora Início"] = compromisso.HoraInicio;
+                    linha["Local"] = compromisso.Local;
+                    linha["Link"] = compromisso.Link;
+                    linha["Data"] = compromisso.Data;
+
+                    if (compromisso.Contato != null)
+                        linha["Contato"] = compromisso.Contato.Nome;
+
+                    tableFuturo.Rows.Add(linha);
+                }
             }
 
 
 
         }
 
-     
 
-      
+
+
         /// <summary>
         /// Gravar compromisso
         /// </summary>
@@ -395,6 +467,11 @@ namespace eAgenda.WindowsForms
         {
             ExportarPDFCompromisso.ExportarCompromissosFuturosPDF(dataFuturoUm.Value, dataFuturoDois.Value);
             MessageBox.Show("PDF criado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

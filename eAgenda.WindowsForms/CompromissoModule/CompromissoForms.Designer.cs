@@ -96,6 +96,33 @@ namespace eAgenda.WindowsForms
             this.dataColumn22 = new System.Data.DataColumn();
             this.dataColumn23 = new System.Data.DataColumn();
             this.dataColumn24 = new System.Data.DataColumn();
+            this.table_compromissosen = new System.Data.DataTable();
+            this.dataColumn25 = new System.Data.DataColumn();
+            this.dataColumn26 = new System.Data.DataColumn();
+            this.dataColumn27 = new System.Data.DataColumn();
+            this.dataColumn28 = new System.Data.DataColumn();
+            this.dataColumn29 = new System.Data.DataColumn();
+            this.dataColumn30 = new System.Data.DataColumn();
+            this.dataColumn31 = new System.Data.DataColumn();
+            this.dataColumn32 = new System.Data.DataColumn();
+            this.tablePassadoen = new System.Data.DataTable();
+            this.dataColumn33 = new System.Data.DataColumn();
+            this.dataColumn34 = new System.Data.DataColumn();
+            this.dataColumn35 = new System.Data.DataColumn();
+            this.dataColumn36 = new System.Data.DataColumn();
+            this.dataColumn37 = new System.Data.DataColumn();
+            this.dataColumn38 = new System.Data.DataColumn();
+            this.dataColumn39 = new System.Data.DataColumn();
+            this.dataColumn40 = new System.Data.DataColumn();
+            this.tableFuturoen = new System.Data.DataTable();
+            this.dataColumn41 = new System.Data.DataColumn();
+            this.dataColumn42 = new System.Data.DataColumn();
+            this.dataColumn43 = new System.Data.DataColumn();
+            this.dataColumn44 = new System.Data.DataColumn();
+            this.dataColumn45 = new System.Data.DataColumn();
+            this.dataColumn46 = new System.Data.DataColumn();
+            this.dataColumn47 = new System.Data.DataColumn();
+            this.dataColumn48 = new System.Data.DataColumn();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Compromissos.SuspendLayout();
@@ -112,210 +139,156 @@ namespace eAgenda.WindowsForms
             ((System.ComponentModel.ISupportInitialize)(this.tablePassado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFuturo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableFuturoen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Location = new System.Drawing.Point(32, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 270);
-            this.panel1.TabIndex = 0;
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.Compromissos);
             this.tabControl1.Controls.Add(this.Passados);
             this.tabControl1.Controls.Add(this.Futuro);
-            this.tabControl1.Location = new System.Drawing.Point(0, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(460, 260);
-            this.tabControl1.TabIndex = 0;
             // 
             // Compromissos
             // 
+            resources.ApplyResources(this.Compromissos, "Compromissos");
             this.Compromissos.Controls.Add(this.btn_exportarCompromissos);
             this.Compromissos.Controls.Add(this.bt_excluir);
             this.Compromissos.Controls.Add(this.dataGridCompromissos);
-            this.Compromissos.Location = new System.Drawing.Point(4, 22);
             this.Compromissos.Name = "Compromissos";
-            this.Compromissos.Padding = new System.Windows.Forms.Padding(3);
-            this.Compromissos.Size = new System.Drawing.Size(452, 234);
-            this.Compromissos.TabIndex = 0;
-            this.Compromissos.Text = "Compromissos";
             this.Compromissos.UseVisualStyleBackColor = true;
             // 
             // btn_exportarCompromissos
             // 
+            resources.ApplyResources(this.btn_exportarCompromissos, "btn_exportarCompromissos");
             this.btn_exportarCompromissos.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarCompromissos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarCompromissos.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarCompromissos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarCompromissos.Location = new System.Drawing.Point(354, 182);
             this.btn_exportarCompromissos.Name = "btn_exportarCompromissos";
-            this.btn_exportarCompromissos.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarCompromissos.TabIndex = 6;
-            this.btn_exportarCompromissos.Text = "Exportar PDF";
             this.btn_exportarCompromissos.UseVisualStyleBackColor = false;
             this.btn_exportarCompromissos.Click += new System.EventHandler(this.btn_exportarCompromissos_Click);
             // 
             // bt_excluir
             // 
+            resources.ApplyResources(this.bt_excluir, "bt_excluir");
             this.bt_excluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_excluir.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_excluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_excluir.Location = new System.Drawing.Point(6, 182);
             this.bt_excluir.Name = "bt_excluir";
-            this.bt_excluir.Size = new System.Drawing.Size(84, 29);
-            this.bt_excluir.TabIndex = 3;
-            this.bt_excluir.Text = "Excluir";
             this.bt_excluir.UseVisualStyleBackColor = false;
             this.bt_excluir.Click += new System.EventHandler(this.bt_excluir_Click);
             // 
             // dataGridCompromissos
             // 
+            resources.ApplyResources(this.dataGridCompromissos, "dataGridCompromissos");
             this.dataGridCompromissos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCompromissos.Location = new System.Drawing.Point(10, 26);
             this.dataGridCompromissos.Name = "dataGridCompromissos";
             this.dataGridCompromissos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridCompromissos.Size = new System.Drawing.Size(436, 150);
-            this.dataGridCompromissos.TabIndex = 2;
             this.dataGridCompromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Passados
             // 
+            resources.ApplyResources(this.Passados, "Passados");
             this.Passados.Controls.Add(this.btn_exportarCompromissoPassado);
             this.Passados.Controls.Add(this.label2);
             this.Passados.Controls.Add(this.dataPassado);
             this.Passados.Controls.Add(this.dataGridPassado);
-            this.Passados.Location = new System.Drawing.Point(4, 22);
             this.Passados.Name = "Passados";
-            this.Passados.Padding = new System.Windows.Forms.Padding(3);
-            this.Passados.Size = new System.Drawing.Size(452, 234);
-            this.Passados.TabIndex = 1;
-            this.Passados.Text = "Passados";
             this.Passados.UseVisualStyleBackColor = true;
             // 
             // btn_exportarCompromissoPassado
             // 
+            resources.ApplyResources(this.btn_exportarCompromissoPassado, "btn_exportarCompromissoPassado");
             this.btn_exportarCompromissoPassado.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarCompromissoPassado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarCompromissoPassado.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarCompromissoPassado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarCompromissoPassado.Location = new System.Drawing.Point(354, 194);
             this.btn_exportarCompromissoPassado.Name = "btn_exportarCompromissoPassado";
-            this.btn_exportarCompromissoPassado.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarCompromissoPassado.TabIndex = 21;
-            this.btn_exportarCompromissoPassado.Text = "Exportar PDF";
             this.btn_exportarCompromissoPassado.UseVisualStyleBackColor = false;
             this.btn_exportarCompromissoPassado.Click += new System.EventHandler(this.btn_exportarCompromissoPassado_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label2.Location = new System.Drawing.Point(19, 202);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Data";
             // 
             // dataPassado
             // 
-            this.dataPassado.Location = new System.Drawing.Point(55, 198);
+            resources.ApplyResources(this.dataPassado, "dataPassado");
             this.dataPassado.Name = "dataPassado";
-            this.dataPassado.Size = new System.Drawing.Size(133, 20);
-            this.dataPassado.TabIndex = 19;
             this.dataPassado.ValueChanged += new System.EventHandler(this.dataPassado_ValueChanged);
             // 
             // dataGridPassado
             // 
+            resources.ApplyResources(this.dataGridPassado, "dataGridPassado");
             this.dataGridPassado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPassado.Location = new System.Drawing.Point(10, 28);
             this.dataGridPassado.Name = "dataGridPassado";
             this.dataGridPassado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPassado.Size = new System.Drawing.Size(436, 150);
-            this.dataGridPassado.TabIndex = 2;
             this.dataGridPassado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // Futuro
             // 
+            resources.ApplyResources(this.Futuro, "Futuro");
             this.Futuro.Controls.Add(this.btn_exportarPDFCompromissoFuturo);
             this.Futuro.Controls.Add(this.label10);
             this.Futuro.Controls.Add(this.label9);
             this.Futuro.Controls.Add(this.dataFuturoDois);
             this.Futuro.Controls.Add(this.dataFuturoUm);
             this.Futuro.Controls.Add(this.dataGridFuturo);
-            this.Futuro.Location = new System.Drawing.Point(4, 22);
             this.Futuro.Name = "Futuro";
-            this.Futuro.Size = new System.Drawing.Size(452, 234);
-            this.Futuro.TabIndex = 2;
-            this.Futuro.Text = "Futuros";
             this.Futuro.UseVisualStyleBackColor = true;
             // 
             // btn_exportarPDFCompromissoFuturo
             // 
+            resources.ApplyResources(this.btn_exportarPDFCompromissoFuturo, "btn_exportarPDFCompromissoFuturo");
             this.btn_exportarPDFCompromissoFuturo.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn_exportarPDFCompromissoFuturo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_exportarPDFCompromissoFuturo.Font = new System.Drawing.Font("Veneer", 10F);
             this.btn_exportarPDFCompromissoFuturo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_exportarPDFCompromissoFuturo.Location = new System.Drawing.Point(357, 180);
             this.btn_exportarPDFCompromissoFuturo.Name = "btn_exportarPDFCompromissoFuturo";
-            this.btn_exportarPDFCompromissoFuturo.Size = new System.Drawing.Size(92, 29);
-            this.btn_exportarPDFCompromissoFuturo.TabIndex = 22;
-            this.btn_exportarPDFCompromissoFuturo.Text = "Exportar PDF";
             this.btn_exportarPDFCompromissoFuturo.UseVisualStyleBackColor = false;
             this.btn_exportarPDFCompromissoFuturo.Click += new System.EventHandler(this.btn_exportarPDFCompromissoFuturo_Click);
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label10.Location = new System.Drawing.Point(22, 213);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Fim";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label9.Location = new System.Drawing.Point(22, 187);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Início";
             // 
             // dataFuturoDois
             // 
-            this.dataFuturoDois.Location = new System.Drawing.Point(63, 207);
+            resources.ApplyResources(this.dataFuturoDois, "dataFuturoDois");
             this.dataFuturoDois.Name = "dataFuturoDois";
-            this.dataFuturoDois.Size = new System.Drawing.Size(133, 20);
-            this.dataFuturoDois.TabIndex = 20;
             this.dataFuturoDois.ValueChanged += new System.EventHandler(this.dataFuturoDois_ValueChanged);
             // 
             // dataFuturoUm
             // 
-            this.dataFuturoUm.Location = new System.Drawing.Point(63, 181);
+            resources.ApplyResources(this.dataFuturoUm, "dataFuturoUm");
             this.dataFuturoUm.Name = "dataFuturoUm";
-            this.dataFuturoUm.Size = new System.Drawing.Size(133, 20);
-            this.dataFuturoUm.TabIndex = 19;
             this.dataFuturoUm.ValueChanged += new System.EventHandler(this.dataFuturoUm_ValueChanged);
             // 
             // dataGridFuturo
             // 
+            resources.ApplyResources(this.dataGridFuturo, "dataGridFuturo");
             this.dataGridFuturo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFuturo.Location = new System.Drawing.Point(13, 24);
             this.dataGridFuturo.Name = "dataGridFuturo";
             this.dataGridFuturo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridFuturo.Size = new System.Drawing.Size(436, 150);
-            this.dataGridFuturo.TabIndex = 1;
             this.dataGridFuturo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCompromissos_DoubleClick);
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.bt_editar);
             this.panel2.Controls.Add(this.dt_data);
             this.panel2.Controls.Add(this.btGravar);
@@ -332,169 +305,109 @@ namespace eAgenda.WindowsForms
             this.panel2.Controls.Add(this.tb_link);
             this.panel2.Controls.Add(this.tb_local);
             this.panel2.Controls.Add(this.tb_assunto);
-            this.panel2.Location = new System.Drawing.Point(32, 378);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 186);
-            this.panel2.TabIndex = 1;
             // 
             // bt_editar
             // 
+            resources.ApplyResources(this.bt_editar, "bt_editar");
             this.bt_editar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.bt_editar.Font = new System.Drawing.Font("Veneer", 10F);
             this.bt_editar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_editar.Location = new System.Drawing.Point(238, 145);
             this.bt_editar.Name = "bt_editar";
-            this.bt_editar.Size = new System.Drawing.Size(84, 29);
-            this.bt_editar.TabIndex = 19;
-            this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = false;
             this.bt_editar.Click += new System.EventHandler(this.bt_editar_Click);
             // 
             // dt_data
             // 
-            this.dt_data.Location = new System.Drawing.Point(68, 109);
+            resources.ApplyResources(this.dt_data, "dt_data");
             this.dt_data.Name = "dt_data";
-            this.dt_data.Size = new System.Drawing.Size(133, 20);
-            this.dt_data.TabIndex = 18;
             // 
             // btGravar
             // 
+            resources.ApplyResources(this.btGravar, "btGravar");
             this.btGravar.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btGravar.Font = new System.Drawing.Font("Veneer", 10F);
             this.btGravar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btGravar.Location = new System.Drawing.Point(140, 145);
             this.btGravar.Name = "btGravar";
-            this.btGravar.Size = new System.Drawing.Size(84, 29);
-            this.btGravar.TabIndex = 17;
-            this.btGravar.Text = "Gravar";
             this.btGravar.UseVisualStyleBackColor = false;
             this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
             // tb_hora
             // 
-            this.tb_hora.Location = new System.Drawing.Point(192, 72);
-            this.tb_hora.Mask = "00:00";
+            resources.ApplyResources(this.tb_hora, "tb_hora");
             this.tb_hora.Name = "tb_hora";
-            this.tb_hora.Size = new System.Drawing.Size(38, 20);
-            this.tb_hora.TabIndex = 15;
             this.tb_hora.ValidatingType = typeof(System.DateTime);
             // 
             // tb_horai
             // 
-            this.tb_horai.Location = new System.Drawing.Point(83, 72);
-            this.tb_horai.Mask = "00:00";
+            resources.ApplyResources(this.tb_horai, "tb_horai");
             this.tb_horai.Name = "tb_horai";
-            this.tb_horai.Size = new System.Drawing.Size(38, 20);
-            this.tb_horai.TabIndex = 14;
             this.tb_horai.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label8.Location = new System.Drawing.Point(32, 116);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Data";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label7.Location = new System.Drawing.Point(138, 79);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Término";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label6.Location = new System.Drawing.Point(17, 79);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Hora Início";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label5.Location = new System.Drawing.Point(274, 79);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Link";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label4.Location = new System.Drawing.Point(224, 116);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Contatos";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label3.Location = new System.Drawing.Point(295, 41);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Local";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Assunto";
             // 
             // cb_contatos
             // 
+            resources.ApplyResources(this.cb_contatos, "cb_contatos");
             this.cb_contatos.DisplayMember = "Id";
             this.cb_contatos.FormattingEnabled = true;
-            this.cb_contatos.Location = new System.Drawing.Point(285, 108);
             this.cb_contatos.Name = "cb_contatos";
-            this.cb_contatos.Size = new System.Drawing.Size(149, 21);
-            this.cb_contatos.TabIndex = 5;
             this.cb_contatos.ValueMember = "Id";
             // 
             // tb_link
             // 
-            this.tb_link.Location = new System.Drawing.Point(307, 72);
+            resources.ApplyResources(this.tb_link, "tb_link");
             this.tb_link.Name = "tb_link";
-            this.tb_link.Size = new System.Drawing.Size(127, 20);
-            this.tb_link.TabIndex = 4;
             // 
             // tb_local
             // 
             this.tb_local.AcceptsReturn = true;
-            this.tb_local.Location = new System.Drawing.Point(334, 34);
+            resources.ApplyResources(this.tb_local, "tb_local");
             this.tb_local.Name = "tb_local";
-            this.tb_local.Size = new System.Drawing.Size(100, 20);
-            this.tb_local.TabIndex = 1;
             // 
             // tb_assunto
             // 
-            this.tb_assunto.Location = new System.Drawing.Point(68, 34);
+            resources.ApplyResources(this.tb_assunto, "tb_assunto");
             this.tb_assunto.Name = "tb_assunto";
-            this.tb_assunto.Size = new System.Drawing.Size(196, 20);
-            this.tb_assunto.TabIndex = 0;
             // 
             // dataSetCompromissos
             // 
             this.dataSetCompromissos.DataSetName = "NewDataSet";
             this.dataSetCompromissos.Tables.AddRange(new System.Data.DataTable[] {
-            this.table_compromissos});
+            this.table_compromissos,
+            this.table_compromissosen});
             // 
             // table_compromissos
             // 
@@ -543,19 +456,16 @@ namespace eAgenda.WindowsForms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, -95);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(298, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // dataSetPassado
             // 
             this.dataSetPassado.DataSetName = "NewDataSet";
             this.dataSetPassado.Tables.AddRange(new System.Data.DataTable[] {
-            this.tablePassado});
+            this.tablePassado,
+            this.tablePassadoen});
             // 
             // tablePassado
             // 
@@ -606,7 +516,8 @@ namespace eAgenda.WindowsForms
             // 
             this.dataSetFuturo.DataSetName = "NewDataSet";
             this.dataSetFuturo.Tables.AddRange(new System.Data.DataTable[] {
-            this.tableFuturo});
+            this.tableFuturo,
+            this.tableFuturoen});
             // 
             // tableFuturo
             // 
@@ -653,18 +564,151 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn24.ColumnName = "Assunto";
             // 
+            // table_compromissosen
+            // 
+            this.table_compromissosen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn25,
+            this.dataColumn26,
+            this.dataColumn27,
+            this.dataColumn28,
+            this.dataColumn29,
+            this.dataColumn30,
+            this.dataColumn31,
+            this.dataColumn32});
+            this.table_compromissosen.Locale = new System.Globalization.CultureInfo("en");
+            this.table_compromissosen.TableName = "table_compromissosen";
+            // 
+            // dataColumn25
+            // 
+            this.dataColumn25.ColumnName = "Id";
+            // 
+            // dataColumn26
+            // 
+            this.dataColumn26.ColumnName = "Subject";
+            // 
+            // dataColumn27
+            // 
+            this.dataColumn27.ColumnName = "Start Hour";
+            // 
+            // dataColumn28
+            // 
+            this.dataColumn28.ColumnName = "End Hour";
+            // 
+            // dataColumn29
+            // 
+            this.dataColumn29.ColumnName = "Date";
+            // 
+            // dataColumn30
+            // 
+            this.dataColumn30.ColumnName = "Contact";
+            // 
+            // dataColumn31
+            // 
+            this.dataColumn31.ColumnName = "Location";
+            // 
+            // dataColumn32
+            // 
+            this.dataColumn32.ColumnName = "Link";
+            // 
+            // tablePassadoen
+            // 
+            this.tablePassadoen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn33,
+            this.dataColumn34,
+            this.dataColumn35,
+            this.dataColumn36,
+            this.dataColumn37,
+            this.dataColumn38,
+            this.dataColumn39,
+            this.dataColumn40});
+            this.tablePassadoen.TableName = "tablePassadoen";
+            // 
+            // dataColumn33
+            // 
+            this.dataColumn33.ColumnName = "Id";
+            // 
+            // dataColumn34
+            // 
+            this.dataColumn34.ColumnName = "Subject";
+            // 
+            // dataColumn35
+            // 
+            this.dataColumn35.ColumnName = "Start Hour";
+            // 
+            // dataColumn36
+            // 
+            this.dataColumn36.ColumnName = "End Hour";
+            // 
+            // dataColumn37
+            // 
+            this.dataColumn37.ColumnName = "Date";
+            // 
+            // dataColumn38
+            // 
+            this.dataColumn38.ColumnName = "Contact";
+            // 
+            // dataColumn39
+            // 
+            this.dataColumn39.ColumnName = "Location";
+            // 
+            // dataColumn40
+            // 
+            this.dataColumn40.ColumnName = "Link";
+            // 
+            // tableFuturoen
+            // 
+            this.tableFuturoen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn41,
+            this.dataColumn42,
+            this.dataColumn43,
+            this.dataColumn44,
+            this.dataColumn45,
+            this.dataColumn46,
+            this.dataColumn47,
+            this.dataColumn48});
+            this.tableFuturoen.TableName = "tableFuturoen";
+            // 
+            // dataColumn41
+            // 
+            this.dataColumn41.ColumnName = "Id";
+            // 
+            // dataColumn42
+            // 
+            this.dataColumn42.ColumnName = "Subject";
+            // 
+            // dataColumn43
+            // 
+            this.dataColumn43.ColumnName = "Start Hour";
+            // 
+            // dataColumn44
+            // 
+            this.dataColumn44.ColumnName = "End Hour";
+            // 
+            // dataColumn45
+            // 
+            this.dataColumn45.ColumnName = "Date";
+            // 
+            // dataColumn46
+            // 
+            this.dataColumn46.ColumnName = "Contact";
+            // 
+            // dataColumn47
+            // 
+            this.dataColumn47.ColumnName = "Location";
+            // 
+            // dataColumn48
+            // 
+            this.dataColumn48.ColumnName = "Link";
+            // 
             // CompromissoForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(530, 576);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CompromissoForms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Meus compromissos";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.Compromissos.ResumeLayout(false);
@@ -684,6 +728,9 @@ namespace eAgenda.WindowsForms
             ((System.ComponentModel.ISupportInitialize)(this.tablePassado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFuturo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableFuturoen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -756,5 +803,32 @@ namespace eAgenda.WindowsForms
         private System.Windows.Forms.Button btn_exportarCompromissos;
         private System.Windows.Forms.Button btn_exportarCompromissoPassado;
         private System.Windows.Forms.Button btn_exportarPDFCompromissoFuturo;
+        private System.Data.DataTable table_compromissosen;
+        private System.Data.DataColumn dataColumn25;
+        private System.Data.DataColumn dataColumn26;
+        private System.Data.DataColumn dataColumn27;
+        private System.Data.DataColumn dataColumn28;
+        private System.Data.DataColumn dataColumn29;
+        private System.Data.DataColumn dataColumn30;
+        private System.Data.DataColumn dataColumn31;
+        private System.Data.DataColumn dataColumn32;
+        private System.Data.DataTable tablePassadoen;
+        private System.Data.DataColumn dataColumn33;
+        private System.Data.DataColumn dataColumn34;
+        private System.Data.DataColumn dataColumn35;
+        private System.Data.DataColumn dataColumn36;
+        private System.Data.DataColumn dataColumn37;
+        private System.Data.DataColumn dataColumn38;
+        private System.Data.DataColumn dataColumn39;
+        private System.Data.DataColumn dataColumn40;
+        private System.Data.DataTable tableFuturoen;
+        private System.Data.DataColumn dataColumn41;
+        private System.Data.DataColumn dataColumn42;
+        private System.Data.DataColumn dataColumn43;
+        private System.Data.DataColumn dataColumn44;
+        private System.Data.DataColumn dataColumn45;
+        private System.Data.DataColumn dataColumn46;
+        private System.Data.DataColumn dataColumn47;
+        private System.Data.DataColumn dataColumn48;
     }
 }

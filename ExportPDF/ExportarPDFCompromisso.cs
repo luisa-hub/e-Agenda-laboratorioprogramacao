@@ -7,6 +7,7 @@ using iText.Layout.Properties;
 using System;
 using System.Collections.Generic;
 using eAgenda.Controladores.CompromissoModule;
+using System.Threading;
 
 namespace eAgenda.ExportPDF
 {
@@ -15,7 +16,7 @@ namespace eAgenda.ExportPDF
     /// </summary>
     public class ExportarPDFCompromisso
     {
-       
+        static bool english = Thread.CurrentThread.CurrentUICulture.ToString() == "en-US";
         /// <summary>
         /// Exportar todos os compromissos para PDF
         /// </summary>
@@ -51,13 +52,24 @@ namespace eAgenda.ExportPDF
         {
             ControladorCompromisso controlador = new ControladorCompromisso();
             List<Compromisso> todosCompromissos = controlador.SelecionarCompromissosPassados(data);
-
-            using (PdfWriter wPdf = new PdfWriter($@"..\..\..\Relatorios\relatorioCompromissosPassados.pdf", new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
+            string url;
+            string strParagraph;
+            if (english)
+            {
+                url = $@"..\..\..\Reports\pastAppointmentsReport.pdf";
+                strParagraph = "Past Appointments Report";
+            }
+            else
+            {
+                url = $@"..\..\..\Relatorios\relatorioCompromissosPassados.pdf";
+                strParagraph = "Relatório de Compromissos Passados";
+            }
+            using (PdfWriter wPdf = new PdfWriter(url, new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(wPdf);
 
                 Document document = new Document(pdfDocument, PageSize.A4);
-                document.Add(new Paragraph("Relatório de Compromissos Passados").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
+                document.Add(new Paragraph(strParagraph).SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
 
                 foreach (var compromisso in todosCompromissos)
                 {
@@ -80,13 +92,24 @@ namespace eAgenda.ExportPDF
         {
             ControladorCompromisso controlador = new ControladorCompromisso();
             List<Compromisso> todosCompromissos = controlador.SelecionarCompromissosFuturos(dataInicio, dataFim);
-
-            using (PdfWriter wPdf = new PdfWriter($@"..\..\..\Relatorios\relatorioCompromissosFuturos.pdf", new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
+            string url;
+            string strParagraph;
+            if (english)
+            {
+                url = $@"..\..\..\Reports\futureAppointmentsReport.pdf";
+                strParagraph = "Future Appointments Report";
+            }
+            else
+            {
+                url = $@"..\..\..\Relatorios\relatorioCompromissosFuturos.pdf";
+                strParagraph = "Relatório de Compromissos Futuros";
+            }
+            using (PdfWriter wPdf = new PdfWriter(url, new WriterProperties().SetPdfVersion(PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(wPdf);
 
                 Document document = new Document(pdfDocument, PageSize.A4);
-                document.Add(new Paragraph("Relatório de Compromissos Futuros").SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
+                document.Add(new Paragraph(strParagraph).SetTextAlignment(TextAlignment.CENTER).SetBold().SetFontSize(20));
 
                 foreach (var compromisso in todosCompromissos)
                 {
@@ -107,20 +130,38 @@ namespace eAgenda.ExportPDF
         /// <param name="compromisso">Compromisso a ser adicionado</param>
         private static void AdicionarCompromissoNoDocumento(Document document, Compromisso compromisso)
         {
-            document.Add(new Paragraph("\n\n"));
-            document.Add(new Paragraph("Assunto: " + compromisso.Assunto.ToString()));
-            document.Add(new Paragraph("Contato: " + compromisso.Contato.Nome.ToString()));
+            if (english)
+            {
+                document.Add(new Paragraph("\n\n"));
+                document.Add(new Paragraph("Subject: " + compromisso.Assunto.ToString()));
+                document.Add(new Paragraph("Contact: " + compromisso.Contato.Nome.ToString()));
 
-            if (!String.IsNullOrEmpty(compromisso.Local))
-                document.Add(new Paragraph("Local: " + compromisso.Local.ToString()));
+                if (!String.IsNullOrEmpty(compromisso.Local))
+                    document.Add(new Paragraph("Location: " + compromisso.Local.ToString()));
 
-            if(!String.IsNullOrEmpty(compromisso.Link))
-                document.Add(new Paragraph("Link: " + compromisso.Link.ToString()));
+                if (!String.IsNullOrEmpty(compromisso.Link))
+                    document.Add(new Paragraph("Link: " + compromisso.Link.ToString()));
 
-            document.Add(new Paragraph("Data: " + compromisso.Data.ToString("d")));
-            document.Add(new Paragraph("Hora Início: " + compromisso.HoraInicio.ToString()));
-            document.Add(new Paragraph("Hora Término: " + compromisso.HoraTermino.ToString()));
-            
+                document.Add(new Paragraph("Date: " + compromisso.Data.ToString("d")));
+                document.Add(new Paragraph("Start Hour: " + compromisso.HoraInicio.ToString()));
+                document.Add(new Paragraph("End Hour: " + compromisso.HoraTermino.ToString()));
+            }
+            else
+            {
+                document.Add(new Paragraph("\n\n"));
+                document.Add(new Paragraph("Assunto: " + compromisso.Assunto.ToString()));
+                document.Add(new Paragraph("Contato: " + compromisso.Contato.Nome.ToString()));
+
+                if (!String.IsNullOrEmpty(compromisso.Local))
+                    document.Add(new Paragraph("Local: " + compromisso.Local.ToString()));
+
+                if (!String.IsNullOrEmpty(compromisso.Link))
+                    document.Add(new Paragraph("Link: " + compromisso.Link.ToString()));
+
+                document.Add(new Paragraph("Data: " + compromisso.Data.ToString("d")));
+                document.Add(new Paragraph("Hora Início: " + compromisso.HoraInicio.ToString()));
+                document.Add(new Paragraph("Hora Término: " + compromisso.HoraTermino.ToString()));
+            }
         }
 
     }
