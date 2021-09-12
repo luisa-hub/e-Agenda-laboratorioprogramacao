@@ -123,22 +123,22 @@
   <data name="&gt;&gt;dataColumn14.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tb_tarefapendente.Type" xml:space="preserve">
-    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>330, 296</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_exportarPDFConcluida.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;dataColumn21.Name" xml:space="preserve">
+    <value>dataColumn21</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
-  <data name="cb_prioridadeTarefa.Items2" xml:space="preserve">
-    <value>Alta</value>
+  <data name="&gt;&gt;dataColumn24.Name" xml:space="preserve">
+    <value>dataColumn24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bt_editarPendente.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="bt_editarConcluida.Text" xml:space="preserve">
     <value>Editar</value>
@@ -149,8 +149,8 @@
   <data name="bt_excluirPendente.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 29</value>
   </data>
-  <data name="&gt;&gt;tb_tarefas.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;dataColumn6.Name" xml:space="preserve">
+    <value>dataColumn6</value>
   </data>
   <data name="btn_exportarPDFConcluida.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -170,6 +170,9 @@
   <data name="&gt;&gt;bt_atualizar.Name" xml:space="preserve">
     <value>bt_atualizar</value>
   </data>
+  <data name="bt_atualizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 76</value>
+  </data>
   <data name="&gt;&gt;bt_excluirConcluida.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -182,29 +185,23 @@
   <data name="tb_name.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 20</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Nome da Tarefa</value>
+  <data name="&gt;&gt;dataColumn19.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tb_name.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="bt_editarConcluida.Location" type="System.Drawing.Point, System.Drawing">
     <value>272, 191</value>
   </data>
-  <data name="btn_exportarPDFConcluida.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 29</value>
-  </data>
-  <data name="&gt;&gt;tb_tarefas.Name" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tb_tarefas</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 27</value>
   </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;tb_tarefas.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;dataColumn1.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataColumn12.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -212,14 +209,14 @@
   <data name="&gt;&gt;btn_exportarPDFPendente.Name" xml:space="preserve">
     <value>btn_exportarPDFPendente</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 78</value>
-  </data>
-  <data name="&gt;&gt;dataColumn6.Name" xml:space="preserve">
-    <value>dataColumn6</value>
+  <data name="&gt;&gt;tb_tarefas.Name" xml:space="preserve">
+    <value>tb_tarefas</value>
   </data>
   <data name="&gt;&gt;dataColumn4.Name" xml:space="preserve">
     <value>dataColumn4</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -665,9 +662,6 @@
         Awk3v4EAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;tb_tarefapendenteen.Name" xml:space="preserve">
-    <value>tb_tarefapendenteen</value>
-  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 54</value>
   </data>
@@ -677,8 +671,11 @@
   <data name="tb_porcentagem.Mask" xml:space="preserve">
     <value>000</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="btn_exportarPDFConcluida.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tb_tarefas.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -686,23 +683,26 @@
   <data name="&gt;&gt;dataGridTarefaConcluidas.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;dataColumn10.Name" xml:space="preserve">
-    <value>dataColumn10</value>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 266</value>
+  <data name="bt_atualizar.Text" xml:space="preserve">
+    <value>Atualizar Porcentagem</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Minhas Tarefas</value>
   </data>
   <data name="&gt;&gt;tb_tarefas.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tb_tarefas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 292</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 266</value>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 78</value>
   </data>
   <data name="&gt;&gt;btn_exportarPDFPendente.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
   </data>
   <data name="&gt;&gt;dataSetConcluidas.Type" xml:space="preserve">
     <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -716,26 +716,26 @@
   <data name="bt_excluirPendente.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataColumn1.Name" xml:space="preserve">
-    <value>dataColumn1</value>
+  <data name="&gt;&gt;tb_tarefapendenteen.Name" xml:space="preserve">
+    <value>tb_tarefapendenteen</value>
   </data>
-  <data name="&gt;&gt;bt_editarPendente.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataColumn6.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tb_tarefapendente.Type" xml:space="preserve">
+    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 266</value>
   </data>
   <data name="dataGridTarefaConcluidas.Size" type="System.Drawing.Size, System.Drawing">
     <value>478, 174</value>
@@ -746,14 +746,8 @@
   <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dataColumn15.Name" xml:space="preserve">
-    <value>dataColumn15</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
-  </data>
-  <data name="btn_exportarPDFPendente.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;bt_editarConcluida.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -761,8 +755,8 @@
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 13</value>
   </data>
-  <data name="btn_exportarPDFPendente.Text" xml:space="preserve">
-    <value>Exportar PDF</value>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataColumn3.Name" xml:space="preserve">
     <value>dataColumn3</value>
@@ -770,14 +764,11 @@
   <data name="bt_editarConcluida.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
-  <data name="&gt;&gt;dataGridTarefas.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 124</value>
-  </data>
-  <data name="&gt;&gt;dataColumn24.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Prioridade</value>
@@ -791,17 +782,17 @@
   <data name="&gt;&gt;panel3.Name" xml:space="preserve">
     <value>panel3</value>
   </data>
-  <data name="dataGridTarefas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>478, 174</value>
+  <data name="&gt;&gt;bt_editarConcluida.Name" xml:space="preserve">
+    <value>bt_editarConcluida</value>
   </data>
-  <data name="&gt;&gt;dataColumn7.Name" xml:space="preserve">
-    <value>dataColumn7</value>
+  <data name="bt_atualizar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Minhas Tarefas</value>
+  <data name="&gt;&gt;dataColumn23.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cb_prioridadeTarefa.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="tb_tarefas.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 14</value>
   </data>
   <data name="&gt;&gt;dataGridTarefaConcluidas.Name" xml:space="preserve">
     <value>dataGridTarefaConcluidas</value>
@@ -813,17 +804,11 @@
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>panel3</value>
   </data>
-  <data name="tb_name.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="dataGridTarefas.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;dataColumn2.Type" xml:space="preserve">
+  <data name="&gt;&gt;dataColumn21.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn23.Name" xml:space="preserve">
-    <value>dataColumn23</value>
   </data>
   <data name="&gt;&gt;dataColumn2.Name" xml:space="preserve">
     <value>dataColumn2</value>
@@ -831,8 +816,8 @@
   <data name="&gt;&gt;btn_exportarPDFPendente.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;tb_name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dataColumn6.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataColumn19.Name" xml:space="preserve">
     <value>dataColumn19</value>
@@ -843,14 +828,8 @@
   <data name="bt_atualizar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;dataColumn21.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn23.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="bt_atualizar.Text" xml:space="preserve">
-    <value>Atualizar Porcentagem</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;dataColumn11.Name" xml:space="preserve">
     <value>dataColumn11</value>
@@ -873,6 +852,9 @@
   <data name="&gt;&gt;btn_exportarPDFConcluida.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
   <data name="&gt;&gt;dataColumn14.Name" xml:space="preserve">
     <value>dataColumn14</value>
   </data>
@@ -885,8 +867,8 @@
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 29</value>
   </data>
-  <data name="&gt;&gt;bt_editarConcluida.Name" xml:space="preserve">
-    <value>bt_editarConcluida</value>
+  <data name="&gt;&gt;dataColumn9.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -900,29 +882,26 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TarefaForms</value>
   </data>
-  <data name="btn_exportarPDFConcluida.Text" xml:space="preserve">
-    <value>Exportar PDF</value>
+  <data name="&gt;&gt;dataColumn1.Name" xml:space="preserve">
+    <value>dataColumn1</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>561, 569</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tb_name.Name" xml:space="preserve">
-    <value>tb_name</value>
+  <data name="cb_prioridadeTarefa.Items1" xml:space="preserve">
+    <value>Normal</value>
   </data>
-  <data name="&gt;&gt;btn_exportarPDFConcluida.Name" xml:space="preserve">
-    <value>btn_exportarPDFConcluida</value>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 266</value>
   </data>
-  <data name="&gt;&gt;dataColumn9.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="btn_exportarPDFConcluida.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 29</value>
   </data>
   <data name="&gt;&gt;button2.Parent" xml:space="preserve">
     <value>panel3</value>
-  </data>
-  <data name="tb_tarefas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 14</value>
   </data>
   <data name="bt_editarPendente.Location" type="System.Drawing.Point, System.Drawing">
     <value>269, 190</value>
@@ -945,11 +924,8 @@
   <data name="bt_editarPendente.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 29</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="dataGridTarefaConcluidas.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataColumn21.Name" xml:space="preserve">
-    <value>dataColumn21</value>
   </data>
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
@@ -959,9 +935,6 @@
   </data>
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="tb_tarefas.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -978,11 +951,8 @@
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dataColumn22.Name" xml:space="preserve">
-    <value>dataColumn22</value>
-  </data>
-  <data name="&gt;&gt;dataColumn19.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1008,14 +978,8 @@
   <data name="&gt;&gt;btn_exportarPDFPendente.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;tb_name.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Gravar</value>
   </data>
   <data name="&gt;&gt;dataColumn20.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1026,14 +990,14 @@
   <data name="&gt;&gt;bt_editarPendente.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;dataColumn8.Name" xml:space="preserve">
-    <value>dataColumn8</value>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;dataGridTarefas.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tb_tarefas</value>
   </data>
   <data name="&gt;&gt;bt_excluirConcluida.Name" xml:space="preserve">
     <value>bt_excluirConcluida</value>
@@ -1041,47 +1005,62 @@
   <data name="bt_excluirConcluida.Text" xml:space="preserve">
     <value>Excluir</value>
   </data>
-  <data name="bt_excluirConcluida.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="bt_excluirConcluida.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 191</value>
   </data>
   <data name="&gt;&gt;dataColumn17.Name" xml:space="preserve">
     <value>dataColumn17</value>
   </data>
-  <data name="btn_exportarPDFPendente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="btn_exportarPDFPendente.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;dataSetPendentes.Name" xml:space="preserve">
     <value>dataSetPendentes</value>
   </data>
-  <data name="bt_atualizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 76</value>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="btn_exportarPDFPendente.Text" xml:space="preserve">
+    <value>Exportar PDF</value>
+  </data>
+  <data name="&gt;&gt;tb_name.Name" xml:space="preserve">
+    <value>tb_name</value>
+  </data>
+  <data name="bt_excluirPendente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;dataColumn10.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tb_tarefas.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="bt_editarConcluida.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 29</value>
-  </data>
-  <data name="bt_editarPendente.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="cb_prioridadeTarefa.Items2" xml:space="preserve">
+    <value>Alta</value>
   </data>
   <data name="cb_prioridadeTarefa.Items" xml:space="preserve">
     <value>Baixa</value>
   </data>
+  <data name="tb_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 20</value>
+  </data>
   <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tb_tarefapendente.Name" xml:space="preserve">
     <value>tb_tarefapendente</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cb_prioridadeTarefa.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;dataColumn7.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1116,19 +1095,13 @@
   <data name="&gt;&gt;tb_tarefasconcluidasen.Type" xml:space="preserve">
     <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cb_prioridadeTarefa.Items1" xml:space="preserve">
-    <value>Normal</value>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tb_tarefas</value>
   </data>
   <data name="dataGridTarefaConcluidas.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 6</value>
   </data>
   <data name="&gt;&gt;dataColumn15.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn24.Name" xml:space="preserve">
-    <value>dataColumn24</value>
-  </data>
-  <data name="&gt;&gt;dataColumn4.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cb_prioridadeTarefa.TabIndex" type="System.Int32, mscorlib">
@@ -1143,11 +1116,8 @@
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;bt_excluirPendente.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;dataGridTarefas.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1158,14 +1128,17 @@
   <data name="tabPage2.Text" xml:space="preserve">
     <value>Concluídas</value>
   </data>
+  <data name="btn_exportarPDFPendente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 229</value>
+  </data>
   <data name="&gt;&gt;bt_editarPendente.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Pendentes</value>
+  <data name="&gt;&gt;dataColumn4.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btn_exportarPDFPendente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 229</value>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tb_porcentagem.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -1182,47 +1155,47 @@
   <data name="&gt;&gt;dataColumn3.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="cb_prioridadeTarefa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 21</value>
+  <data name="&gt;&gt;bt_excluirPendente.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tb_tarefas.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
+  <data name="btn_exportarPDFPendente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 439</value>
   </data>
+  <data name="tb_porcentagem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 42</value>
+  </data>
   <data name="bt_excluirConcluida.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;dataColumn16.Name" xml:space="preserve">
-    <value>dataColumn16</value>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="bt_editarConcluida.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 29</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 13</value>
   </data>
-  <data name="bt_excluirPendente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;bt_atualizar.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;dataColumn8.Name" xml:space="preserve">
+    <value>dataColumn8</value>
   </data>
   <data name="&gt;&gt;bt_excluirConcluida.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;tb_porcentagem.Name" xml:space="preserve">
-    <value>tb_porcentagem</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Nome da Tarefa</value>
   </data>
-  <data name="tb_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 20</value>
+  <data name="&gt;&gt;btn_exportarPDFConcluida.Name" xml:space="preserve">
+    <value>btn_exportarPDFConcluida</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>-22, -65</value>
@@ -1230,17 +1203,17 @@
   <data name="&gt;&gt;cb_prioridadeTarefa.Parent" xml:space="preserve">
     <value>panel3</value>
   </data>
-  <data name="bt_excluirConcluida.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 191</value>
+  <data name="&gt;&gt;dataColumn22.Name" xml:space="preserve">
+    <value>dataColumn22</value>
   </data>
-  <data name="&gt;&gt;btn_exportarPDFConcluida.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="tb_tarefas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>502, 292</value>
   </data>
   <data name="bt_editarConcluida.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="bt_editarPendente.Text" xml:space="preserve">
-    <value>Editar</value>
+  <data name="&gt;&gt;dataColumn2.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="bt_atualizar.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 29</value>
@@ -1254,8 +1227,14 @@
   <data name="&gt;&gt;bt_excluirPendente.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>561, 569</value>
+  <data name="btn_exportarPDFConcluida.Text" xml:space="preserve">
+    <value>Exportar PDF</value>
+  </data>
+  <data name="&gt;&gt;dataColumn23.Name" xml:space="preserve">
+    <value>dataColumn23</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
   </data>
   <data name="&gt;&gt;tb_name.Parent" xml:space="preserve">
     <value>panel3</value>
@@ -1263,8 +1242,8 @@
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;dataColumn10.Name" xml:space="preserve">
+    <value>dataColumn10</value>
   </data>
   <data name="bt_editarPendente.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
@@ -1272,65 +1251,86 @@
   <data name="&gt;&gt;bt_editarConcluida.Parent" xml:space="preserve">
     <value>tabPage2</value>
   </data>
+  <data name="&gt;&gt;btn_exportarPDFConcluida.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tb_tarefas</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Gravar</value>
+  </data>
+  <data name="&gt;&gt;dataColumn16.Name" xml:space="preserve">
+    <value>dataColumn16</value>
   </data>
   <data name="&gt;&gt;dataColumn11.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dataGridTarefaConcluidas.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;bt_excluirPendente.Name" xml:space="preserve">
+    <value>bt_excluirPendente</value>
   </data>
   <data name="&gt;&gt;dataColumn12.Name" xml:space="preserve">
     <value>dataColumn12</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cb_prioridadeTarefa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 21</value>
   </data>
-  <data name="bt_atualizar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="&gt;&gt;tb_name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bt_atualizar.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;dataColumn17.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tb_porcentagem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 42</value>
+  <data name="&gt;&gt;dataColumn1.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;dataColumn24.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_porcentagem.Name" xml:space="preserve">
+    <value>tb_porcentagem</value>
   </data>
   <data name="&gt;&gt;dataColumn13.Name" xml:space="preserve">
     <value>dataColumn13</value>
   </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
+  <data name="bt_editarPendente.Text" xml:space="preserve">
+    <value>Editar</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="bt_excluirConcluida.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridTarefas.Size" type="System.Drawing.Size, System.Drawing">
+    <value>478, 174</value>
+  </data>
+  <data name="&gt;&gt;dataColumn7.Name" xml:space="preserve">
+    <value>dataColumn7</value>
   </data>
   <data name="&gt;&gt;dataGridTarefas.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 13</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Pendentes</value>
+  </data>
+  <data name="&gt;&gt;bt_editarPendente.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel4</value>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;bt_excluirPendente.Name" xml:space="preserve">
-    <value>bt_excluirPendente</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 27</value>
+  <data name="&gt;&gt;dataColumn15.Name" xml:space="preserve">
+    <value>dataColumn15</value>
   </data>
   <data name="&gt;&gt;bt_excluirConcluida.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -1347,14 +1347,14 @@
   <data name="&gt;&gt;tb_porcentagem.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="dataSetConcluidas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>167, 17</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
   </metadata>
   <metadata name="dataSetPendentes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

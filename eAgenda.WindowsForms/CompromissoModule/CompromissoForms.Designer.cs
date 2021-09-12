@@ -75,6 +75,15 @@ namespace eAgenda.WindowsForms
             this.dataColumn6 = new System.Data.DataColumn();
             this.dataColumn7 = new System.Data.DataColumn();
             this.dataColumn8 = new System.Data.DataColumn();
+            this.table_compromissosen = new System.Data.DataTable();
+            this.dataColumn25 = new System.Data.DataColumn();
+            this.dataColumn26 = new System.Data.DataColumn();
+            this.dataColumn27 = new System.Data.DataColumn();
+            this.dataColumn28 = new System.Data.DataColumn();
+            this.dataColumn29 = new System.Data.DataColumn();
+            this.dataColumn30 = new System.Data.DataColumn();
+            this.dataColumn31 = new System.Data.DataColumn();
+            this.dataColumn32 = new System.Data.DataColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataSetPassado = new System.Data.DataSet();
             this.tablePassado = new System.Data.DataTable();
@@ -86,6 +95,15 @@ namespace eAgenda.WindowsForms
             this.dataColumn14 = new System.Data.DataColumn();
             this.dataColumn15 = new System.Data.DataColumn();
             this.dataColumn16 = new System.Data.DataColumn();
+            this.tablePassadoen = new System.Data.DataTable();
+            this.dataColumn33 = new System.Data.DataColumn();
+            this.dataColumn34 = new System.Data.DataColumn();
+            this.dataColumn35 = new System.Data.DataColumn();
+            this.dataColumn36 = new System.Data.DataColumn();
+            this.dataColumn37 = new System.Data.DataColumn();
+            this.dataColumn38 = new System.Data.DataColumn();
+            this.dataColumn39 = new System.Data.DataColumn();
+            this.dataColumn40 = new System.Data.DataColumn();
             this.dataSetFuturo = new System.Data.DataSet();
             this.tableFuturo = new System.Data.DataTable();
             this.dataColumn17 = new System.Data.DataColumn();
@@ -96,24 +114,6 @@ namespace eAgenda.WindowsForms
             this.dataColumn22 = new System.Data.DataColumn();
             this.dataColumn23 = new System.Data.DataColumn();
             this.dataColumn24 = new System.Data.DataColumn();
-            this.table_compromissosen = new System.Data.DataTable();
-            this.dataColumn25 = new System.Data.DataColumn();
-            this.dataColumn26 = new System.Data.DataColumn();
-            this.dataColumn27 = new System.Data.DataColumn();
-            this.dataColumn28 = new System.Data.DataColumn();
-            this.dataColumn29 = new System.Data.DataColumn();
-            this.dataColumn30 = new System.Data.DataColumn();
-            this.dataColumn31 = new System.Data.DataColumn();
-            this.dataColumn32 = new System.Data.DataColumn();
-            this.tablePassadoen = new System.Data.DataTable();
-            this.dataColumn33 = new System.Data.DataColumn();
-            this.dataColumn34 = new System.Data.DataColumn();
-            this.dataColumn35 = new System.Data.DataColumn();
-            this.dataColumn36 = new System.Data.DataColumn();
-            this.dataColumn37 = new System.Data.DataColumn();
-            this.dataColumn38 = new System.Data.DataColumn();
-            this.dataColumn39 = new System.Data.DataColumn();
-            this.dataColumn40 = new System.Data.DataColumn();
             this.tableFuturoen = new System.Data.DataTable();
             this.dataColumn41 = new System.Data.DataColumn();
             this.dataColumn42 = new System.Data.DataColumn();
@@ -134,13 +134,13 @@ namespace eAgenda.WindowsForms
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCompromissos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_compromissos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPassado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePassado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFuturo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturoen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,6 +190,7 @@ namespace eAgenda.WindowsForms
             // dataGridCompromissos
             // 
             resources.ApplyResources(this.dataGridCompromissos, "dataGridCompromissos");
+            this.dataGridCompromissos.AllowUserToAddRows = false;
             this.dataGridCompromissos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCompromissos.Name = "dataGridCompromissos";
             this.dataGridCompromissos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -229,6 +230,7 @@ namespace eAgenda.WindowsForms
             // dataGridPassado
             // 
             resources.ApplyResources(this.dataGridPassado, "dataGridPassado");
+            this.dataGridPassado.AllowUserToAddRows = false;
             this.dataGridPassado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPassado.Name = "dataGridPassado";
             this.dataGridPassado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -281,6 +283,7 @@ namespace eAgenda.WindowsForms
             // dataGridFuturo
             // 
             resources.ApplyResources(this.dataGridFuturo, "dataGridFuturo");
+            this.dataGridFuturo.AllowUserToAddRows = false;
             this.dataGridFuturo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridFuturo.Name = "dataGridFuturo";
             this.dataGridFuturo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -454,6 +457,52 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn8.ColumnName = "Link";
             // 
+            // table_compromissosen
+            // 
+            this.table_compromissosen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn25,
+            this.dataColumn26,
+            this.dataColumn27,
+            this.dataColumn28,
+            this.dataColumn29,
+            this.dataColumn30,
+            this.dataColumn31,
+            this.dataColumn32});
+            this.table_compromissosen.Locale = new System.Globalization.CultureInfo("en");
+            this.table_compromissosen.TableName = "table_compromissosen";
+            // 
+            // dataColumn25
+            // 
+            this.dataColumn25.ColumnName = "Id";
+            // 
+            // dataColumn26
+            // 
+            this.dataColumn26.ColumnName = "Subject";
+            // 
+            // dataColumn27
+            // 
+            this.dataColumn27.ColumnName = "Start Hour";
+            // 
+            // dataColumn28
+            // 
+            this.dataColumn28.ColumnName = "End Hour";
+            // 
+            // dataColumn29
+            // 
+            this.dataColumn29.ColumnName = "Date";
+            // 
+            // dataColumn30
+            // 
+            this.dataColumn30.ColumnName = "Contact";
+            // 
+            // dataColumn31
+            // 
+            this.dataColumn31.ColumnName = "Location";
+            // 
+            // dataColumn32
+            // 
+            this.dataColumn32.ColumnName = "Link";
+            // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
@@ -512,6 +561,51 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn16.ColumnName = "Data";
             // 
+            // tablePassadoen
+            // 
+            this.tablePassadoen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn33,
+            this.dataColumn34,
+            this.dataColumn35,
+            this.dataColumn36,
+            this.dataColumn37,
+            this.dataColumn38,
+            this.dataColumn39,
+            this.dataColumn40});
+            this.tablePassadoen.TableName = "tablePassadoen";
+            // 
+            // dataColumn33
+            // 
+            this.dataColumn33.ColumnName = "Id";
+            // 
+            // dataColumn34
+            // 
+            this.dataColumn34.ColumnName = "Subject";
+            // 
+            // dataColumn35
+            // 
+            this.dataColumn35.ColumnName = "Start Hour";
+            // 
+            // dataColumn36
+            // 
+            this.dataColumn36.ColumnName = "End Hour";
+            // 
+            // dataColumn37
+            // 
+            this.dataColumn37.ColumnName = "Date";
+            // 
+            // dataColumn38
+            // 
+            this.dataColumn38.ColumnName = "Contact";
+            // 
+            // dataColumn39
+            // 
+            this.dataColumn39.ColumnName = "Location";
+            // 
+            // dataColumn40
+            // 
+            this.dataColumn40.ColumnName = "Link";
+            // 
             // dataSetFuturo
             // 
             this.dataSetFuturo.DataSetName = "NewDataSet";
@@ -563,97 +657,6 @@ namespace eAgenda.WindowsForms
             // dataColumn24
             // 
             this.dataColumn24.ColumnName = "Assunto";
-            // 
-            // table_compromissosen
-            // 
-            this.table_compromissosen.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn25,
-            this.dataColumn26,
-            this.dataColumn27,
-            this.dataColumn28,
-            this.dataColumn29,
-            this.dataColumn30,
-            this.dataColumn31,
-            this.dataColumn32});
-            this.table_compromissosen.Locale = new System.Globalization.CultureInfo("en");
-            this.table_compromissosen.TableName = "table_compromissosen";
-            // 
-            // dataColumn25
-            // 
-            this.dataColumn25.ColumnName = "Id";
-            // 
-            // dataColumn26
-            // 
-            this.dataColumn26.ColumnName = "Subject";
-            // 
-            // dataColumn27
-            // 
-            this.dataColumn27.ColumnName = "Start Hour";
-            // 
-            // dataColumn28
-            // 
-            this.dataColumn28.ColumnName = "End Hour";
-            // 
-            // dataColumn29
-            // 
-            this.dataColumn29.ColumnName = "Date";
-            // 
-            // dataColumn30
-            // 
-            this.dataColumn30.ColumnName = "Contact";
-            // 
-            // dataColumn31
-            // 
-            this.dataColumn31.ColumnName = "Location";
-            // 
-            // dataColumn32
-            // 
-            this.dataColumn32.ColumnName = "Link";
-            // 
-            // tablePassadoen
-            // 
-            this.tablePassadoen.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn33,
-            this.dataColumn34,
-            this.dataColumn35,
-            this.dataColumn36,
-            this.dataColumn37,
-            this.dataColumn38,
-            this.dataColumn39,
-            this.dataColumn40});
-            this.tablePassadoen.TableName = "tablePassadoen";
-            // 
-            // dataColumn33
-            // 
-            this.dataColumn33.ColumnName = "Id";
-            // 
-            // dataColumn34
-            // 
-            this.dataColumn34.ColumnName = "Subject";
-            // 
-            // dataColumn35
-            // 
-            this.dataColumn35.ColumnName = "Start Hour";
-            // 
-            // dataColumn36
-            // 
-            this.dataColumn36.ColumnName = "End Hour";
-            // 
-            // dataColumn37
-            // 
-            this.dataColumn37.ColumnName = "Date";
-            // 
-            // dataColumn38
-            // 
-            this.dataColumn38.ColumnName = "Contact";
-            // 
-            // dataColumn39
-            // 
-            this.dataColumn39.ColumnName = "Location";
-            // 
-            // dataColumn40
-            // 
-            this.dataColumn40.ColumnName = "Link";
             // 
             // tableFuturoen
             // 
@@ -708,6 +711,7 @@ namespace eAgenda.WindowsForms
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "CompromissoForms";
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -723,13 +727,13 @@ namespace eAgenda.WindowsForms
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetCompromissos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_compromissos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPassado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablePassado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFuturo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_compromissosen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablePassadoen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableFuturoen)).EndInit();
             this.ResumeLayout(false);
 

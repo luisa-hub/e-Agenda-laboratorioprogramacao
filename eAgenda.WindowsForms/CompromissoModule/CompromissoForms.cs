@@ -245,10 +245,10 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.InserirNovo(compromisso);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Registrado com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -300,36 +300,38 @@ namespace eAgenda.WindowsForms
         /// <param name="e"></param>
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-            if (dataGridCompromissos.RowCount == 0)
-                return;
-
-
-            int id = Convert.ToInt32(dataGridCompromissos.CurrentRow.Cells["Id"].Value);
-
-            bool numeroEncontrado = controlador.Existe(id);
-
-            if (numeroEncontrado == false)
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
             {
+                if (dataGridCompromissos.RowCount == 0)
+                    return;
 
-                controlador.Excluir(id);
-                return;
+
+                int id = Convert.ToInt32(dataGridCompromissos.CurrentRow.Cells["Id"].Value);
+
+                bool numeroEncontrado = controlador.Existe(id);
+
+                if (numeroEncontrado == false)
+                {
+
+                    controlador.Excluir(id);
+                    return;
+                }
+
+                bool conseguiuExcluir = controlador.Excluir(id);
+
+                if (conseguiuExcluir)
+                {
+                    MessageBox.Show("Registro excluído com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+
+                else
+                {
+                    MessageBox.Show("Erro ao apagar o resgistro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
-
-            bool conseguiuExcluir = controlador.Excluir(id);
-
-            if (conseguiuExcluir)
-            {
-                MessageBox.Show("Sucesso");
-
-            }
-
-
-            else
-            {
-                MessageBox.Show("Erro");
-
-            }
-
             PreencherTabelaCompromisso();
         }
 
@@ -408,10 +410,10 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, compromisso);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Compromisso" + compromisso.Assunto + "editado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

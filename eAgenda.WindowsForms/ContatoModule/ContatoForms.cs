@@ -1,14 +1,10 @@
 ﻿using eAgenda.Controladores.ContatoModule;
-using eAgenda.Controladores.Shared;
+
 using eAgenda.Dominio.ContatoModule;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using eAgenda.ExportPDF;
 using System.Threading;
@@ -119,12 +115,12 @@ namespace eAgenda.WindowsForms
 
             if (resultadoValidacao == "ESTA_VALIDO")
             {
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Registrado com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 limparCampos();
             }
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -175,14 +171,15 @@ namespace eAgenda.WindowsForms
 
             if (conseguiuExcluir)
             {
-                MessageBox.Show("Sucesso");
+                MessageBox.Show("Registro excluído com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             }
 
 
             else
             {
-                MessageBox.Show("Erro");
+                MessageBox.Show("Erro ao apagar o resgistro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -217,11 +214,11 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.Editar(id, contato);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Contato" + contato.Nome + "editado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             limparCampos();

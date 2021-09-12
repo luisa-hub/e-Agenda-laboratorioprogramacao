@@ -117,11 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bt_tarefa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 163</value>
+  </data>
+  <data name="bt_tarefa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 31</value>
+  </data>
   <data name="bt_tarefa.Text" xml:space="preserve">
     <value>My Tasks</value>
   </data>
+  <data name="bt_contatos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 280</value>
+  </data>
+  <data name="bt_contatos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 31</value>
+  </data>
   <data name="bt_contatos.Text" xml:space="preserve">
     <value>My Contacts</value>
+  </data>
+  <data name="bt_compromisso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 221</value>
+  </data>
+  <data name="bt_compromisso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 31</value>
   </data>
   <data name="bt_compromisso.Text" xml:space="preserve">
     <value>My Appointments</value>
@@ -129,7 +148,6 @@
   <data name="bt_saida.Text" xml:space="preserve">
     <value>Quit</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4CAYAAADsEGyPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
