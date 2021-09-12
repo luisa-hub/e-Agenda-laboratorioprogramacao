@@ -124,9 +124,9 @@ namespace eAgenda.WindowsForms
 
 
             if (english)
-                dataGridCompromissos.DataSource = tablePassadoen;
+                dataGridPassado.DataSource = tablePassadoen;
             else
-                dataGridCompromissos.DataSource = tablePassado;
+                dataGridPassado.DataSource = tablePassado;
 
             foreach (var compromisso in compromissosPassados)
             {
@@ -153,7 +153,7 @@ namespace eAgenda.WindowsForms
 
                     linha["Id"] = compromisso.Id;
                     linha["Assunto"] = compromisso.Assunto;
-                    linha["Hora Término"] = compromisso.HoraTermino;
+                    linha["Hora Fim"] = compromisso.HoraTermino;
                     linha["Hora Início"] = compromisso.HoraInicio;
                     linha["Local"] = compromisso.Local;
                     linha["Link"] = compromisso.Link;
@@ -184,9 +184,9 @@ namespace eAgenda.WindowsForms
             List<Compromisso> compromissos = controlador.SelecionarCompromissosFuturos(dataInicio, dataFim);
 
             if (english)
-                dataGridCompromissos.DataSource = tableFuturoen;
+                dataGridFuturo.DataSource = tableFuturoen;
             else
-                dataGridCompromissos.DataSource = tableFuturo;
+                dataGridFuturo.DataSource = tableFuturo;
 
             foreach (var compromisso in compromissos)
             {
