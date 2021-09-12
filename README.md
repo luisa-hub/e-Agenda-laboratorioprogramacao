@@ -113,5 +113,9 @@ Cada módulo será analisado de maneira mais detalhada nos próximos capítulos.
   
   ### Internacionalização
   
-  Para a internacionalização do software, escolhemos a língua inglesa. Clicando no botão inicial do e-Agenda, o usuário consegue alterar a língua para português ou inglês, o que alterará todos os formulários. 
+  <img src="https://user-images.githubusercontent.com/72579773/133005374-b1d95d54-9fbb-465b-bbfa-c61b700dc852.png" />
+  
+**Figura 12 - e-Agenda na língua inglesa**
+ 
+ Para a internacionalização do software, escolhemos a língua inglesa. Clicando no botão inicial do e-Agenda, o usuário consegue alterar a língua para português ou inglês, o que alterará todos os formulários. 
 
