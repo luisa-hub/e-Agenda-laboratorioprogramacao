@@ -1,5 +1,4 @@
-﻿using eAgenda.Controladores.Shared;
-using eAgenda.Controladores.TarefaModule;
+﻿using eAgenda.Controladores.TarefaModule;
 using eAgenda.Dominio.TarefaModule;
 using System;
 using System.Collections.Generic;
@@ -34,7 +33,6 @@ namespace eAgenda.WindowsForms
         /// <summary>
         /// Preenche o DataGrid das Tarefas Pendentes
         /// </summary>
-
         private void PreencherTabelaPendente()
         {
            dataGridTarefas.Refresh();
@@ -45,38 +43,63 @@ namespace eAgenda.WindowsForms
             else
                 dataGridTarefas.DataSource = tb_tarefapendente;
 
-            //adicionado as linhas no datagrid
-
+           
             List<Tarefa> tarefas = controlador.SelecionarTodasTarefasPendentes();
             
             foreach (var tarefa in tarefas)
             {
                 DataRow linha;
-                if (english) {
-                    linha = tb_tarefapendenteen.NewRow();
-                    linha["Id"] = tarefa.Id;
-                    linha["Title"] = tarefa.Titulo;
-                    linha["Completion Date"] = tarefa.DataConclusao;
-                    linha["Start Date"] = tarefa.DataCriacao;
-                    linha["Priority"] = tarefa.Prioridade;
-                    linha["Percentage"] = tarefa.Percentual;
-                    tb_tarefapendenteen.Rows.Add(linha);
+                if (english)
+                {
+                    linha = AdicionarLinhasEmIngles(tarefa, tb_tarefapendenteen);
 
                 }
-                else {
-                    linha = tb_tarefapendente.NewRow();
-                    linha["Id"] = tarefa.Id;
-                    linha["Nome"] = tarefa.Titulo;
-                    linha["Data Conclusão"] = tarefa.DataConclusao;
-                    linha["Data Início"] = tarefa.DataCriacao;
-                    linha["Prioridade"] = tarefa.Prioridade;
-                    linha["Percentual"] = tarefa.Percentual;
-                    tb_tarefapendente.Rows.Add(linha);
+                else
+                {
+                    linha = AdicionarLinhasEmPt(tarefa, tb_tarefapendente);
                 }
             }
+
+
             
+        }
 
+        /// <summary>
+        /// Adiciona as linhas na datatable especificada (em PT-BR)
+        /// </summary>
+        /// <param name="tarefa">Tarefa que deseja mostrar</param>
+        /// <param name="tabela">DataTable que deseja preencher</param>
+        /// <returns>A linha preenchida com as informações</returns>
+        private DataRow AdicionarLinhasEmPt(Tarefa tarefa, DataTable tabela)
+        {
+            DataRow linha = tabela.NewRow();
+            linha["Id"] = tarefa.Id;
+            linha["Nome"] = tarefa.Titulo;
+            linha["Data Conclusão"] = tarefa.DataConclusao;
+            linha["Data Início"] = tarefa.DataCriacao;
+            linha["Prioridade"] = tarefa.Prioridade;
+            linha["Percentual"] = tarefa.Percentual;
+            tabela.Rows.Add(linha);
+            return linha;
+        }
 
+        /// <summary>
+        /// Adiciona as linhas na datatable especificada (em EN-US)
+        /// </summary>
+        /// <param name="tarefa">Tarefa que deseja mostrar</param>
+        /// <param name="tabela">DataTable que deseja preencher</param>
+        /// <returns>A linha preenchida com as informações</returns>
+        private DataRow AdicionarLinhasEmIngles(Tarefa tarefa, DataTable tabela)
+        {
+            DataRow linha = tabela.NewRow();
+            linha["Id"] = tarefa.Id;
+            linha["Title"] = tarefa.Titulo;
+            linha["Completion Date"] = tarefa.DataConclusao;
+            linha["Start Date"] = tarefa.DataCriacao;
+            linha["Priority"] = tarefa.Prioridade;
+            linha["Percentage"] = tarefa.Percentual;
+            tabela.Rows.Add(linha);
+            return linha;
         }
 
         /// <summary>
@@ -101,31 +124,16 @@ namespace eAgenda.WindowsForms
                 DataRow linha;
                 if (english)
                 {
-                    linha = tb_tarefasconcluidasen.NewRow();
-                    linha["Id"] = tarefa.Id;
-                    linha["Title"] = tarefa.Titulo;
-                    linha["Completion Date"] = tarefa.DataConclusao;
-                    linha["Start Date"] = tarefa.DataCriacao;
-                    linha["Priority"] = tarefa.Prioridade;
-                    linha["Percentage"] = tarefa.Percentual;
-                    tb_tarefasconcluidasen.Rows.Add(linha);
+                    linha = AdicionarLinhasEmIngles(tarefa, tb_tarefasconcluidasen);
                 }
                 else
                 {
-                    linha = tb_tarefasconcluidasen.NewRow();
-                    linha["Id"] = tarefa.Id;
-                    linha["Nome"] = tarefa.Titulo;
-                    linha["Data Conclusão"] = tarefa.DataConclusao;
-                    linha["Data Início"] = tarefa.DataCriacao;
-                    linha["Prioridade"] = tarefa.Prioridade;
-                    linha["Percentual"] = tarefa.Percentual;
-                    tb_tarefasconcluidas.Rows.Add(linha);
+                    linha = AdicionarLinhasEmPt(tarefa, tb_tarefasconcluidas);
 
                 }
             }
 
-
-
+            
         }
 
         /// <summary>
@@ -140,10 +148,11 @@ namespace eAgenda.WindowsForms
             string resultadoValidacao = controlador.InserirNovo(tarefa);
 
             if (resultadoValidacao == "ESTA_VALIDO")
-                MessageBox.Show("Sucesso!");
+                MessageBox.Show("Registrado com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
 
             }
 
@@ -184,39 +193,52 @@ namespace eAgenda.WindowsForms
         /// <param name="e"></param>
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-
-            if (dataGridTarefas.RowCount == 0)
-                return;
-
-
-            int id = Convert.ToInt32(dataGridTarefas.CurrentRow.Cells["Id"].Value);
-
-            bool numeroEncontrado = controlador.Existe(id);
-
-            if (numeroEncontrado == false)            {
-
-                controlador.Excluir(id);
-                return;
-            }
-
-            bool conseguiuExcluir = controlador.Excluir(id);
-
-            if (conseguiuExcluir)
-            {
-                MessageBox.Show("Sucesso");
-                
-            }
-
-
-            else
-            {
-                MessageBox.Show("Erro");
-
-            }
+            Excluir(dataGridTarefas);
+            
 
             PreencherTabelaPendente();
         }
 
+        /// <summary>
+        /// Exclui a tarefa desejada
+        /// </summary>
+        /// <param name="dataGridTarefas"></param>
+        private void Excluir(DataGridView dataGridTarefas)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            {
+                if (dataGridTarefas.RowCount == 0)
+                    return;
+
+
+                int id = Convert.ToInt32(dataGridTarefas.CurrentRow.Cells["Id"].Value);
+
+                bool numeroEncontrado = controlador.Existe(id);
+
+                if (numeroEncontrado == false)
+                {
+
+                    controlador.Excluir(id);
+                    return;
+                }
+
+                bool conseguiuExcluir = controlador.Excluir(id);
+
+                if (conseguiuExcluir)
+                {
+                    MessageBox.Show("Registro excluído com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+
+                else
+                {
+                    MessageBox.Show("Erro ao apagar o resgistro", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+
+        }
 
         /// <summary>
         /// Exclui uma tabela concluída
@@ -225,35 +247,7 @@ namespace eAgenda.WindowsForms
         /// <param name="e"></param>
         private void bt_excluirConcluida_Click(object sender, EventArgs e)
         {
-            if (dataGridTarefaConcluidas.RowCount == 0)
-                return;
-
-
-            int id = Convert.ToInt32(dataGridTarefaConcluidas.CurrentRow.Cells["Id"].Value);
-
-            bool numeroEncontrado = controlador.Existe(id);
-
-            if (numeroEncontrado == false)
-            {
-
-                controlador.Excluir(id);
-                return;
-            }
-
-            bool conseguiuExcluir = controlador.Excluir(id);
-
-            if (conseguiuExcluir)
-            {
-                MessageBox.Show("Sucesso");
-
-            }
-
-
-            else
-            {
-                MessageBox.Show("Erro");
-
-            }
+            Excluir(dataGridTarefaConcluidas);
 
             PreencherTabelaConcluida();
         }
@@ -265,17 +259,16 @@ namespace eAgenda.WindowsForms
         /// <param name="e"></param>
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            if (dataGridTarefaConcluidas.SelectedRows.Count == 1)
-            {
-                id = Convert.ToInt32(dataGridTarefas.CurrentRow.Cells["Id"].Value);
-            }
-
-            else if (dataGridTarefas.SelectedRows.Count == 1)
+         int id;
+         if (dataGridTarefas.SelectedRows.Count == 1)
                 id = Convert.ToInt32(dataGridTarefas.CurrentRow.Cells["Id"].Value);
 
-            else
+        else {
+
+                MessageBox.Show("Nenhuma tarefa selecionada!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+                
 
             bool numeroEncontrado = controlador.Existe(id);
 
@@ -288,10 +281,13 @@ namespace eAgenda.WindowsForms
 
             
             int novoPercentual = Convert.ToInt32(tb_porcentagem.Text);
+            
+            string validarPorcentagem = controlador.AtualizarPercentual(id, novoPercentual);
 
-            controlador.AtualizarPercentual(id, novoPercentual);
-
-            MessageBox.Show("Sucesso!");
+            if(String.IsNullOrEmpty(validarPorcentagem))
+                MessageBox.Show("Porcentagem atualizada com sucesso!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MessageBox.Show(validarPorcentagem, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             PreencherTabelaPendente();
             PreencherTabelaConcluida();
@@ -329,7 +325,7 @@ namespace eAgenda.WindowsForms
 
             else
             {
-                MessageBox.Show(resultadoValidacao);
+                MessageBox.Show(resultadoValidacao, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 

@@ -387,6 +387,7 @@ namespace eAgenda.WindowsForms
             // dataGridTarefas
             // 
             resources.ApplyResources(this.dataGridTarefas, "dataGridTarefas");
+            this.dataGridTarefas.AllowUserToAddRows = false;
             this.dataGridTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTarefas.Name = "dataGridTarefas";
             this.dataGridTarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -435,7 +436,9 @@ namespace eAgenda.WindowsForms
             // dataGridTarefaConcluidas
             // 
             resources.ApplyResources(this.dataGridTarefaConcluidas, "dataGridTarefaConcluidas");
+            this.dataGridTarefaConcluidas.AllowUserToAddRows = false;
             this.dataGridTarefaConcluidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTarefaConcluidas.MultiSelect = false;
             this.dataGridTarefaConcluidas.Name = "dataGridTarefaConcluidas";
             this.dataGridTarefaConcluidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTarefaConcluidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTarefasConcluidas_CellDoubleClick);
@@ -456,6 +459,7 @@ namespace eAgenda.WindowsForms
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "TarefaForms";
             ((System.ComponentModel.ISupportInitialize)(this.dataSetPendentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_tarefapendente)).EndInit();

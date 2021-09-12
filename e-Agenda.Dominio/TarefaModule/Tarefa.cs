@@ -38,14 +38,23 @@ namespace eAgenda.Dominio.TarefaModule
         /// </summary>
         /// <param name="percentual">novo percentual</param>
         /// <param name="dataConclusao">Recebe data de conclusão e atualiza caso seja 100%</param>
-        public void AtualizarPercentual(int percentual, DateTime dataConclusao)
+        public string AtualizarPercentual(int percentual, DateTime dataConclusao)
         {
+            
+            if(percentual < 0 || percentual > 100)
+            {
+                
+                return "A porcentagem precisa ser entre 0 e 100";
+            }
+
             Percentual = percentual;
 
             if (Percentual == 100)
             {
                 DataConclusao = dataConclusao;
             }
+
+            return "";
         }
 
         public override bool Equals(object obj)

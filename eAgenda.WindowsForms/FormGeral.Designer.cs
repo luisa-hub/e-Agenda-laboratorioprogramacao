@@ -111,6 +111,7 @@ namespace eAgenda.WindowsForms
             this.Controls.Add(this.bt_tarefa);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "FormGeral";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

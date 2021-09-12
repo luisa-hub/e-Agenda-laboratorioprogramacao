@@ -119,34 +119,19 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bt_tarefa.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 163</value>
+    <value>85, 163</value>
   </data>
   <data name="bt_tarefa.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 31</value>
-  </data>
-  <data name="bt_tarefa.Text" xml:space="preserve">
-    <value>My Tasks</value>
+    <value>148, 31</value>
   </data>
   <data name="bt_contatos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 280</value>
+    <value>85, 280</value>
   </data>
   <data name="bt_contatos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 31</value>
-  </data>
-  <data name="bt_contatos.Text" xml:space="preserve">
-    <value>My Contacts</value>
+    <value>148, 31</value>
   </data>
   <data name="bt_compromisso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 221</value>
-  </data>
-  <data name="bt_compromisso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 31</value>
-  </data>
-  <data name="bt_compromisso.Text" xml:space="preserve">
-    <value>My Appointments</value>
-  </data>
-  <data name="bt_saida.Text" xml:space="preserve">
-    <value>Quit</value>
+    <value>85, 221</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -586,15 +571,5 @@
         AQAAACRPwQEAAAAkT8EBAAAAJE/BAQAAACRPwQEAAAAkT8EBAAAAJE/BAQAAACRPwQEAAAAkT8EBAAAA
         JC6E/x+qKVGnP/kFXQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Português</value>
   </data>
 </root>

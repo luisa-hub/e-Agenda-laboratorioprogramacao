@@ -106,6 +106,9 @@
     <EmbeddedResource Include="FormGeral.en.resx">
       <DependentUpon>FormGeral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGeral.pt.resx">
+      <DependentUpon>FormGeral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGeral.resx">
       <DependentUpon>FormGeral.cs</DependentUpon>
     </EmbeddedResource>

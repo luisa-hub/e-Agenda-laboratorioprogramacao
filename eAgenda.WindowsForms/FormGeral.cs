@@ -63,13 +63,13 @@ namespace eAgenda.WindowsForms
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
-                Console.WriteLine("Entrou no if do ingles");
+               
             }
             if (button1.Text == "Português")
             {
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("pt");
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt");
-                Console.WriteLine("Entrou no if do português");
+                
             }
             this.Controls.Clear();
             InitializeComponent();

@@ -128,6 +128,9 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="&gt;&gt;tb_horai.Name" xml:space="preserve">
+    <value>tb_horai</value>
+  </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
@@ -174,8 +177,8 @@
   <data name="tb_link.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;dataGridPassado.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>530, 576</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -188,6 +191,9 @@
   </data>
   <data name="btn_exportarCompromissos.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="&gt;&gt;dataColumn13.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Compromissos.Name" xml:space="preserve">
     <value>Compromissos</value>
@@ -285,11 +291,17 @@
   <data name="&gt;&gt;btGravar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;dataColumn24.Name" xml:space="preserve">
+    <value>dataColumn24</value>
+  </data>
   <data name="&gt;&gt;dataColumn47.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>panel2</value>
+  </data>
+  <data name="btn_exportarPDFCompromissoFuturo.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
   <data name="bt_editar.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 145</value>
@@ -336,14 +348,23 @@
   <data name="&gt;&gt;dataColumn46.Name" xml:space="preserve">
     <value>dataColumn46</value>
   </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="btGravar.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 102</value>
   </data>
   <data name="&gt;&gt;dataColumn42.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 7</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;dataColumn31.Name" xml:space="preserve">
     <value>dataColumn31</value>
@@ -359,6 +380,9 @@
   </data>
   <data name="&gt;&gt;dt_data.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;tb_link.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -392,6 +416,9 @@
   </data>
   <data name="&gt;&gt;dataColumn21.Name" xml:space="preserve">
     <value>dataColumn21</value>
+  </data>
+  <data name="&gt;&gt;tableFuturo.Name" xml:space="preserve">
+    <value>tableFuturo</value>
   </data>
   <data name="&gt;&gt;dataColumn14.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -429,8 +456,8 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dataPassado.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -498,17 +525,11 @@
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="tb_local.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
   <data name="Futuro.Text" xml:space="preserve">
     <value>Futuros</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 187</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 302</value>
   </data>
   <data name="&gt;&gt;table_compromissosen.Name" xml:space="preserve">
     <value>table_compromissosen</value>
@@ -524,9 +545,6 @@
   </data>
   <data name="&gt;&gt;dataColumn12.Name" xml:space="preserve">
     <value>dataColumn12</value>
-  </data>
-  <data name="&gt;&gt;dataColumn27.Name" xml:space="preserve">
-    <value>dataColumn27</value>
   </data>
   <data name="&gt;&gt;bt_editar.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -585,20 +603,14 @@
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;tb_link.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;bt_editar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
   </data>
-  <data name="&gt;&gt;bt_editar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="btGravar.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 145</value>
-  </data>
-  <data name="tb_link.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 20</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -662,6 +674,633 @@
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>463, 186</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dataGridPassado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 28</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_assunto.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="&gt;&gt;bt_editar.Name" xml:space="preserve">
+    <value>bt_editar</value>
+  </data>
+  <data name="btGravar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 29</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 116</value>
+  </data>
+  <data name="&gt;&gt;tablePassado.Name" xml:space="preserve">
+    <value>tablePassado</value>
+  </data>
+  <data name="&gt;&gt;dataGridCompromissos.Name" xml:space="preserve">
+    <value>dataGridCompromissos</value>
+  </data>
+  <data name="&gt;&gt;dataColumn32.Name" xml:space="preserve">
+    <value>dataColumn32</value>
+  </data>
+  <data name="&gt;&gt;dataColumn16.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 79</value>
+  </data>
+  <data name="&gt;&gt;dataColumn41.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Futuro.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tb_hora.Name" xml:space="preserve">
+    <value>tb_hora</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btGravar.Name" xml:space="preserve">
+    <value>btGravar</value>
+  </data>
+  <data name="&gt;&gt;dataPassado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Passados.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Compromissos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 234</value>
+  </data>
+  <data name="&gt;&gt;dataColumn31.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;dataColumn22.Name" xml:space="preserve">
+    <value>dataColumn22</value>
+  </data>
+  <data name="&gt;&gt;dataColumn9.Name" xml:space="preserve">
+    <value>dataColumn9</value>
+  </data>
+  <data name="btGravar.Text" xml:space="preserve">
+    <value>Gravar</value>
+  </data>
+  <data name="&gt;&gt;Compromissos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="&gt;&gt;dataColumn40.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btn_exportarCompromissos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tb_assunto.Name" xml:space="preserve">
+    <value>tb_assunto</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissoPassado.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tb_assunto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 20</value>
+  </data>
+  <data name="&gt;&gt;dataColumn21.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tb_hora.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 72</value>
+  </data>
+  <data name="&gt;&gt;dataColumn9.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataFuturoDois.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dataColumn8.Name" xml:space="preserve">
+    <value>dataColumn8</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="&gt;&gt;tb_local.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dataColumn38.Name" xml:space="preserve">
+    <value>dataColumn38</value>
+  </data>
+  <data name="cb_contatos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 108</value>
+  </data>
+  <data name="&gt;&gt;Passados.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataColumn11.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_assunto.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;dataPassado.Name" xml:space="preserve">
+    <value>dataPassado</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 378</value>
+  </data>
+  <data name="&gt;&gt;tb_horai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_horai.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;dataPassado.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissos.Name" xml:space="preserve">
+    <value>btn_exportarCompromissos</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>Passados</value>
+  </data>
+  <data name="&gt;&gt;dataColumn28.Name" xml:space="preserve">
+    <value>dataColumn28</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>463, 270</value>
+  </data>
+  <data name="&gt;&gt;table_compromissosen.Type" xml:space="preserve">
+    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn7.Name" xml:space="preserve">
+    <value>dataColumn7</value>
+  </data>
+  <data name="Compromissos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_link.Name" xml:space="preserve">
+    <value>tb_link</value>
+  </data>
+  <data name="&gt;&gt;dataColumn39.Name" xml:space="preserve">
+    <value>dataColumn39</value>
+  </data>
+  <data name="&gt;&gt;dataFuturoUm.Name" xml:space="preserve">
+    <value>dataFuturoUm</value>
+  </data>
+  <data name="&gt;&gt;tb_local.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;dataColumn36.Name" xml:space="preserve">
+    <value>dataColumn36</value>
+  </data>
+  <data name="btn_exportarCompromissoPassado.Text" xml:space="preserve">
+    <value>Exportar PDF</value>
+  </data>
+  <data name="&gt;&gt;dataColumn18.Name" xml:space="preserve">
+    <value>dataColumn18</value>
+  </data>
+  <data name="bt_editar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 29</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="Futuro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;Passados.Name" xml:space="preserve">
+    <value>Passados</value>
+  </data>
+  <data name="&gt;&gt;dataColumn6.Name" xml:space="preserve">
+    <value>dataColumn6</value>
+  </data>
+  <data name="dt_data.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 109</value>
+  </data>
+  <data name="&gt;&gt;dataPassado.Parent" xml:space="preserve">
+    <value>Passados</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarPDFCompromissoFuturo.Name" xml:space="preserve">
+    <value>btn_exportarPDFCompromissoFuturo</value>
+  </data>
+  <data name="&gt;&gt;dataColumn29.Name" xml:space="preserve">
+    <value>dataColumn29</value>
+  </data>
+  <data name="tb_link.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 72</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CompromissoForms</value>
+  </data>
+  <data name="Compromissos.Text" xml:space="preserve">
+    <value>Compromissos</value>
+  </data>
+  <data name="&gt;&gt;Futuro.Name" xml:space="preserve">
+    <value>Futuro</value>
+  </data>
+  <data name="tb_horai.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dataSetFuturo.Type" xml:space="preserve">
+    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Compromissos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_exportarPDFCompromissoFuturo.Text" xml:space="preserve">
+    <value>Exportar PDF</value>
+  </data>
+  <data name="&gt;&gt;tableFuturoen.Name" xml:space="preserve">
+    <value>tableFuturoen</value>
+  </data>
+  <data name="btn_exportarCompromissoPassado.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;dataColumn4.Name" xml:space="preserve">
+    <value>dataColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataColumn19.Name" xml:space="preserve">
+    <value>dataColumn19</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="bt_excluir.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="dataGridFuturo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>436, 150</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="&gt;&gt;dataColumn45.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dataPassado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 198</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissoPassado.Name" xml:space="preserve">
+    <value>btn_exportarCompromissoPassado</value>
+  </data>
+  <data name="&gt;&gt;tb_hora.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dataColumn14.Name" xml:space="preserve">
+    <value>dataColumn14</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dataSetPassado.Type" xml:space="preserve">
+    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataFuturoDois.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dataColumn35.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_local.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn3.Name" xml:space="preserve">
+    <value>dataColumn3</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Hora Início</value>
+  </data>
+  <data name="&gt;&gt;dataColumn10.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_horai.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="btn_exportarPDFCompromissoFuturo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 180</value>
+  </data>
+  <data name="&gt;&gt;dataColumn25.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tb_local.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dataColumn47.Name" xml:space="preserve">
+    <value>dataColumn47</value>
+  </data>
+  <data name="btGravar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;dataColumn2.Name" xml:space="preserve">
+    <value>dataColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataSetCompromissos.Type" xml:space="preserve">
+    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataFuturoUm.Parent" xml:space="preserve">
+    <value>Futuro</value>
+  </data>
+  <data name="bt_excluir.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 182</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="&gt;&gt;dataFuturoUm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dataColumn15.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn44.Name" xml:space="preserve">
+    <value>dataColumn44</value>
+  </data>
+  <data name="btn_exportarCompromissoPassado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 194</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_exportarCompromissos.Text" xml:space="preserve">
+    <value>Exportar PDF</value>
+  </data>
+  <data name="&gt;&gt;dataFuturoDois.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableFuturo.Type" xml:space="preserve">
+    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Fim</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="&gt;&gt;dataColumn1.Name" xml:space="preserve">
+    <value>dataColumn1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissos.Parent" xml:space="preserve">
+    <value>Compromissos</value>
+  </data>
+  <data name="&gt;&gt;dataColumn27.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn30.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Futuro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;dataColumn34.Name" xml:space="preserve">
+    <value>dataColumn34</value>
+  </data>
+  <data name="bt_editar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;dataColumn27.Name" xml:space="preserve">
+    <value>dataColumn27</value>
+  </data>
+  <data name="&gt;&gt;tb_hora.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 213</value>
+  </data>
+  <data name="&gt;&gt;dataColumn45.Name" xml:space="preserve">
+    <value>dataColumn45</value>
+  </data>
+  <data name="dataFuturoUm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 181</value>
+  </data>
+  <data name="&gt;&gt;dataGridFuturo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn20.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridPassado.Parent" xml:space="preserve">
+    <value>Passados</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridFuturo.Name" xml:space="preserve">
+    <value>dataGridFuturo</value>
+  </data>
+  <data name="&gt;&gt;btn_exportarCompromissoPassado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataFuturoDois.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 207</value>
+  </data>
+  <data name="tb_assunto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 34</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="&gt;&gt;dataColumn17.Name" xml:space="preserve">
+    <value>dataColumn17</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 302</value>
+  </data>
+  <data name="tb_hora.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="cb_contatos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 21</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, -95</value>
+  </data>
+  <data name="tb_link.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="dt_data.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 20</value>
+  </data>
+  <data name="dataGridFuturo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 116</value>
+  </data>
+  <data name="btn_exportarCompromissoPassado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 29</value>
+  </data>
+  <data name="&gt;&gt;dataColumn43.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bt_editar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dataColumn35.Name" xml:space="preserve">
+    <value>dataColumn35</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="dataFuturoUm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 20</value>
+  </data>
+  <data name="tb_hora.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cb_contatos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn10.Name" xml:space="preserve">
+    <value>dataColumn10</value>
+  </data>
+  <data name="&gt;&gt;tableFuturoen.Type" xml:space="preserve">
+    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Futuro.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;dataColumn33.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataColumn37.Name" xml:space="preserve">
+    <value>dataColumn37</value>
+  </data>
+  <data name="&gt;&gt;dataColumn48.Name" xml:space="preserve">
+    <value>dataColumn48</value>
+  </data>
+  <data name="tb_local.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>Futuro</value>
+  </data>
+  <data name="dataGridCompromissos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 26</value>
+  </data>
+  <data name="&gt;&gt;dataGridPassado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;dataColumn25.Name" xml:space="preserve">
+    <value>dataColumn25</value>
+  </data>
+  <data name="&gt;&gt;dt_data.Name" xml:space="preserve">
+    <value>dt_data</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1063,650 +1702,8 @@
         fz4XODXMKJbCAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="dataGridPassado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 28</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tb_assunto.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Link</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;bt_editar.Name" xml:space="preserve">
-    <value>bt_editar</value>
-  </data>
-  <data name="btGravar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 29</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
-  </data>
-  <data name="&gt;&gt;tablePassado.Name" xml:space="preserve">
-    <value>tablePassado</value>
-  </data>
-  <data name="&gt;&gt;dataGridCompromissos.Name" xml:space="preserve">
-    <value>dataGridCompromissos</value>
-  </data>
-  <data name="&gt;&gt;dataColumn32.Name" xml:space="preserve">
-    <value>dataColumn32</value>
-  </data>
-  <data name="&gt;&gt;dataColumn16.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 79</value>
-  </data>
-  <data name="&gt;&gt;dataColumn41.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Futuro.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tb_hora.Name" xml:space="preserve">
-    <value>tb_hora</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btGravar.Name" xml:space="preserve">
-    <value>btGravar</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataPassado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Passados.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="Compromissos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>452, 234</value>
-  </data>
-  <data name="&gt;&gt;dataColumn31.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;dataColumn22.Name" xml:space="preserve">
-    <value>dataColumn22</value>
-  </data>
-  <data name="&gt;&gt;dataColumn9.Name" xml:space="preserve">
-    <value>dataColumn9</value>
-  </data>
-  <data name="&gt;&gt;dt_data.Name" xml:space="preserve">
-    <value>dt_data</value>
-  </data>
-  <data name="btGravar.Text" xml:space="preserve">
-    <value>Gravar</value>
-  </data>
-  <data name="&gt;&gt;Compromissos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="btn_exportarCompromissos.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tb_assunto.Name" xml:space="preserve">
-    <value>tb_assunto</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissoPassado.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tb_assunto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 20</value>
-  </data>
-  <data name="&gt;&gt;dataColumn21.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tb_hora.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 72</value>
-  </data>
-  <data name="dataFuturoDois.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;dataColumn8.Name" xml:space="preserve">
-    <value>dataColumn8</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="&gt;&gt;tb_local.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dataColumn38.Name" xml:space="preserve">
-    <value>dataColumn38</value>
-  </data>
-  <data name="cb_contatos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 108</value>
-  </data>
-  <data name="&gt;&gt;Passados.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataColumn11.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_assunto.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;dataPassado.Name" xml:space="preserve">
-    <value>dataPassado</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 378</value>
-  </data>
-  <data name="&gt;&gt;tb_horai.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_horai.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;dataPassado.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissos.Name" xml:space="preserve">
-    <value>btn_exportarCompromissos</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>Passados</value>
-  </data>
-  <data name="&gt;&gt;dataColumn28.Name" xml:space="preserve">
-    <value>dataColumn28</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>463, 270</value>
-  </data>
-  <data name="&gt;&gt;table_compromissosen.Type" xml:space="preserve">
-    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn7.Name" xml:space="preserve">
-    <value>dataColumn7</value>
-  </data>
-  <data name="Compromissos.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_link.Name" xml:space="preserve">
-    <value>tb_link</value>
-  </data>
-  <data name="&gt;&gt;dataColumn39.Name" xml:space="preserve">
-    <value>dataColumn39</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;dataFuturoUm.Name" xml:space="preserve">
-    <value>dataFuturoUm</value>
-  </data>
-  <data name="&gt;&gt;tb_local.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;dataColumn36.Name" xml:space="preserve">
-    <value>dataColumn36</value>
-  </data>
-  <data name="dataFuturoDois.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 207</value>
-  </data>
-  <data name="btn_exportarCompromissoPassado.Text" xml:space="preserve">
-    <value>Exportar PDF</value>
-  </data>
-  <data name="&gt;&gt;dataColumn18.Name" xml:space="preserve">
-    <value>dataColumn18</value>
-  </data>
-  <data name="bt_editar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 29</value>
-  </data>
-  <data name="Futuro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="&gt;&gt;Passados.Name" xml:space="preserve">
-    <value>Passados</value>
-  </data>
-  <data name="&gt;&gt;dataColumn6.Name" xml:space="preserve">
-    <value>dataColumn6</value>
-  </data>
-  <data name="dt_data.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 109</value>
-  </data>
-  <data name="&gt;&gt;dataPassado.Parent" xml:space="preserve">
-    <value>Passados</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarPDFCompromissoFuturo.Name" xml:space="preserve">
-    <value>btn_exportarPDFCompromissoFuturo</value>
-  </data>
-  <data name="&gt;&gt;dataColumn29.Name" xml:space="preserve">
-    <value>dataColumn29</value>
-  </data>
-  <data name="tb_link.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 72</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Local</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>CompromissoForms</value>
-  </data>
-  <data name="Compromissos.Text" xml:space="preserve">
-    <value>Compromissos</value>
-  </data>
-  <data name="&gt;&gt;Futuro.Name" xml:space="preserve">
-    <value>Futuro</value>
-  </data>
-  <data name="tb_horai.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dataSetFuturo.Type" xml:space="preserve">
-    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Compromissos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btn_exportarPDFCompromissoFuturo.Text" xml:space="preserve">
-    <value>Exportar PDF</value>
-  </data>
-  <data name="&gt;&gt;tableFuturoen.Name" xml:space="preserve">
-    <value>tableFuturoen</value>
-  </data>
-  <data name="btn_exportarCompromissoPassado.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;dataColumn4.Name" xml:space="preserve">
-    <value>dataColumn4</value>
-  </data>
-  <data name="&gt;&gt;dataColumn19.Name" xml:space="preserve">
-    <value>dataColumn19</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="bt_excluir.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableFuturo.Name" xml:space="preserve">
-    <value>tableFuturo</value>
-  </data>
-  <data name="&gt;&gt;dataColumn45.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
-  </data>
-  <data name="btGravar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissoPassado.Name" xml:space="preserve">
-    <value>btn_exportarCompromissoPassado</value>
-  </data>
-  <data name="&gt;&gt;tb_hora.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;dataSetPassado.Type" xml:space="preserve">
-    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataFuturoDois.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;dataColumn35.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;tb_local.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn3.Name" xml:space="preserve">
-    <value>dataColumn3</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Hora Início</value>
-  </data>
-  <data name="&gt;&gt;tb_horai.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;dataGridFuturo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="btn_exportarPDFCompromissoFuturo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 180</value>
-  </data>
-  <data name="&gt;&gt;dataColumn25.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tb_local.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataColumn47.Name" xml:space="preserve">
-    <value>dataColumn47</value>
-  </data>
-  <data name="btn_exportarPDFCompromissoFuturo.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;dataColumn2.Name" xml:space="preserve">
-    <value>dataColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataSetCompromissos.Type" xml:space="preserve">
-    <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataFuturoUm.Parent" xml:space="preserve">
-    <value>Futuro</value>
-  </data>
-  <data name="bt_excluir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 182</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 116</value>
-  </data>
-  <data name="&gt;&gt;dataFuturoUm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataColumn15.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn44.Name" xml:space="preserve">
-    <value>dataColumn44</value>
-  </data>
-  <data name="btn_exportarCompromissoPassado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 194</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataColumn40.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btn_exportarCompromissos.Text" xml:space="preserve">
-    <value>Exportar PDF</value>
-  </data>
-  <data name="&gt;&gt;dataFuturoDois.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableFuturo.Type" xml:space="preserve">
-    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Fim</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataPassado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 198</value>
-  </data>
-  <data name="&gt;&gt;dataColumn1.Name" xml:space="preserve">
-    <value>dataColumn1</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissos.Parent" xml:space="preserve">
-    <value>Compromissos</value>
-  </data>
-  <data name="&gt;&gt;dataColumn27.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn30.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;bt_excluir.Name" xml:space="preserve">
     <value>bt_excluir</value>
-  </data>
-  <data name="&gt;&gt;Futuro.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;dataColumn34.Name" xml:space="preserve">
-    <value>dataColumn34</value>
-  </data>
-  <data name="bt_editar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="&gt;&gt;dataGridPassado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_hora.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 213</value>
-  </data>
-  <data name="&gt;&gt;dataColumn45.Name" xml:space="preserve">
-    <value>dataColumn45</value>
-  </data>
-  <data name="dataFuturoUm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 181</value>
-  </data>
-  <data name="&gt;&gt;tb_horai.Name" xml:space="preserve">
-    <value>tb_horai</value>
-  </data>
-  <data name="&gt;&gt;dataColumn20.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridPassado.Parent" xml:space="preserve">
-    <value>Passados</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridFuturo.Name" xml:space="preserve">
-    <value>dataGridFuturo</value>
-  </data>
-  <data name="&gt;&gt;btn_exportarCompromissoPassado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Início</value>
-  </data>
-  <data name="tb_assunto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 34</value>
-  </data>
-  <data name="&gt;&gt;dataColumn24.Name" xml:space="preserve">
-    <value>dataColumn24</value>
-  </data>
-  <data name="&gt;&gt;dataColumn17.Name" xml:space="preserve">
-    <value>dataColumn17</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>530, 576</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="tb_hora.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="cb_contatos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 21</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, -95</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dt_data.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
-  </data>
-  <data name="dataGridFuturo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btn_exportarCompromissoPassado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 29</value>
-  </data>
-  <data name="&gt;&gt;dataColumn43.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn10.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn35.Name" xml:space="preserve">
-    <value>dataColumn35</value>
-  </data>
-  <data name="&gt;&gt;cb_contatos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="dataFuturoUm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
-  </data>
-  <data name="tb_hora.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;dataColumn14.Name" xml:space="preserve">
-    <value>dataColumn14</value>
-  </data>
-  <data name="&gt;&gt;dataColumn10.Name" xml:space="preserve">
-    <value>dataColumn10</value>
-  </data>
-  <data name="&gt;&gt;tableFuturoen.Type" xml:space="preserve">
-    <value>System.Data.DataTable, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;Futuro.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;dataColumn33.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataColumn37.Name" xml:space="preserve">
-    <value>dataColumn37</value>
-  </data>
-  <data name="&gt;&gt;dataColumn48.Name" xml:space="preserve">
-    <value>dataColumn48</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>Futuro</value>
-  </data>
-  <data name="dataGridCompromissos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 26</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 116</value>
-  </data>
-  <data name="&gt;&gt;dataColumn25.Name" xml:space="preserve">
-    <value>dataColumn25</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 102</value>
-  </data>
-  <data name="bt_editar.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;dataColumn9.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataColumn5.Name" xml:space="preserve">
     <value>dataColumn5</value>
@@ -1750,8 +1747,8 @@
   <data name="&gt;&gt;dataColumn8.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dataGridFuturo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>436, 150</value>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;Compromissos.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1762,8 +1759,8 @@
   <data name="&gt;&gt;dataColumn7.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataColumn13.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
   </data>
   <data name="Passados.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1776,6 +1773,9 @@
   </data>
   <data name="&gt;&gt;btGravar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridPassado.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="Passados.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

@@ -202,13 +202,16 @@ namespace eAgenda.Controladores.TarefaModule
         /// </summary>
         /// <param name="id">Id da tareda</param>
         /// <param name="novoPercentual">Percentual Concluído</param>
-        public void AtualizarPercentual(int id, int novoPercentual)
+        public string AtualizarPercentual(int id, int novoPercentual)
         {
             Tarefa tarefa = SelecionarPorId(id);            
 
-            tarefa.AtualizarPercentual(novoPercentual, DateTime.Today);
+            string validarPorcentagem = tarefa.AtualizarPercentual(novoPercentual, DateTime.Today);
 
+           if(String.IsNullOrEmpty(validarPorcentagem))
             Editar(tarefa.Id, tarefa);
+
+            return validarPorcentagem;
         }
 
        

@@ -57,6 +57,13 @@ namespace eAgenda.WindowsForms
             this.dataColumn4 = new System.Data.DataColumn();
             this.dataColumn5 = new System.Data.DataColumn();
             this.dataColumn6 = new System.Data.DataColumn();
+            this.tableContatosen = new System.Data.DataTable();
+            this.dataColumn13 = new System.Data.DataColumn();
+            this.dataColumn14 = new System.Data.DataColumn();
+            this.dataColumn15 = new System.Data.DataColumn();
+            this.dataColumn16 = new System.Data.DataColumn();
+            this.dataColumn17 = new System.Data.DataColumn();
+            this.dataColumn18 = new System.Data.DataColumn();
             this.dataSetContatosAgrupados = new System.Data.DataSet();
             this.tableContatosAgrupados = new System.Data.DataTable();
             this.dataColumn7 = new System.Data.DataColumn();
@@ -65,14 +72,6 @@ namespace eAgenda.WindowsForms
             this.dataColumn10 = new System.Data.DataColumn();
             this.dataColumn11 = new System.Data.DataColumn();
             this.dataColumn12 = new System.Data.DataColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tableContatosen = new System.Data.DataTable();
-            this.dataColumn13 = new System.Data.DataColumn();
-            this.dataColumn14 = new System.Data.DataColumn();
-            this.dataColumn15 = new System.Data.DataColumn();
-            this.dataColumn16 = new System.Data.DataColumn();
-            this.dataColumn17 = new System.Data.DataColumn();
-            this.dataColumn18 = new System.Data.DataColumn();
             this.tableContatosAgrupadosen = new System.Data.DataTable();
             this.dataColumn19 = new System.Data.DataColumn();
             this.dataColumn20 = new System.Data.DataColumn();
@@ -80,6 +79,7 @@ namespace eAgenda.WindowsForms
             this.dataColumn22 = new System.Data.DataColumn();
             this.dataColumn23 = new System.Data.DataColumn();
             this.dataColumn24 = new System.Data.DataColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tb_visualizacao.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -87,11 +87,11 @@ namespace eAgenda.WindowsForms
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatosAgrupados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupadosen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_cargo
@@ -145,6 +145,7 @@ namespace eAgenda.WindowsForms
             // dataGridContatos
             // 
             resources.ApplyResources(this.dataGridContatos, "dataGridContatos");
+            this.dataGridContatos.AllowUserToAddRows = false;
             this.dataGridContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridContatos.Name = "dataGridContatos";
             this.dataGridContatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -271,6 +272,42 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn6.ColumnName = "Empresa";
             // 
+            // tableContatosen
+            // 
+            this.tableContatosen.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn13,
+            this.dataColumn14,
+            this.dataColumn15,
+            this.dataColumn16,
+            this.dataColumn17,
+            this.dataColumn18});
+            this.tableContatosen.Locale = new System.Globalization.CultureInfo("en");
+            this.tableContatosen.TableName = "tableContatosen";
+            // 
+            // dataColumn13
+            // 
+            this.dataColumn13.ColumnName = "Id";
+            // 
+            // dataColumn14
+            // 
+            this.dataColumn14.ColumnName = "Name";
+            // 
+            // dataColumn15
+            // 
+            this.dataColumn15.ColumnName = "Telephone";
+            // 
+            // dataColumn16
+            // 
+            this.dataColumn16.ColumnName = "Email";
+            // 
+            // dataColumn17
+            // 
+            this.dataColumn17.ColumnName = "Position";
+            // 
+            // dataColumn18
+            // 
+            this.dataColumn18.ColumnName = "Company";
+            // 
             // dataSetContatosAgrupados
             // 
             this.dataSetContatosAgrupados.DataSetName = "NewDataSet";
@@ -313,48 +350,6 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn12.ColumnName = "Empresa";
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // tableContatosen
-            // 
-            this.tableContatosen.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn13,
-            this.dataColumn14,
-            this.dataColumn15,
-            this.dataColumn16,
-            this.dataColumn17,
-            this.dataColumn18});
-            this.tableContatosen.Locale = new System.Globalization.CultureInfo("en");
-            this.tableContatosen.TableName = "tableContatosen";
-            // 
-            // dataColumn13
-            // 
-            this.dataColumn13.ColumnName = "Id";
-            // 
-            // dataColumn14
-            // 
-            this.dataColumn14.ColumnName = "Name";
-            // 
-            // dataColumn15
-            // 
-            this.dataColumn15.ColumnName = "Telephone";
-            // 
-            // dataColumn16
-            // 
-            this.dataColumn16.ColumnName = "Email";
-            // 
-            // dataColumn17
-            // 
-            this.dataColumn17.ColumnName = "Position";
-            // 
-            // dataColumn18
-            // 
-            this.dataColumn18.ColumnName = "Company";
-            // 
             // tableContatosAgrupadosen
             // 
             this.tableContatosAgrupadosen.Columns.AddRange(new System.Data.DataColumn[] {
@@ -390,6 +385,12 @@ namespace eAgenda.WindowsForms
             // 
             this.dataColumn24.ColumnName = "Company";
             // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
             // ContatoForms
             // 
             resources.ApplyResources(this, "$this");
@@ -398,6 +399,7 @@ namespace eAgenda.WindowsForms
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
+            this.MaximizeBox = false;
             this.Name = "ContatoForms";
             this.Load += new System.EventHandler(this.ContatoForms_Load);
             this.panel1.ResumeLayout(false);
@@ -408,11 +410,11 @@ namespace eAgenda.WindowsForms
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetContatosAgrupados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tableContatosen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableContatosAgrupadosen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -595,6 +595,12 @@
         Awk3v4EAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Completed</value>
+  </data>
   <data name="btn_exportarPDFPendente.Text" xml:space="preserve">
     <value>Export PDF</value>
   </data>
@@ -603,12 +609,6 @@
   </data>
   <data name="bt_excluirPendente.Text" xml:space="preserve">
     <value>Delete</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Pending</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Completed</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>My Tasks</value>
