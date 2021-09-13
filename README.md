@@ -25,7 +25,8 @@ Sumário
    
    
   ### Tecnologia
-  O software foi desenvolvido utilizando a tecnologia .Net Framework versão 4.7.2, com a linguagem de programação C#, e pode ser executado em sistemas Windows. Além disso, a persistência dos dados é garantida através do SQLServer.
+  O software foi desenvolvido utilizando a tecnologia .Net Framework versão 4.7.2, com a linguagem de programação C#, e pode ser executado em sistemas Windows. Além disso, a persistência dos dados é garantida através do SQLServer. 
+  É preciso utilizar o Visual Studio para executar o programa.
  
   
   
