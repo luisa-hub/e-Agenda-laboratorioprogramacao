@@ -4,8 +4,8 @@ Sumário
 =================
 <!--ts-->
    * [Sobre](#sobre)
+       * [Vídeo de Apresentação](#vídeo-de-apresentação)
        * [Tecnologia](#tecnologia)
-       * [Vídeo de Apresentação](#video-de-apresentacao)
    * [Conhecendo o sistema](#conhecendo-o-sistema)
    * [Cadastro de Tarefas](#cadastro-de-tarefas)
    * [Cadastro de Contatos](#cadastro-de-contatos)
@@ -20,13 +20,13 @@ Sumário
   <img src="https://user-images.githubusercontent.com/72579773/133004016-b4bbf474-a4dc-4974-8b7b-36df8ffb99e4.png"  align="middle" /> 
   
  **Figura 1 - Página inicial do sistema e-Agenda**
- 
-  ### Vídeo de Apresentação
-  https://youtu.be/ogAHO3evHTs
-  
+   
    O e-Agenda é um software de gestão de tarefas, contatos e compromissos, onde o usuário pode registrar e controlar sua rotina de maneira simples e eficiente. Este software foi desenvolvido pelos alunos Leandro Fontana e Luisa Farias de Macedo para a matéria de Laboratório de Programação, no ano de 2021.
    
-   
+   ### Vídeo de Apresentação
+  https://youtu.be/ogAHO3evHTs
+ 
+ 
   ### Tecnologia
   O software foi desenvolvido utilizando a tecnologia .Net Framework versão 4.7.2, com a linguagem de programação C#, e pode ser executado em sistemas Windows. Além disso, a persistência dos dados é garantida através do SQLServer. 
   É preciso utilizar o Visual Studio para executar o programa.
